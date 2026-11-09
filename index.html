@@ -558,7 +558,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.12", "pc_url": "https://aka.doubaocdn.com/s/Y0ewCPEHga", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.12：现在把任何文件或文件夹直接拖进 OMC 窗口，它会自己认出是模组 / 光影 / 材质包 / 存档 / 版本 / 整合包 / 皮肤，然后装到该去的目录，认不出来会红字告诉你「未知的文件或文件夹」；下载页点项目封面，能进去看这个项目的所有版本，任意挑一个直接装，带实时下载进度。"}'>
+<meta name="omc-update" content='{"latest": "1.7.13", "pc_url": "https://aka.doubaocdn.com/s/wOUaDddPFq", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.13：底部常驻更新进度条；加过杀毒白名单就不再重复提示；F11 一键全屏；新增「好友」页（填自己的 Supabase 地址就能用）；新版本可套一整套游戏设置（options.txt）；一键导出整合包；种子地图和存档地图能看生物群系；模组版本列表每个版本都带封面；设置里能单独指定游戏内语言，模组名和道具名跟着变。"}'>
 
 </head>
 
@@ -574,7 +574,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.12</strong></span>
+    <span>版本 <strong>1.7.13</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -614,11 +614,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/Y0ewCPEHga">
+      <a class="btn" href="https://aka.doubaocdn.com/s/wOUaDddPFq">
 
         下载 Windows 版
 
-        <small>zip · 42.4 MB · 1.7.12</small>
+        <small>zip · 41.2 MB · 1.7.12</small>
 
       </a>
 
@@ -650,7 +650,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/Y0ewCPEHga">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/wOUaDddPFq">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
 
       </div>
 
@@ -700,9 +700,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/Y0ewCPEHga">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/wOUaDddPFq">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/Y0ewCPEHga">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/wOUaDddPFq">复制完整链接</button>
 
         </div>
 
@@ -716,7 +716,7 @@ footer{
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.12.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.13.zip -Algorithm SHA256
 
             </div>
 
@@ -806,13 +806,17 @@ footer{
 
   <section class="upd">
 
-            <h2>1.7.12 更新了什么<em>2026-11-09</em></h2>
+                <h2>1.7.13 更新了什么<em>2026-11-09</em></h2>
     <div class="ulist">
-      <div><i></i><span><b>拖进来就自动装</b>：把 jar、zip 或者整个文件夹往 OMC 窗口里一拖，它按内部结构判断是什么——模组、光影、材质包、存档、版本、整合包、皮肤，各归各位。改过名字的也认得出来。</span></div>
-      <div><i></i><span><b>认不出来会红字提醒</b>：拖进来的东西判不出类型时，弹窗里用红字列出「未知的文件或文件夹」和原因，不会闷头乱装。</span></div>
-      <div><i></i><span><b>看项目的全部版本</b>：下载页点模组封面，进去就是这个项目的所有版本，每个都能单独装，大小和发布日期都写清楚。</span></div>
-      <div><i></i><span><b>下载进度条</b>：模组、光影、材质包下载都有实时进度和百分比，不用干等着猜。</span></div>
-      <div><i></i><span><b>上一版的修复都在</b>：Java 版本自动匹配、内存自适应、右键删除、皮肤库精选与筛选提速、穿搭码、基岩版启动、自动进服、Fabric API、自定义封面、反馈入口。</span></div>
+      <div><i></i><span><b>更新进度条</b>：检查更新、下载新包、解压替换，整个流程底部常驻一条进度条，不再只有一个百分比数字。</span></div>
+      <div><i></i><span><b>白名单只问一次</b>：手动「加入白名单」成功后，启动器自己会检查系统排除项，已经加过就不再弹那个提示框。</span></div>
+      <div><i></i><span><b>F11 全屏</b>：任何时候按 F11 切全屏，再按一次退回来。</span></div>
+      <div><i></i><span><b>好友页</b>：侧边栏新增「好友」，填上自己的 Supabase 项目地址和 anon key 就能连；好友列表、邀请进房间的入口都在这里。</span></div>
+      <div><i></i><span><b>新版本默认游戏设置</b>：44 项游戏内设置（渲染距离、图形、FOV、粒子、帧率、九个音轨、聊天、难度……）配一次，装完新版本自动写进 options.txt，你自己调过的不会被覆盖。</span></div>
+      <div><i></i><span><b>导出整合包</b>：模组页点「导出整合包」，把 mods、config、资源包、光影和设置打成一个 zip，附一份怎么用的说明，直接发给朋友。</span></div>
+      <div><i></i><span><b>种子地图 / 存档地图</b>：输种子在 chunkbase 看生物群系；也能直接读存档的区块，把已经探索过的地方画成彩色小地图。</span></div>
+      <div><i></i><span><b>版本列表带封面</b>：点模组看全部版本时，每一条前面都有项目封面。</span></div>
+      <div><i></i><span><b>游戏内语言单独设</b>：设置里能指定游戏内语言，模组名和道具名跟着变（模组自带对应语言文件才生效）。</span></div>
     </div>
   </section>
 
@@ -960,7 +964,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.12</span>
+    <span>OMC LAUNCHER 1.7.13</span>
 
     <span>Windows 10/11 x64</span>
 
