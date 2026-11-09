@@ -558,7 +558,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.23", "pc_url": "https://aka.doubaocdn.com/s/Ek8ISTbfVx", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.23：好友页能按账号名搜人加好友了——输入对方的账号名，搜到点「加为好友」就进列表；本机账号和最近 12 小时登录过的账号都能搜到，账号页有「允许别人按账号名搜到我」开关。好友列表记名字、来源和添加日期，能删。私聊和在线状态仍要接自己的后端。"}'>
+<meta name="omc-update" content='{"latest": "1.7.24", "pc_url": "https://aka.doubaocdn.com/s/sNrpF06Pm7", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.24：模组能打标签、按标签筛选，新增模组黑名单（导入/拖入直接拦下）；版本列表能一键复制成副本；好友能改备注名、分组；账号能导加密备份、每天改一次用户名；验证码 10 秒冷却；密码必须 6 位且带数字和符号；自带一个自己的第三方登录服务器（thirdserver 目录）。"}'>
 
 </head>
 
@@ -574,7 +574,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.23</strong></span>
+    <span>版本 <strong>1.7.24</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -614,11 +614,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/Ek8ISTbfVx">
+      <a class="btn" href="https://aka.doubaocdn.com/s/sNrpF06Pm7">
 
         下载 Windows 版
 
-        <small>zip · 41.6 MB · 1.7.23</small>
+        <small>zip · 41.6 MB · 1.7.24</small>
 
       </a>
 
@@ -650,7 +650,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/Ek8ISTbfVx">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/sNrpF06Pm7">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
 
       </div>
 
@@ -700,9 +700,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/Ek8ISTbfVx">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/sNrpF06Pm7">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/Ek8ISTbfVx">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/sNrpF06Pm7">复制完整链接</button>
 
         </div>
 
@@ -712,11 +712,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">9ACC03F82260A6B855AAF6D82CF0CA76011C17C4C31D90F90C08222700B2AA87</div>
+            <div class="hash">7696E69AF4231696CD7FBB33DD19C23DDA2D2363AA45F2D4AC6985FA56389C5F</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.23.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.24.zip -Algorithm SHA256
 
             </div>
 
@@ -807,13 +807,15 @@ footer{
   <section class="upd">
                     
                     
-                    <h2>1.7.23 更新了什么<em>2026-11-09</em></h2>
+                    <h2>1.7.24 更新了什么<em>2026-11-09</em></h2>
     <div class="ulist">
-      <div><i></i><span><b>按账号名加好友</b>：好友页顶上多了一块搜索——输入对方的账号名（账号页注册时填的那个用户名），按「搜索」就列出对得上的账号，选一个点「加为好友」就进列表。留空能看全部最近在线的。</div></div>
-      <div><i></i><span><b>怎么搜得到人</b>：账号登录时会把自己挂到公共目录上，只挂账号名和一个随机编号，不带邮箱；目录只保留最近 12 小时的公告，所以搜到的是「最近登录过的人」。本机自己的账号也一并列出。</div></div>
-      <div><i></i><span><b>隐私开关</b>：账号页底部有「允许别人按账号名搜到我」，不想被搜就关掉，关了就不会再往目录发自己的名字。</div></div>
-      <div><i></i><span><b>好友列表</b>：每行显示名字、来源（在线目录 / 本机 / ID）和添加日期，能删；「把我也挂到目录」按钮可以手动补挂一次。</div></div>
-      <div><i></i><span><b>边界</b>：私聊（文字 / 图片 / 文件）和好友在线状态仍然需要一台在线后端，页面下方保留了 Supabase 那一段，填了才生效。</div></div>
+      <div><i></i><span><b>模组标签</b>：选中模组点「给选中模组打标签」，勾必装 / 测试 / 危险 / 备选，也能自己加标签和写备注；顶部「标签筛选」按标签筛列表，标签只存本机不写进 jar。</div></div>
+      <div><i></i><span><b>模组黑名单</b>：把不想要的模组文件或通配规则（如 *hack*）加进黑名单，之后拖进来、导入时直接拦下不装，并说明命中了哪条规则。</div></div>
+      <div><i></i><span><b>复制版本</b>：版本列表右键「复制这个版本」，整份复制成新实例，可以选要不要把模组和配置一起带过去，日志不带。</div></div>
+      <div><i></i><span><b>好友备注 / 分组</b>：双击好友就能改备注名、分组和备注；好友列表顶上按分组筛选。</div></div>
+      <div><i></i><span><b>账号</b>：能导出加密备份（设一个备份口令），换电脑导入回来；每个账号每天能改一次用户名。</div></div>
+      <div><i></i><span><b>验证码 / 密码</b>：发完验证码要等 10 秒才能重发，按钮带倒计时；密码至少 6 位，必须同时有数字和符号，不能有中文和空格。</div></div>
+      <div><i></i><span><b>自己的第三方登录</b>：包里多了一个 thirdserver 目录，里面是 Yggdrasil 登录服务器，用 python 一条命令就能跑；启动器设置页第三方登录里填 http://你的IP:8080/api/yggdrasil，点「在这个服务器注册新账号」就能开号并直接登录，不再依赖别人的皮肤站。</div></div>
     </div></section>
 
 
@@ -960,7 +962,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.23</span>
+    <span>OMC LAUNCHER 1.7.24</span>
 
     <span>Windows 10/11 x64</span>
 
