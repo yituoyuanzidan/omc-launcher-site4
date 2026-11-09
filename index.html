@@ -558,7 +558,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.18", "pc_url": "https://aka.doubaocdn.com/s/HwIFLQeRT9", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.18：皮肤相关的功能全部搬进「皮肤库」——导入 png、拖拽导入、批量导出、收藏夹、模糊搜索、披风和穿搭都在这一页；联机房间可以设密码；模组能一键全启/全停、冲突检测还能缺前置一键装；资源包有大图预览；设置里多了内存预设、一键打包日志、浅色主题和自定义快捷键；种子地图能选范围与图尺寸、存书签、导出大图；下载队列同时跑两个、各看各的进度。"}'>
+<meta name="omc-update" content='{"latest": "1.7.20", "pc_url": "https://aka.doubaocdn.com/s/yuaYcWjWXx", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.20：更新下载多了进度条——下载、校验、解压每段都看得见进度、速度和剩余时间；换包重启快多了，从十几秒压到 3 秒左右。新增「附魔计算器」：勾想要的附魔，直接给你按顺序合书的方案，合计多少级、会不会超 39 级都写着；还有附魔台那一页，告诉你摆几个书架、走哪一档、这档能出到几级。"}'>
 
 </head>
 
@@ -574,7 +574,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.18</strong></span>
+    <span>版本 <strong>1.7.20</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -614,11 +614,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/HwIFLQeRT9">
+      <a class="btn" href="https://aka.doubaocdn.com/s/yuaYcWjWXx">
 
         下载 Windows 版
 
-        <small>zip · 41.6 MB · 1.7.18</small>
+        <small>zip · 41.6 MB · 1.7.20</small>
 
       </a>
 
@@ -650,7 +650,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/HwIFLQeRT9">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/yuaYcWjWXx">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
 
       </div>
 
@@ -700,9 +700,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/HwIFLQeRT9">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/yuaYcWjWXx">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/HwIFLQeRT9">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/yuaYcWjWXx">复制完整链接</button>
 
         </div>
 
@@ -712,11 +712,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">338929b0a15734715f83f9ab07f2071b922e96b004780ffda15c04f53222d1b3</div>
+            <div class="hash">D2A24330C336C0F6D86CD577F36E3C431EF075E39835541F4CA10C74E62CD7D9</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.18.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.20.zip -Algorithm SHA256
 
             </div>
 
@@ -807,17 +807,13 @@ footer{
   <section class="upd">
                     
                     
-                    <h2>1.7.18 更新了什么<em>2026-11-09</em></h2>
+                    <h2>1.7.20 更新了什么<em>2026-11-09</em></h2>
     <div class="ulist">
-      <div><i></i><span><b>皮肤全搬到皮肤库</b>：启动页不再有皮肤表单，导入 png（也能直接把图片拖进来）、批量导出成 zip、收藏夹、模糊搜索、披风、穿搭、应用到游戏，全在「皮肤库」一页。</span></div>
-      <div><i></i><span><b>房间密码</b>：开房时填一个密码，房间列表会标「有密码」，别人进来前得先对上；密码只广播一段短哈希，不发明文。</span></div>
-      <div><i></i><span><b>模组批量启停</b>：一键全部启用 / 全部停用，停用只是改名成 .disabled，文件不删，想回来点一下就行。</span></div>
-      <div><i></i><span><b>冲突检测</b>：扫出同一个模组 ID 装了好几份、以及缺前置的情况；缺前置可以直接去 Modrinth 确认后装进 mods。</span></div>
-      <div><i></i><span><b>版本快照</b>：给某个版本打个快照（版本目录 + 当时的模组清单），改坏了用快照一键还原，还原前原目录自动备份。</span></div>
-      <div><i></i><span><b>资源包大图预览</b>：选中资源包看 pack.png 的放大图、文件大小、有没有启用。</span></div>
-      <div><i></i><span><b>设置页更好用</b>：内存预设 2G / 4G / 6G / 8G / 16G 一键切；一键打包日志（启动器日志 + 游戏 latest.log + 崩溃报告 + 模组清单，不含账号配置）；界面主题可切浅色；三个快捷键能自己改。</span></div>
-      <div><i></i><span><b>种子地图更顺手</b>：搜索范围可选 ±1000 到 ±10000、群系图尺寸可选 ±1024 / ±2048 / ±4096；当前位置能存成书签（青色方块标在图上）；画好的图可以导出 PNG。</span></div>
-      <div><i></i><span><b>下载队列</b>：同时下两个文件，每条都有自己的进度条。</span></div>
+      <div><i></i><span><b>更新进度条</b>：下载、校验、解压各算各的百分比，右边显示实时速度和剩余时间，不会再看着一个不动的条猜。</span></div>
+      <div><i></i><span><b>换包重启更快</b>：退出等待从轮询 500 毫秒改成 100 毫秒，替换文件的重试间隔也收紧，整段换包从十几秒压到 3 秒左右；下次打开会告诉你上次换了多久。</span></div>
+      <div><i></i><span><b>附魔计算器 · 铁砧</b>：选装备、勾目标附魔和等级，直接给「先书合书、最后一次性上砧」的分步方案，每步花几级、合计多少、会不会超 39 级都标出来；旁边还有「一本一本直接加」的对照，差多少一目了然。</span></div>
+      <div><i></i><span><b>附魔计算器 · 附魔台</b>：算要摆几个有效书架、该走顶槽还是底槽、这一档能出到几级，也列这一档可能出现哪些附魔；宝藏附魔会直接提示附魔台刷不出、要放书或者去换书。</span></div>
+      <div><i></i><span><b>入口位置</b>：在「模组与资源」页工具行最右边，点「附魔计算器」就是，两页用页签切换。</span></div>
     </div></section>
 
 
@@ -964,7 +960,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.18</span>
+    <span>OMC LAUNCHER 1.7.20</span>
 
     <span>Windows 10/11 x64</span>
 
