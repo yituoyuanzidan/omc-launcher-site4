@@ -558,7 +558,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.14", "pc_url": "https://aka.doubaocdn.com/s/D7c8UO3Idv", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.14：所有弹窗按钮改成中文（是/否/确定/取消）；第三方登录可选 LittleSkin、红石 MCskin、Ely.by 或自建皮肤站，只填域名也行；热门皮肤改成 5 路并发加载，单张从 7 秒降到 1.5 秒；种子地图能直接读存档的种子，还加了结构遗迹地图（村庄、要塞、遗迹位置）。"}'>
+<meta name="omc-update" content='{"latest": "1.7.15", "pc_url": "https://aka.doubaocdn.com/s/BE8ctXiOTE", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.15：反馈改成直接匿名发送，不用登录、不用邮箱、不用填联系方式，点一下就到作者手上；皮肤库里没下载的皮肤也先显示样子，用的是临时图，切走就自动删；界面文案后面多余的引号字符全部清理；第三方登录可选 LittleSkin、红石 MCskin、Ely.by 或自建皮肤站；种子地图可以读存档种子、看结构遗迹。"}'>
 
 </head>
 
@@ -574,7 +574,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.14</strong></span>
+    <span>版本 <strong>1.7.15</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -614,11 +614,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/D7c8UO3Idv">
+      <a class="btn" href="https://aka.doubaocdn.com/s/BE8ctXiOTE">
 
         下载 Windows 版
 
-        <small>zip · 41.3 MB · 1.7.14</small>
+        <small>zip · 41.3 MB · 1.7.15</small>
 
       </a>
 
@@ -650,7 +650,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/D7c8UO3Idv">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/BE8ctXiOTE">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
 
       </div>
 
@@ -700,9 +700,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/D7c8UO3Idv">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/BE8ctXiOTE">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/D7c8UO3Idv">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/BE8ctXiOTE">复制完整链接</button>
 
         </div>
 
@@ -716,7 +716,7 @@ footer{
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.14.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.15.zip -Algorithm SHA256
 
             </div>
 
@@ -805,16 +805,14 @@ footer{
   <!-- 更新日志 -->
 
   <section class="upd">
-
-                    <h2>1.7.14 更新了什么<em>2026-11-09</em></h2>
+                    <h2>1.7.15 更新了什么<em>2026-11-09</em></h2>
     <div class="ulist">
-      <div><i></i><span><b>弹窗按钮全中文</b>：之前每个提示框的按钮都是英文的 Yes / No / OK / Cancel，现在统一成 是 / 否 / 确定 / 取消，147 个弹窗一起改。</span></div>
-      <div><i></i><span><b>好友页标签补翻译</b>：原来剩下的两个英文标签改成「服务器地址」「服务器密钥」。</span></div>
-      <div><i></i><span><b>第三方登录可选服务商</b>：下拉里直接选 LittleSkin（国内、支持中文名）、红石皮肤站 MCskin（国内）、Ely.by（国际、皮肤披风齐全），或者「自建 Blessing Skin」自己填。</span></div>
-      <div><i></i><span><b>只填域名也能登</b>：输入 littleskin.cn、ely.by 这种域名会自动补成完整认证地址，自建站补 /api/yggdrasil。</span></div>
-      <div><i></i><span><b>热门皮肤加载提速</b>：改成 5 路同时拉，单张耗时从 7 秒降到 1.5 秒；拉到一张就只刷新那一格，不再整表重建；两块皮肤源谁先给出就用谁，不再白等国际链路；首屏静默补 20 个精选。</span></div>
-      <div><i></i><span><b>种子地图：结构遗迹</b>：新加「看结构遗迹」，跳 chunkbase 的结构地图，村庄、要塞、海底神殿、遗迹在哪一眼看到。</span></div>
-      <div><i></i><span><b>种子地图：读存档种子</b>：选中存档点「用这个存档的种子」，直接从 level.dat 读出种子填进去，新老存档格式都认。</span></div>
+      <div><i></i><span><b>反馈改成匿名的</b>：不用登录、不用邮箱、不用填联系方式，点「直接匿名发送」内容就到作者那边了。会带上版本号、系统、内存和日志末 12 行，路径里的用户名自动换成 %USER%，不带你任何账号信息。</span></div>
+      <div><i></i><span><b>没下载的皮肤也能看</b>：皮肤库里没下载的格子以前只有问号，现在先给一张临时预览图。这张图不进皮肤库，切走或者一直没点「拉取这个」就会自动删掉，不占地方。</span></div>
+      <div><i></i><span><b>界面文字清理</b>：把界面上文案后面多余的引号和不可见字符全去掉，看着干净。</span></div>
+      <div><i></i><span><b>第三方登录四家可选</b>：LittleSkin（国内、支持中文名）、红石皮肤站 MCskin（国内）、Ely.by（国际、皮肤披风齐全），或者「自建 Blessing Skin」自己填；只填域名也会自动补全地址。</span></div>
+      <div><i></i><span><b>种子地图：看结构遗迹</b>：版本详情里选中存档，点「用这个存档的种子」自动读出 level.dat 里的种子，再点「看结构遗迹」就能看到村庄、要塞、海底神殿在哪。</span></div>
+      <div><i></i><span><b>热门皮肤更快</b>：保留 5 路并发加载，单张 1.5 秒左右，拉到就只刷新那一格。</span></div>
     </div>
   </section>
 
@@ -962,7 +960,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.14</span>
+    <span>OMC LAUNCHER 1.7.15</span>
 
     <span>Windows 10/11 x64</span>
 
