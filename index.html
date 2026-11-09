@@ -558,7 +558,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.9", "pc_url": "https://aka.doubaocdn.com/s/o5a1iePUMM", "mobile_url": "", "notes": "1.7.9：修复 1.7.8 启动即报 BaseWorker 未定义的问题（那个版本打不开）；1.7.8 新增的杀毒白名单一键处理保留——首次启动会问一次，设置页「维护与工具」里也有按钮，包里还带「加入白名单.bat」。自动更新、6 路并行下载、存档管理移到版本详情页同前一版。"}'>
+<meta name="omc-update" content='{"latest": "1.7.11", "pc_url": "https://aka.doubaocdn.com/s/JWPnxhUwku", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.11：修复 Java 版本对不上导致游戏打不开（按版本要求自动挑 Java、缺了自动下载，内存也按机器自适应）；新增右键删除存档 / 版本 / 模组 / 资源包 / 光影 / 截图；皮肤库加「精选」和「只看皮肤 / 只看披风」，热门皮肤改成图标缓存 + 分批加载，不再卡顿；新增穿搭码（一套穿搭生成一串码，别人粘进去就能还原）；可一键启动基岩版；设置里能固定进游戏直连指定服务器；装 Fabric 时自动补 Fabric API；版本可以自己换封面图；设置页新增反馈 / 报 Bug 入口。"}'>
 
 </head>
 
@@ -574,7 +574,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.9</strong></span>
+    <span>版本 <strong>1.7.11</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -614,11 +614,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/o5a1iePUMM">
+      <a class="btn" href="https://aka.doubaocdn.com/s/JWPnxhUwku">
 
         下载 Windows 版
 
-        <small>zip · 42.4 MB · 1.7.9</small>
+        <small>zip · 42.4 MB · 1.7.11</small>
 
       </a>
 
@@ -650,7 +650,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/o5a1iePUMM">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/JWPnxhUwku">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
 
       </div>
 
@@ -700,9 +700,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/o5a1iePUMM">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/JWPnxhUwku">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/o5a1iePUMM">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/JWPnxhUwku">复制完整链接</button>
 
         </div>
 
@@ -716,7 +716,7 @@ footer{
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.9.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.11.zip -Algorithm SHA256
 
             </div>
 
@@ -806,14 +806,17 @@ footer{
 
   <section class="upd">
 
-    <h2>1.7.9 更新了什么<em>2026-11-09</em></h2>
+        <h2>1.7.11 更新了什么<em>2026-11-09</em></h2>
     <div class="ulist">
-      <div><i></i><span><b>修复启动崩溃</b>：1.7.8 打开会弹「BaseWorker is not defined」，这个版本已经修好，直接覆盖解压即可。</span></div>
-      <div><i></i><span><b>自动更新整条链路重做</b>：启动 3 秒后后台静默检查，失败自动重试；不点检查更新也会自己发现新版。下载完成后关掉启动器就自动换上，换好会自己重新打开。</span></div>
-      <div><i></i><span><b>更新下载提速</b>：改成 6 路分块并行下载，60MB 的包 20 秒左右下完，服务器不支持分块时自动退回单连接。</span></div>
-      <div><i></i><span><b>窗口图标修复</b>：图标文件里 256 像素那一帧原本是坏的，Windows 取不到就显示成默认的「崩溃」图标，现在 10 个尺寸全部重做。</span></div>
-      <div><i></i><span><b>存档管理挪到版本详情页</b>：点开某个版本就能导入存档、数据包、改结构、拖放 zip，不用再切到「模组与资源」。</span></div>
-      <div><i></i><span><b>杀毒白名单一键处理</b>：首次启动会问一次要不要加，设置页「维护与工具」里也有按钮，包里还带一个「加入白名单.bat」。系统会把启动器误报成风险程序，加进白名单就不再拦。</span></div>
+      <div><i></i><span><b>游戏打不开彻底修复</b>：以前不管你装的是 1.21 还是最新快照，它都拿同一个 Java 去跑，版本要求 21 却用 17，直接崩。现在按版本要求自动挑 Java，缺了会自动下载，内存也按你机器的实际容量自适应。</span></div>
+      <div><i></i><span><b>右键删除</b>：版本、存档、模组、资源包、光影、截图，在列表里右键就能删，删前自动备份存档。</span></div>
+      <div><i></i><span><b>皮肤库更快 + 精选</b>：新增「精选」只看热门主播皮肤，还有「只看皮肤 / 只看披风」筛选；图标加了缓存并分批加载，热门皮肤不再一进去就卡住。</span></div>
+      <div><i></i><span><b>穿搭码</b>：一套穿搭生成一串码，发给别人，他粘进「穿搭码导入」就能直接用同一套。</span></div>
+      <div><i></i><span><b>基岩版一键启动</b>：装了微软商店版基岩版的话，主界面直接点启动，没装会问你要不要打开商店。</span></div>
+      <div><i></i><span><b>自动进服务器</b>：设置里填 <code>地址:端口</code>，进游戏直接连进去，不用每次翻服务器列表（1.20 及以上版本生效）。</span></div>
+      <div><i></i><span><b>Fabric 自动补 Fabric API</b>：装 Fabric 实例时顺手把 Fabric API 一起装上，省得模组一进游戏就报缺依赖。</span></div>
+      <div><i></i><span><b>版本自定义封面</b>：版本列表右键「换封面图」，给每个版本配一张自己看的封面。</span></div>
+      <div><i></i><span><b>反馈入口</b>：设置页「反馈 / 报 Bug」，一键复制环境信息 + 日志末尾，发给作者就能定位问题。</span></div>
     </div>
   </section>
 
@@ -961,7 +964,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.9</span>
+    <span>OMC LAUNCHER 1.7.11</span>
 
     <span>Windows 10/11 x64</span>
 
