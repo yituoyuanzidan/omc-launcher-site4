@@ -558,7 +558,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.11", "pc_url": "https://aka.doubaocdn.com/s/JWPnxhUwku", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.11：修复 Java 版本对不上导致游戏打不开（按版本要求自动挑 Java、缺了自动下载，内存也按机器自适应）；新增右键删除存档 / 版本 / 模组 / 资源包 / 光影 / 截图；皮肤库加「精选」和「只看皮肤 / 只看披风」，热门皮肤改成图标缓存 + 分批加载，不再卡顿；新增穿搭码（一套穿搭生成一串码，别人粘进去就能还原）；可一键启动基岩版；设置里能固定进游戏直连指定服务器；装 Fabric 时自动补 Fabric API；版本可以自己换封面图；设置页新增反馈 / 报 Bug 入口。"}'>
+<meta name="omc-update" content='{"latest": "1.7.12", "pc_url": "https://aka.doubaocdn.com/s/Y0ewCPEHga", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.12：现在把任何文件或文件夹直接拖进 OMC 窗口，它会自己认出是模组 / 光影 / 材质包 / 存档 / 版本 / 整合包 / 皮肤，然后装到该去的目录，认不出来会红字告诉你「未知的文件或文件夹」；下载页点项目封面，能进去看这个项目的所有版本，任意挑一个直接装，带实时下载进度。"}'>
 
 </head>
 
@@ -574,7 +574,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.11</strong></span>
+    <span>版本 <strong>1.7.12</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -614,11 +614,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/JWPnxhUwku">
+      <a class="btn" href="https://aka.doubaocdn.com/s/Y0ewCPEHga">
 
         下载 Windows 版
 
-        <small>zip · 42.4 MB · 1.7.11</small>
+        <small>zip · 42.4 MB · 1.7.12</small>
 
       </a>
 
@@ -650,7 +650,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/JWPnxhUwku">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/Y0ewCPEHga">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
 
       </div>
 
@@ -700,9 +700,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/JWPnxhUwku">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/Y0ewCPEHga">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/JWPnxhUwku">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/Y0ewCPEHga">复制完整链接</button>
 
         </div>
 
@@ -716,7 +716,7 @@ footer{
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.11.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.12.zip -Algorithm SHA256
 
             </div>
 
@@ -806,17 +806,13 @@ footer{
 
   <section class="upd">
 
-        <h2>1.7.11 更新了什么<em>2026-11-09</em></h2>
+            <h2>1.7.12 更新了什么<em>2026-11-09</em></h2>
     <div class="ulist">
-      <div><i></i><span><b>游戏打不开彻底修复</b>：以前不管你装的是 1.21 还是最新快照，它都拿同一个 Java 去跑，版本要求 21 却用 17，直接崩。现在按版本要求自动挑 Java，缺了会自动下载，内存也按你机器的实际容量自适应。</span></div>
-      <div><i></i><span><b>右键删除</b>：版本、存档、模组、资源包、光影、截图，在列表里右键就能删，删前自动备份存档。</span></div>
-      <div><i></i><span><b>皮肤库更快 + 精选</b>：新增「精选」只看热门主播皮肤，还有「只看皮肤 / 只看披风」筛选；图标加了缓存并分批加载，热门皮肤不再一进去就卡住。</span></div>
-      <div><i></i><span><b>穿搭码</b>：一套穿搭生成一串码，发给别人，他粘进「穿搭码导入」就能直接用同一套。</span></div>
-      <div><i></i><span><b>基岩版一键启动</b>：装了微软商店版基岩版的话，主界面直接点启动，没装会问你要不要打开商店。</span></div>
-      <div><i></i><span><b>自动进服务器</b>：设置里填 <code>地址:端口</code>，进游戏直接连进去，不用每次翻服务器列表（1.20 及以上版本生效）。</span></div>
-      <div><i></i><span><b>Fabric 自动补 Fabric API</b>：装 Fabric 实例时顺手把 Fabric API 一起装上，省得模组一进游戏就报缺依赖。</span></div>
-      <div><i></i><span><b>版本自定义封面</b>：版本列表右键「换封面图」，给每个版本配一张自己看的封面。</span></div>
-      <div><i></i><span><b>反馈入口</b>：设置页「反馈 / 报 Bug」，一键复制环境信息 + 日志末尾，发给作者就能定位问题。</span></div>
+      <div><i></i><span><b>拖进来就自动装</b>：把 jar、zip 或者整个文件夹往 OMC 窗口里一拖，它按内部结构判断是什么——模组、光影、材质包、存档、版本、整合包、皮肤，各归各位。改过名字的也认得出来。</span></div>
+      <div><i></i><span><b>认不出来会红字提醒</b>：拖进来的东西判不出类型时，弹窗里用红字列出「未知的文件或文件夹」和原因，不会闷头乱装。</span></div>
+      <div><i></i><span><b>看项目的全部版本</b>：下载页点模组封面，进去就是这个项目的所有版本，每个都能单独装，大小和发布日期都写清楚。</span></div>
+      <div><i></i><span><b>下载进度条</b>：模组、光影、材质包下载都有实时进度和百分比，不用干等着猜。</span></div>
+      <div><i></i><span><b>上一版的修复都在</b>：Java 版本自动匹配、内存自适应、右键删除、皮肤库精选与筛选提速、穿搭码、基岩版启动、自动进服、Fabric API、自定义封面、反馈入口。</span></div>
     </div>
   </section>
 
@@ -964,7 +960,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.11</span>
+    <span>OMC LAUNCHER 1.7.12</span>
 
     <span>Windows 10/11 x64</span>
 
