@@ -558,7 +558,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.8", "pc_url": "https://aka.doubaocdn.com/s/NxXjQobDdV", "mobile_url": "", "notes": "1.7.8：自动更新整条链路重做（启动后台静默检查、断线重试、关掉即自动换上、换好后自动重新打开）；下载改 6 路并行，60MB 包 20 秒左右；修复窗口图标异常；存档管理从「模组与资源」移到版本详情页；新增杀毒白名单一键处理（首次启动问一次，设置页也有按钮，包内另带「加入白名单.bat」）。"}'>
+<meta name="omc-update" content='{"latest": "1.7.9", "pc_url": "https://aka.doubaocdn.com/s/o5a1iePUMM", "mobile_url": "", "notes": "1.7.9：修复 1.7.8 启动即报 BaseWorker 未定义的问题（那个版本打不开）；1.7.8 新增的杀毒白名单一键处理保留——首次启动会问一次，设置页「维护与工具」里也有按钮，包里还带「加入白名单.bat」。自动更新、6 路并行下载、存档管理移到版本详情页同前一版。"}'>
 
 </head>
 
@@ -574,7 +574,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.8</strong></span>
+    <span>版本 <strong>1.7.9</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -614,11 +614,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/NxXjQobDdV">
+      <a class="btn" href="https://aka.doubaocdn.com/s/o5a1iePUMM">
 
         下载 Windows 版
 
-        <small>zip · 42.4 MB · 1.7.8</small>
+        <small>zip · 42.4 MB · 1.7.9</small>
 
       </a>
 
@@ -650,7 +650,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/NxXjQobDdV">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/o5a1iePUMM">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
 
       </div>
 
@@ -700,9 +700,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/NxXjQobDdV">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/o5a1iePUMM">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/NxXjQobDdV">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/o5a1iePUMM">复制完整链接</button>
 
         </div>
 
@@ -712,11 +712,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">89eaca7efc18ae093e3441a27f6f345ba157576cb179691303332a3b7920b9ff</div>
+            <div class="hash">338929b0a15734715f83f9ab07f2071b922e96b004780ffda15c04f53222d1b3</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.8.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.9.zip -Algorithm SHA256
 
             </div>
 
@@ -806,8 +806,9 @@ footer{
 
   <section class="upd">
 
-    <h2>1.7.8 更新了什么<em>2026-11-09</em></h2>
+    <h2>1.7.9 更新了什么<em>2026-11-09</em></h2>
     <div class="ulist">
+      <div><i></i><span><b>修复启动崩溃</b>：1.7.8 打开会弹「BaseWorker is not defined」，这个版本已经修好，直接覆盖解压即可。</span></div>
       <div><i></i><span><b>自动更新整条链路重做</b>：启动 3 秒后后台静默检查，失败自动重试；不点检查更新也会自己发现新版。下载完成后关掉启动器就自动换上，换好会自己重新打开。</span></div>
       <div><i></i><span><b>更新下载提速</b>：改成 6 路分块并行下载，60MB 的包 20 秒左右下完，服务器不支持分块时自动退回单连接。</span></div>
       <div><i></i><span><b>窗口图标修复</b>：图标文件里 256 像素那一帧原本是坏的，Windows 取不到就显示成默认的「崩溃」图标，现在 10 个尺寸全部重做。</span></div>
@@ -830,7 +831,7 @@ footer{
 
       <div class="dbody">
 
-        PyInstaller 打包的 exe 经常被误判成风险程序，这是启发式扫描的误报。1.7.8 起可以直接点设置页的「加入杀毒白名单」，或者右键以管理员身份运行包里的「加入白名单.bat」，省得手动找入口。双击没反应通常是压缩包没解压完就直接在压缩包里双击了，必须先完整解压。
+        PyInstaller 打包的 exe 经常被误判成风险程序，这是启发式扫描的误报。1.7.9 起可以直接点设置页的「加入杀毒白名单」，或者右键以管理员身份运行包里的「加入白名单.bat」，省得手动找入口。双击没反应通常是压缩包没解压完就直接在压缩包里双击了，必须先完整解压。
 
       </div>
 
@@ -960,7 +961,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.8</span>
+    <span>OMC LAUNCHER 1.7.9</span>
 
     <span>Windows 10/11 x64</span>
 
