@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OMC 启动器 · 下载</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23191D21'/%3E%3Crect x='2' y='2' width='12' height='5' fill='%236FA84A'/%3E%3Crect x='2' y='7' width='12' height='7' fill='%2380573B'/%3E%3Crect x='5' y='9' width='3' height='3' fill='%23A8794F'/%3E%3C/svg%3E">
+<style>
+:root{
+  --rock:#191D21;
+  --stone:#232A2F;
+  --stone2:#2C343A;
+  --line:#3A454C;
+  --grass:#6FA84A;
+  --grass-d:#4E7C33;
+  --gold:#DBB13C;
+  --text:#E9EDE4;
+  --muted:#98A69B;
+  --warn:#D06A4E;
+  --body:#C6D0C4;
+  --shadow:#0B0F0C;
+  --code-bg:#1E2529;
+  --chip:#2A3438;
+}
+html[data-theme="light"]{
+  --rock:#F3F0E5;
+  --stone:#FFFDF6;
+  --stone2:#EAE6D8;
+  --line:#C6C0AE;
+  --grass:#4E7C33;
+  --grass-d:#3C6027;
+  --gold:#9A6E10;
+  --text:#1B2126;
+  --muted:#6C766C;
+  --warn:#A9472C;
+  --body:#333B36;
+  --shadow:#BDB7A4;
+  --code-bg:#EDE9DB;
+  --chip:#E3DECE;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  background:var(--rock);
+  color:var(--text);
+  font-family:"PingFang SC","Microsoft YaHei","Noto Sans SC",system-ui,sans-serif;
+  font-size:15px;
+  line-height:1.7;
+  padding:0 16px 56px;
+  transition:background-color .18s ease, color .18s ease;
+}
+.wrap{max-width:980px;margin:0 auto}
+
+/* 顶部规格条 */
+.bar{
+  display:flex;flex-wrap:wrap;gap:8px 16px;
+  align-items:center;
+  border-bottom:1px solid var(--line);
+  padding:14px 0 11px;
+  font-family:Consolas,"Courier New",monospace;
+  font-size:12.5px;
+  color:var(--muted);
+  letter-spacing:.02em;
+}
+.bar strong{color:var(--grass);font-weight:600}
+.badge{
+  display:inline-block;
+  font-size:11.5px;
+  padding:2px 8px;
+  border:1px solid var(--grass-d);
+  color:var(--grass);
+  border-radius:2px;
+  letter-spacing:.04em;
+}
+.spacer{flex:1 1 auto}
+.tbtn{
+  font-family:inherit;font-size:12px;
+  background:var(--stone2);
+  color:var(--text);
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:6px 11px;
+  cursor:pointer;
+  min-height:34px;
+}
+.tbtn:hover{border-color:var(--gold)}
+.tbtn:focus-visible{outline:3px solid var(--grass);outline-offset:2px}
+
+/* Hero */
+.hero{padding:34px 0 28px;border-bottom:1px solid var(--line)}
+.blocks{display:flex;gap:0;margin-bottom:22px}
+.blocks svg{width:52px;height:52px;display:block;image-rendering:pixelated}
+h1{
+  font-size:clamp(33px,9vw,56px);
+  line-height:1.08;
+  letter-spacing:-.02em;
+  font-weight:700;
+  margin-bottom:12px;
+}
+h1 span{color:var(--grass)}
+.lede{max-width:34em;color:var(--body);font-size:15.5px}
+.lede b{color:var(--text);font-weight:600}
+.primary{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-top:24px}
+.btn{
+  display:inline-flex;flex-direction:column;gap:2px;
+  padding:13px 22px;
+  background:var(--grass);
+  color:#0E1410;
+  border:2px solid var(--grass-d);
+  border-radius:4px;
+  box-shadow:4px 4px 0 var(--shadow);
+  text-decoration:none;
+  font-weight:700;
+  line-height:1.25;
+  transition:transform .1s ease, box-shadow .1s ease;
+}
+.btn:hover{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--shadow)}
+.btn:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.btn small{font-weight:400;font-size:12px;opacity:.78;font-family:Consolas,monospace}
+.btn.ghost{background:var(--stone2);color:var(--text);border-color:var(--line)}
+.note{font-size:13px;color:var(--muted);font-family:Consolas,monospace}
+
+/* 区块标题 */
+h2{font-size:19px;font-weight:700;letter-spacing:.01em;margin-bottom:4px}
+h2 em{font-style:normal;color:var(--muted);font-weight:400;font-size:13px;
+  font-family:Consolas,monospace;margin-left:8px}
+
+/* 设备对照 */
+.pick{padding:32px 0 6px}
+.qa{margin-top:16px;border-top:1px solid var(--line)}
+.q{display:grid;grid-template-columns:1fr;gap:4px 20px;padding:14px 0;border-bottom:1px solid var(--line)}
+.q .ask{color:var(--body)}
+.q .ans{color:var(--text);font-size:14.5px}
+.q .ans a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(219,177,60,.45)}
+.q .ans a:hover{border-bottom-color:var(--gold)}
+.tag{font-family:Consolas,monospace;font-size:12.5px;color:var(--muted);
+  background:var(--code-bg);padding:1px 5px;border-radius:2px}
+
+/* 下载卡 */
+.dls{padding:32px 0 6px}
+.cards{display:grid;grid-template-columns:1fr;gap:16px;margin-top:16px}
+.card{
+  border:2px solid var(--line);
+  background:var(--stone);
+  border-radius:4px;
+  padding:18px 18px 18px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.card h3{font-size:16px;font-weight:700;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.wh{
+  font-family:Consolas,monospace;font-size:11.5px;color:var(--muted);
+  border:1px solid var(--line);border-radius:2px;padding:1px 6px;font-weight:400;
+}
+.card p{font-size:13.5px;color:var(--muted)}
+.dlrow{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap}
+a.go{
+  flex:1 1 130px;
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:40px;
+  font-family:Consolas,monospace;font-size:13px;
+  color:var(--gold);
+  text-decoration:none;
+  border:2px solid var(--line);
+  padding:8px 12px;border-radius:3px;text-align:center;
+  transition:border-color .15s ease, background-color .15s ease;
+}
+a.go:hover{border-color:var(--gold);background:var(--chip)}
+a.go:focus-visible{outline:3px solid var(--grass);outline-offset:2px}
+.copy{
+  flex:0 0 auto;
+  min-width:96px;min-height:40px;
+  background:var(--stone2);color:var(--text);
+  border:2px solid var(--line);border-radius:3px;
+  font-size:12.5px;font-family:inherit;cursor:pointer;
+  padding:6px 10px;
+}
+.copy:hover{border-color:var(--grass)}
+.copy:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* 折叠 */
+details{border-top:1px solid var(--line)}
+details summary{
+  cursor:pointer;
+  list-style:none;
+  padding:9px 2px;
+  font-family:Consolas,monospace;
+  font-size:12.5px;
+  color:var(--muted);
+  display:flex;justify-content:space-between;align-items:center;
+  min-height:34px;
+}
+details summary::-webkit-details-marker{display:none}
+details summary::after{content:"+";color:var(--muted);font-size:14px}
+details[open] summary::after{content:"−"}
+details summary:hover{color:var(--text)}
+details summary:focus-visible{outline:3px solid var(--grass);outline-offset:-2px}
+.dbody{padding:2px 2px 12px}
+.hash{
+  font-family:Consolas,monospace;font-size:11.5px;
+  line-height:1.55;word-break:break-all;
+  color:var(--muted);background:var(--code-bg);
+  padding:8px 9px;border-radius:3px;user-select:all;
+}
+
+/* 自动更新提示条 */
+.auto{
+  margin-top:22px;display:flex;gap:10px;align-items:flex-start;
+  border:1px solid var(--line);border-left:4px solid var(--grass);
+  background:var(--stone);
+  padding:13px 15px;
+}
+.auto svg{flex:none;width:18px;height:18px;margin-top:3px}
+.auto div{font-size:13.8px;color:var(--body)}
+.auto b{color:var(--text)}
+
+/* 更新日志 */
+.upd{padding:34px 0 4px}
+.ulist{display:flex;flex-direction:column;gap:10px;margin-top:14px;max-width:46em}
+.ulist div{display:flex;gap:10px;font-size:14.5px;line-height:1.6}
+.ulist i{flex:none;width:4px;background:var(--grass);margin:5px 0;display:block}
+.ulist span{color:var(--body)}
+
+/* FAQ */
+.faq{padding:34px 0 4px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-of-type{border-top:1px solid var(--line);margin-top:14px}
+.faq details summary{
+  font-family:inherit;font-size:14.5px;color:var(--text);
+  padding:13px 2px;line-height:1.5;gap:16px;align-items:flex-start;
+}
+.faq details summary::after{margin-top:2px;flex:none}
+.faq .dbody{font-size:14px;color:var(--body);line-height:1.75;max-width:46em}
+
+/* 扫码 */
+.scan{padding:34px 0 4px}
+.scanbox{
+  margin-top:16px;display:flex;gap:20px;align-items:center;flex-wrap:wrap;
+  border:2px solid var(--line);background:var(--stone);
+  border-radius:4px;padding:18px;
+}
+#qrholder{
+  flex:none;width:132px;height:132px;
+  background:var(--code-bg);border:1px solid var(--line);
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;color:var(--muted);text-align:center;padding:8px;
+}
+#qrholder svg, #qrholder img, #qrholder table{display:block;margin:0 auto;max-width:100%}
+.scantext{flex:1 1 240px;min-width:0;font-size:14px;color:var(--body)}
+.scantext .url{
+  display:block;margin-top:8px;
+  font-family:Consolas,monospace;font-size:12.5px;
+  word-break:break-all;color:var(--muted);
+}
+.scanrow{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+
+/* 限制 */
+.limit{padding:34px 0 4px}
+.boxbox{
+  margin-top:16px;border:1px solid var(--line);border-left:4px solid var(--warn);
+  background:var(--stone);padding:16px 18px;max-width:52em;
+}
+.boxbox h3{font-size:15px;margin-bottom:8px;color:var(--warn)}
+.boxbox ul{margin:0;padding-left:18px}
+.boxbox li{font-size:14px;color:var(--body);margin-bottom:5px}
+
+footer{
+  margin-top:40px;padding-top:16px;border-top:1px solid var(--line);
+  font-family:Consolas,monospace;font-size:12px;color:var(--muted);
+  display:flex;flex-wrap:wrap;gap:6px 16px;
+}
+
+@media(min-width:820px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .q{grid-template-columns:210px 1fr;align-items:baseline}
+}
+@media(prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important}
+  .btn:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- 顶部规格 -->
+  <div class="bar">
+    <span>OMC LAUNCHER</span>
+    <span>版本 <strong>1.7.2</strong></span>
+    <span class="badge">稳定正式版</span>
+    <span class="spacer"></span>
+    <button class="tbtn" id="themebtn" type="button" aria-live="polite">切到浅色</button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="blocks" aria-hidden="true">
+      <svg viewBox="0 0 16 16"><rect width="16" height="16" fill="#191D21"/><rect x="0" y="2" width="16" height="5" fill="#6FA84A"/><rect x="0" y="7" width="16" height="9" fill="#80573B"/><rect x="3" y="9" width="2" height="2" fill="#A8794F"/><rect x="9" y="11" width="2" height="2" fill="#6E4A31"/><rect x="12" y="3" width="2" height="2" fill="#4E7C33"/></svg>
+      <svg viewBox="0 0 16 16"><rect width="16" height="16" fill="#191D21"/><rect x="0" y="2" width="16" height="5" fill="#7CB455"/><rect x="0" y="7" width="16" height="9" fill="#8D6244"/><rect x="2" y="12" width="2" height="2" fill="#A8794F"/><rect x="6" y="9" width="2" height="2" fill="#6E4A31"/><rect x="11" y="3" width="2" height="2" fill="#5C8C3C"/></svg>
+      <svg viewBox="0 0 16 16"><rect width="16" height="16" fill="#191D21"/><rect x="0" y="2" width="16" height="5" fill="#6FA84A"/><rect x="0" y="7" width="16" height="9" fill="#7A5236"/><rect x="4" y="10" width="3" height="3" fill="#A8794F"/><rect x="10" y="3" width="2" height="2" fill="#4E7C33"/></svg>
+      <svg viewBox="0 0 16 16"><rect width="16" height="16" fill="#191D21"/><rect x="0" y="2" width="16" height="5" fill="#7CB455"/><rect x="0" y="7" width="16" height="9" fill="#80573B"/><rect x="8" y="12" width="2" height="2" fill="#6E4A31"/><rect x="3" y="4" width="2" height="2" fill="#5C8C3C"/></svg>
+    </div>
+    <h1>OMC <span>启动器</span></h1>
+    <p class="lede">
+      一个给自己的 Minecraft Java 版用的启动器：装版本、装模组、装光影、装存档、装数据包，
+      一条链接点下去就完事。<b>电脑上运行，手机也能遥控。</b>
+    </p>
+    <div class="primary">
+      <a class="btn" href="https://aka.doubaocdn.com/s/u3m6iAYNbr">
+        下载 Windows 版
+        <small>zip · 41.1 MB · 1.7.2</small>
+      </a>
+      <a class="btn ghost" href="#mobile">
+        OMC 手机端
+        <small>无需安装 · 同 WiFi 直连</small>
+      </a>
+      <span class="note">Windows 版解压后双击 OMC.exe，不用安装</span>
+    </div>
+  </section>
+
+  <!-- 选哪个 -->
+  <section class="pick">
+    <h2>装哪一个<em>先看你是哪种情况</em></h2>
+    <div class="qa">
+      <div class="q">
+        <div class="ask">我用 Windows 电脑玩 MC</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/u3m6iAYNbr">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+      </div>
+      <div class="q">
+        <div class="ask">我想在手机上用 OMC</div>
+        <div class="ans">不用装 App。电脑上开着 OMC，手机连同一个 WiFi，浏览器打开 <span class="tag">http://电脑IP:8899</span>，再点页面里的「添加到手机桌面」，桌面上就多一个 OMC 图标。步骤见<a href="#mobile">下面这一节</a>。</div>
+      </div>
+      <div class="q">
+        <div class="ask">我要手机不接电脑、自己跑 Java 版</div>
+        <div class="ans">OMC 做不到这个，它的手机端只是遥控电脑的网页。得用第三方启动器（比如 FCL），它跟 OMC 是两套东西，本站不提供。</div>
+      </div>
+      <div class="q">
+        <div class="ask">我用的是 Win7 / Win8 / 32 位系统</div>
+        <div class="ans">用不了 Windows 版。界面框架最低要求 Win10 64 位，这个限制改不掉。这类机器建议用 HMCL 或 PCL2。</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载卡 -->
+  <section class="dls">
+    <h2>全部下载<em>两个包，按需取</em></h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Windows 版 <span class="wh">x64 · 41.1 MB</span></h3>
+        <p>成品包，解压即用。光影、存档、数据包、模组都能在里面下和装，带自动更新。</p>
+        <div class="dlrow">
+          <a class="go" href="https://aka.doubaocdn.com/s/u3m6iAYNbr">下载 zip</a>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/u3m6iAYNbr">复制完整链接</button>
+        </div>
+        <details>
+          <summary>下载后校验 SHA256</summary>
+          <div class="dbody">
+            <div class="hash">0681ee709111b10667de490e28b4f88ed78f81f1ab335af21affd400b1cb733e</div>
+            <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.2.zip -Algorithm SHA256
+            </div>
+          </div>
+        </details>
+      </div>
+      <div class="card">
+        <h3>手机端 <span class="wh">OMC 手机控制台</span></h3>
+        <p>OMC 自带的手机端，不是另一个 App。电脑开着启动器，手机浏览器连上去就是一个能点的界面，可以添加到手机桌面当图标用。</p>
+        <div class="dlrow">
+          <a class="go" href="#mobile">看怎么连上</a>
+          <button class="copy" type="button" data-copy="http://电脑IP:8899">复制地址格式</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="auto">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 0 1 13.7-5.6L20 8" stroke="#6FA84A" stroke-width="2" fill="none" stroke-linecap="square"/><path d="M20 4v4h-4" stroke="#6FA84A" stroke-width="2" fill="none"/><path d="M20 12a8 8 0 0 1-13.7 5.6L4 16" stroke="#6FA84A" stroke-width="2" fill="none" stroke-linecap="square"/><path d="M4 20v-4h4" stroke="#6FA84A" stroke-width="2" fill="none"/></svg>
+      <div>
+        <b>装上之后不用再回来看这个页面。</b>
+        Windows 版启动后会自动联网检查新版本，有新包就在后台自己下，下完问你要不要重启换上；设置里可以关掉这个开关。
+      </div>
+    </div>
+  </section>
+
+  <!-- 手机端 -->
+  <section class="mobile" id="mobile">
+    <h2>手机上怎么用 OMC<em>不需要装任何 App</em></h2>
+    <div class="ulist" style="margin-top:16px">
+      <div><i></i><span><b>电脑上打开 OMC</b>，记下它给出的局域网地址和端口，默认是 8899。</span></div>
+      <div><i></i><span><b>手机连同一个 WiFi</b>，浏览器里输 <span class="tag">http://电脑IP:8899</span>，例如 <span class="tag">http://192.168.1.5:8899</span>。</span></div>
+      <div><i></i><span><b>点页面里的「添加到手机桌面」</b>，手机桌面就多一个 OMC 图标，以后点开直接用，看着跟 App 一样。</span></div>
+    </div>
+    <div class="boxbox" style="border-left-color:var(--grass);margin-top:20px">
+      <h3 style="color:var(--grass)">为什么没有安卓 APK</h3>
+      <ul>
+        <li>OMC 没做安卓原生 App，手机端就是启动器自己开的那个本地网页，界面和功能跟着电脑上那份程序走。</li>
+        <li>所以手机端显示的版本 = 你电脑上装的版本。电脑更新过了，手机刷新一下就是新的，不用另外装。</li>
+        <li>手机和电脑要在同一个路由器下，跨网或用流量都连不上。</li>
+        <li>如果要在手机上脱离电脑自己跑 Java 版 Minecraft，只能用第三方启动器（比如 FCL），那不是 OMC，本站不提供。</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 更新日志 -->
+  <section class="upd">
+    <h2>1.7.2 更新了什么<em>2026-11-08</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>联网自动更新</b>：启动后静默检查，有新版本自己下，下完问一句要不要重启换上。设置里可以关。</span></div>
+      <div><i></i><span><b>官方最新版本卡片</b>：启动页顶部显示 Mojang 当前最新正式版的版本号和官方封面，官方发新版自己就变。</span></div>
+      <div><i></i><span><b>存档数据包管理</b>：点选存档后可查看已装数据包、导入 zip 或文件夹、删除。</span></div>
+      <div><i></i><span><b>结构 .nbt 导入</b>：丢进存档的 <span class="tag">generated/structures</span>，游戏里直接 <span class="tag">/place structure</span>。</span></div>
+      <div><i></i><span><b>全部改成拖拽导入</b>：模组、资源包、光影、存档、皮肤，拖进去就装上。</span></div>
+      <div><i></i><span><b>修下载跳转</b>：分享短链是 302 跳转，之前更新包会下载失败，已修。</span></div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <h2>常见问题</h2>
+    <details>
+      <summary>打开 OMC.exe 被杀毒软件报毒、或者双击没反应怎么办</summary>
+      <div class="dbody">
+        PyInstaller 打包的 exe 经常被误判成风险程序，这是启发式扫描的误报。把整个解压目录加进杀毒软件的白名单，或者先在文件夹里右键 OMC.exe 允许运行。双击没反应通常是压缩包没解压完就直接在压缩包里双击了，必须先完整解压。
+      </div>
+    </details>
+    <details>
+      <summary>第一次打开没有 Java，会不会开不了游戏</summary>
+      <div class="dbody">
+        不会。启动器会先找系统里的 Java，找不到就自己下载一个 JRE 17 放到自己的数据目录（Windows 上是 <span class="tag">%USERPROFILE%\.simple_mc_launcher\java\jdk17</span>），下完自动填好路径。也可以在设置里手动指定已有的 Java。
+      </div>
+    </details>
+    <details>
+      <summary>手机端怎么连，为什么连不上</summary>
+      <div class="dbody">
+        手机和电脑必须连同一个路由器（同一个 WiFi）。电脑上开着 OMC，看页面显示的地址，一般是 <span class="tag">http://电脑局域网IP:8899</span>，手机浏览器直接输进去。连不上多半是 Windows 防火墙拦了这个端口，放行一次即可；用手机流量、或者电脑连的是热点另一侧，都不通。
+      </div>
+    </details>
+    <details>
+      <summary>FCL 装完开游戏很卡、或者崩</summary>
+      <div class="dbody">
+        FCL 是在手机上跑桌面版 Java，很吃内存和芯片。进 FCL 设置里把分配给游戏的内存调到 2G 左右（机身内存 8G 以上再往上加），渲染器优先选适合机型的那一档，光影基本别开。低端机跑 1.16 以上版本通常比较勉强。
+      </div>
+    </details>
+    <details>
+      <summary>自动更新会不会把我自己改过的文件覆盖掉</summary>
+      <div class="dbody">
+        会。更新是整目录覆盖，只有你自己放在安装目录外面的东西不受影响。配置、存档、模组库都在 <span class="tag">.simple_mc_launcher</span> 数据目录里，不在安装目录，所以不会被覆盖。如果你手动改过安装目录里的程序文件，建议关掉设置里的自动更新。
+      </div>
+    </details>
+    <details>
+      <summary>为什么 Mac 上不能自动更新</summary>
+      <div class="dbody">
+        macOS 的 .app 是签名过的包，程序自己替换自己会被系统拒绝。所以在 Mac 上检测到新版只会提示你去下载，然后手动把新的 OMC.app 拖进应用程序目录覆盖。Windows 和 Linux 是可以自己换的。
+      </div>
+    </details>
+  </section>
+
+  <!-- 扫码 -->
+  <section class="scan">
+    <h2>手机扫码打开本页</h2>
+    <div class="scanbox">
+      <div id="qrholder">二维码生成中</div>
+      <div class="scantext">
+        用手机相机或扫码工具扫左边，直接打开这个下载页，省得在手机上敲链接。
+        <span class="url" id="pageurl"></span>
+        <div class="scanrow">
+          <button class="copy" type="button" id="copyurl">复制本页链接</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 限制 -->
+  <section class="limit">
+    <h2>先说清楚做不到的</h2>
+    <div class="boxbox">
+      <h3>这几件事目前没有</h3>
+      <ul>
+        <li>没有安卓版的 OMC 本体。手机上要玩 Java 版只能用 FCL，OMC 的手机部分只是遥控电脑的网页。</li>
+        <li>没有能浏览的在线存档库。CurseForge 的存档分类要 API Key、网页又被挡，所以做成「粘贴 zip 直链一键安装」。</li>
+        <li>macOS 上不支持自动替换更新，得手动把新的 <span class="tag">OMC.app</span> 拖进应用程序目录。</li>
+        <li>手机遥控走局域网，跨网、用流量都连不上。</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <span>OMC LAUNCHER 1.7.2</span>
+    <span>Windows 10/11 x64</span>
+    <span>Minecraft Java Edition</span>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  /* ---------- 主题切换 ---------- */
+  var root = document.documentElement;
+  var tbtn = document.getElementById('themebtn');
+  function applyTheme(t){
+    root.setAttribute('data-theme', t);
+    tbtn.textContent = (t === 'dark') ? '切到浅色' : '切到深色';
+  }
+  var saved = null;
+  try { saved = localStorage.getItem('omc-theme'); } catch(e){}
+  if (saved === 'light' || saved === 'dark') {
+    applyTheme(saved);
+  } else {
+    var prefersLight = false;
+    try {
+      prefersLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
+    } catch(e){}
+    applyTheme(prefersLight ? 'light' : 'dark');
+  }
+  tbtn.addEventListener('click', function(){
+    var next = (root.getAttribute('data-theme') === 'dark') ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem('omc-theme', next); } catch(e){}
+  });
+
+  /* ---------- 复制 ---------- */
+  function flash(btn, ok){
+    var old = btn.getAttribute('data-label') || btn.textContent;
+    btn.setAttribute('data-label', old);
+    btn.textContent = ok ? '已复制' : '复制失败';
+    setTimeout(function(){
+      btn.textContent = btn.getAttribute('data-label');
+    }, 1600);
+  }
+  function copyText(text, btn){
+    function fallback(){
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.position = 'fixed';
+      ta.style.top = '-1000px';
+      document.body.appendChild(ta);
+      ta.select();
+      var ok = false;
+      try { ok = document.execCommand('copy'); } catch(e){ ok = false; }
+      document.body.removeChild(ta);
+      flash(btn, ok);
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){
+        flash(btn, true);
+      }, fallback);
+    } else {
+      fallback();
+    }
+  }
+  function absUrl(u){
+    if (!u) { return u; }
+    if (u.indexOf('://') >= 0 || u.indexOf('mailto:') === 0) { return u; }
+    var base = pageUrl.replace(/[^\/]*$/, '');
+    return base + u.replace(/^[.\/]+/, '');
+  }
+
+  var copyBtns = document.querySelectorAll('[data-copy]');
+  for (var i = 0; i < copyBtns.length; i++) {
+    (function(b){
+      b.addEventListener('click', function(){
+        copyText(absUrl(b.getAttribute('data-copy')), b);
+      });
+    })(copyBtns[i]);
+  }
+
+  /* ---------- 本页地址 ---------- */
+  var pageUrl = '';
+  try { pageUrl = window.location.href.split('#')[0]; } catch(e){}
+  var urlEl = document.getElementById('pageurl');
+  if (urlEl) { urlEl.textContent = pageUrl; }
+  var copyUrlBtn = document.getElementById('copyurl');
+  if (copyUrlBtn) {
+    copyUrlBtn.addEventListener('click', function(){
+      copyText(pageUrl, copyUrlBtn);
+    });
+  }
+
+  /* ---------- 二维码 ---------- */
+  var holder = document.getElementById('qrholder');
+  function qrFallback(){
+    if (!holder) { return; }
+    holder.innerHTML = '';
+    holder.style.fontSize = '12px';
+    holder.style.padding = '10px';
+    holder.textContent = '二维码没能生成，直接复制上面的链接即可。';
+  }
+  function renderQr(){
+    if (!holder) { return; }
+    try {
+      var qr = qrcode(0, 'M');
+      qr.addData(pageUrl);
+      qr.make();
+      holder.innerHTML = qr.createSvgTag({ cellSize: 4, margin: 2, scalable: true });
+      holder.style.background = '#FFFFFF';
+      holder.style.padding = '4px';
+    } catch(e) {
+      qrFallback();
+    }
+  }
+  var qrScript = document.createElement('script');
+  qrScript.src = 'https://fastly.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js';
+  qrScript.async = true;
+  qrScript.onload = renderQr;
+  qrScript.onerror = qrFallback;
+  document.body.appendChild(qrScript);
+})();
+</script>
+</body>
+</html>
