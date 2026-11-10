@@ -22,7 +22,7 @@ on:
       - ".github/workflows/build-macos.yml"
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -101,3 +101,15 @@ jobs:
             src/ver.txt
           retention-days: 90
           if-no-files-found: error
+
+      # 同时发到 Release：资源是公开直链，别人不用登录 GitHub 也能直接下载
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: macos-${{ matrix.tag }}-v${{ env.VER }}
+          name: OMC macOS ${{ env.VER }} (${{ matrix.tag }})
+          body: |
+            OMC 启动器 macOS ${{ matrix.tag }} 版，版本号 ${{ env.VER }}。
+            解压后把 OMC.app 拖进「应用程序」。没做 Apple 签名/公证，
+            首次打开请在 Finder 里右键 → 打开，或在「系统设置 → 隐私与安全性」里点“仍要打开”。
+          files: src/OMC-macOS-${{ matrix.tag }}-*.zip
+          fail_on_unmatched_files: true
