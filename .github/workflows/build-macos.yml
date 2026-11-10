@@ -26,9 +26,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - runner: macos-14
+          - runner: macos-15
             tag: arm64
-          - runner: macos-13
+          - runner: macos-15-intel
             tag: x64
     runs-on: ${{ matrix.runner }}
     steps:
