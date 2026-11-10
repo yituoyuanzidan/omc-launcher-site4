@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.38", "pc_url": "https://aka.doubaocdn.com/s/8IHZGUWllg", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.38：多了一整页「工具」——版本备份、模组冲突检测、日志诊断、Java 管理、批量导入导出、收藏夹、截图相册、主题商店，八块在一个页面里。手机连电脑也顺手改好了：地址会自己挑对网卡，手机页面上还列出备用地址。"}'>
+<meta name="omc-update" content='{"latest": "1.7.39", "pc_url": "https://aka.doubaocdn.com/s/XX16QsaLzW", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.39：工具页多了第九个页签「缓存清理」——联网缓存、预告片缓存、临时解压残留、下载残片、音乐缓存五类一起扫出来，勾上就删，光临时残留这一项就常见几百 MB 到几个 GB。深色界面整片改成深色半透明，壁纸能透出来；在线搜歌加到「我的列表」以前点了没反应，修好了，下载时还会显示百分比进度条；设置里能一键把启动器加到桌面；低配电脑和远程桌面会自动少加载点东西；另外补了 Win7 / Win8 / 8.1 的老系统专用版。注意这一版是 Windows 更新，Linux 和 macOS 的包暂时还是 1.7.38。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.38</strong></span>
+    <span>版本 <strong>1.7.39</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/8IHZGUWllg">
+      <a class="btn" href="https://aka.doubaocdn.com/s/XX16QsaLzW">
 
         下载 Windows 版
 
-        <small>zip · 66.9 MB · 1.7.38</small>
+        <small>zip · 68.4 MB · 1.7.39</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/8IHZGUWllg">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/XX16QsaLzW">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/6XwstbD78m">老系统专用版</a>。</div>
 
       </div>
 
@@ -730,21 +730,21 @@ footer{
 
   <section class="dls">
 
-    <h2>全部下载<em>Windows / Linux / macOS 三平台，外加手机端</em></h2>
+    <h2>全部下载<em>Windows / Linux / macOS 三平台，外加老系统版和手机端</em></h2>
 
     <div class="cards">
 
       <div class="card">
 
-        <h3>Windows 版 <span class="wh">x64 · 66.9 MB</span></h3>
+        <h3>Windows 版 <span class="wh">x64 · 68.4 MB</span></h3>
 
-        <p>成品包，解压即用。光影、存档、数据包、模组都能在里面下和装，带自动更新。</p>
+        <p>成品包，解压即用。光影、存档、数据包、模组都能在里面下和装，带自动更新。需要 Windows 10 / 11（64 位）。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/8IHZGUWllg">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/XX16QsaLzW">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/8IHZGUWllg">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/XX16QsaLzW">复制完整链接</button>
 
         </div>
 
@@ -754,11 +754,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">B87BAD0C6670BF6B6839F43AB39D297344CCF303693B9B914424FA209676633B</div>
+            <div class="hash">8479663623D6C083923E27BE2CE60BEC2F3682277447F76EA3F2A6C715881C58</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.38.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.39.zip -Algorithm SHA256
 
             </div>
 
@@ -770,9 +770,49 @@ footer{
 
       <div class="card">
 
+        <h3>Windows 老系统版 <span class="wh">Win7 / 8 / 8.1 · x64 · 57.8 MB</span></h3>
+
+        <p>给还在 Win7 SP1、Win8、Win8.1 的电脑用。界面和功能跟标准版一致，只是底下换成 Qt5 内核，因为这些系统跑不了新版 Qt6。历史记录里那种「只是挪挪位置、不改变功能」的补丁做了不少，这一版是把界面整套对齐过去的第一版。</p>
+
+        <div class="dlrow">
+
+          <a class="go" href="https://aka.doubaocdn.com/s/6XwstbD78m">下载 zip</a>
+
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/6XwstbD78m">复制完整链接</button>
+
+        </div>
+
+        <details>
+
+          <summary>下载后校验 SHA256</summary>
+
+          <div class="dbody">
+
+            <div class="hash" id="w7hash">394452CB7B660ED9B003FC39050D51890B149C8DAAFEA2A9E644BF3C85BA3335</div>
+
+            <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
+
+              Windows: Get-FileHash .\OMC-Win7-x64-1.7.39.zip -Algorithm SHA256
+
+            </div>
+
+          </div>
+
+        </details>
+
+        <div style="font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.7">
+
+          要求 Windows 7 SP1 及以上（64 位）。Vista / XP 连 Qt5 运行库都加载不了，装了也开不起来，会弹一句提示就退出。系统太老的机器，建议先把系统升到 Win7 SP1 或者干脆用标准版配 Win10。
+
+        </div>
+
+      </div>
+
+      <div class="card">
+
         <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。</p>
+        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.39 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -806,7 +846,7 @@ footer{
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。</p>
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.39 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -937,6 +977,13 @@ footer{
   <section class="upd">
     <h2>1.7.38 更新了什么<em>2026-11-10</em></h2>
     <div class="ulist">
+      <div><i></i><span><b>工具页多了「缓存清理」（1.7.39 新增）</b>：联网缓存、预告片缓存、临时解压残留、下载残片、音乐缓存五类一起扫出来，各自标出占用多少、干什么用的，勾上就删。临时解压残留是导入模组或存档中途异常退出留下的，光这一项常见几百 MB 到几个 GB，以前得自己翻文件夹找。</span></div>
+      <div><i></i><span><b>深色界面改成深色半透明（1.7.39 改）</b>：整片界面从实色换成带通透感的深色，自定义壁纸能透出来，文字对比度保持原样。下拉列表、右键菜单、悬浮提示这三处保持实色，不然叠在壁纸上会看不清。</span></div>
+      <div><i></i><span><b>在线搜歌加到「我的列表」修好了（1.7.39 修）</b>：以前点菜单里那一项，界面完全没反应——实际是传错了参数，异常被静默吞掉。现在点了就真的下载并加进列表，下载时底部还会显示百分比进度条。顺手把后缀改对了：iTunes 给的实际是 m4a，以前一律存成 mp3。</span></div>
+      <div><i></i><span><b>设置里能一键加到桌面（1.7.39 新增）</b>：没有快捷方式的电脑，点一下就在桌面生成一个；已经有会先问要不要覆盖。桌面被 OneDrive 或企业策略接管导致失败时，会明确说明原因，而不是弹一句「失败」。</span></div>
+      <div><i></i><span><b>Win7 / 8 / 8.1 有专用版了（1.7.39 新增）</b>：新版 Qt6 从技术上就不支持 Win7 及更早系统，所以另做了一个 Qt5 内核的老系统版，界面、功能、工具页九个页签都在。Vista / XP 连 Qt5 运行库都加载不了，只能提示不支持。</span></div>
+      <div><i></i><span><b>启动前先自检（1.7.39 新增）</b>：系统版本、内存、磁盘空间、CPU 指令集、32 位还是 64 位，开跑之前先查一遍，不合格就说清楚缺什么、该怎么办，而不是双击之后一闪就没。低配机器和远程桌面会自动少加载预告片一类吃资源的东西。</span></div>
+      <div><i></i><span><b>两处老毛病修掉了（1.7.39 修）</b>：启动失败时的提示以前被一句短文案盖住，看不出真实原因；杀毒白名单提示框按 Esc 或点关闭，以前会被当成「以后不再提醒」记下来，现在只有明确点「不用了」才会记。</span></div>
       <div><i></i><span><b>多了一整页「工具」（1.7.38 新增）</b>：左栏多了「工具」这一项，进去是八个页签：版本备份、模组冲突检测、日志诊断、Java 管理、批量导入导出、收藏夹、截图相册、主题商店。以前这些事要么得自己翻文件夹，要么根本做不到，现在都在这一页里点一下。</span></div>
       <div><i></i><span><b>版本备份与还原（1.7.38 新增）</b>：把一整个版本目录打成 zip 存在存档目录下的 backups 里，还原的时候会先把现在这份改名成「还原前-时间」留一份底，不会一键就把能用的版本弄没。</span></div>
       <div><i></i><span><b>模组冲突检测（1.7.38 新增）</b>：直接读 jar 里的 fabric / quilt / forge 元数据，把版本要求对不上、缺前置、重复装了同一个、加载器不匹配这几类问题列出来，不用再靠看崩溃日志猜。</span></div>
@@ -1096,9 +1143,9 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.38</span>
+    <span>OMC LAUNCHER 1.7.39</span>
 
-    <span>Windows 10/11 x64</span>
+    <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
     <span>Minecraft Java Edition</span>
 
