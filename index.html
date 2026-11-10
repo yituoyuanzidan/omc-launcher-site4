@@ -558,7 +558,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.25", "pc_url": "https://aka.doubaocdn.com/s/ISW7g9rbQU", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.25：附魔计算器换成 RNG 附魔操控——读存档或填种子、录几组附魔台数字就能反推种子，直接告诉你点第几格拿目标附魔；好友私聊改成在启动器里直接聊；光影和存档都能拖进来就装；皮肤库加了翻页；内置 6 张 MC 壁纸；关闭更快，反推不再把机器占满。"}'>
+<meta name="omc-update" content='{"latest": "1.7.26", "pc_url": "https://aka.doubaocdn.com/s/zCh4mDxV7h", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.26：加了群聊（建群给个群号，别人填号就进）；私聊改成离线可达——启动器一开就在后台收信，不用开窗口也能收到，好友列表直接显示几条未读；所有人能自定义头像，可导入图片也有 8 个内置的，好友/搜索/联机成员和房主/私聊/群聊里都看得到；登录注册多了「扫码 / 手机号」——微信扫码、QQ 扫码（都要手机在同一 Wi-Fi 上二次确认）、QQ 号加验证码、手机号加验证码；左上角加了署名。"}'>
 
 </head>
 
@@ -574,7 +574,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.25</strong></span>
+    <span>版本 <strong>1.7.26</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -614,11 +614,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/ISW7g9rbQU">
+      <a class="btn" href="https://aka.doubaocdn.com/s/zCh4mDxV7h">
 
         下载 Windows 版
 
-        <small>zip · 41.6 MB · 1.7.25</small>
+        <small>zip · 41.6 MB · 1.7.26</small>
 
       </a>
 
@@ -650,7 +650,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/ISW7g9rbQU">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/zCh4mDxV7h">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
 
       </div>
 
@@ -700,9 +700,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/ISW7g9rbQU">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/zCh4mDxV7h">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/ISW7g9rbQU">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/zCh4mDxV7h">复制完整链接</button>
 
         </div>
 
@@ -712,11 +712,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">98E6F1ED22B06BFC2D3E8320C4B178B706A50F4003C2308BBBA2CF6E04A48785</div>
+            <div class="hash">40CDA08D10408EEE138E3307EC2A939905F8DA3DA5A9F1DE9FB59BE06FB46F39</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.25.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.26.zip -Algorithm SHA256
 
             </div>
 
@@ -807,16 +807,14 @@ footer{
   <section class="upd">
                     
                     
-                    <h2>1.7.25 更新了什么<em>2026-11-10</em></h2>
+                    <h2>1.7.26 更新了什么<em>2026-11-10</em></h2>
     <div class="ulist">
-      <div><i></i><span><b>附魔计算器 = RNG 附魔操控</b>：不再只算「摆几个书架能出什么」，而是照 RNG 附魔那套来——读存档取出 XP 种子，或者直接把种子填进去；在附魔台上把三格显示的数字和当时书架数记几组，点「开始反推」扫一遍全部候选种子，最后列出这三格各会出哪些附魔，并用 ★ 标出你想要的那个，直接给「点第 1 / 2 / 3 格」。只对原版随机数有效，Paper / Purpur / Leaves 这类改过随机数的服务端会算不准。</div></div>
-      <div><i></i><span><b>入口挪到看得见的地方</b>：模组页工具行改成可以横向滚，第二行最左边就是蓝色「附魔计算器」；启动页皮肤卡里也放了一个，不用再往按钮堆里翻。</div></div>
-      <div><i></i><span><b>好友私聊在启动器里</b>：好友列表选中一个点「私聊」（双击也行），直接开聊天窗。消息走公共中转，不需要你搭后端，两边打开同一个窗口就能聊；本地还留一份历史，断网也能翻。</div></div>
-      <div><i></i><span><b>光影 / 存档拖进来就装</b>：把 .zip 或者解压后的文件夹拖进窗口——光影文件夹会自动压成 zip 放进 shaderpacks，材质包同理；存档 zip 会自动解开、认准带 level.dat 的那一层装进 saves。</div></div>
-      <div><i></i><span><b>皮肤库翻页</b>：每页 30 / 60 / 120 可选，能上一页下一页、直接跳页、回第一页。</div></div>
-      <div><i></i><span><b>6 张内置壁纸</b>：草原 · 蘑菇与山、落日 · 河畔小村、山谷 · 云上村落、悬崖 · 河边小屋、空岛 · 浮空石林、海上 · 巨石城堡，设置页背景图里直接选。</div></div>
-      <div><i></i><span><b>第三方登录更省事</b>：地址下拉第一项就是「我的第三方登录」，旁边能点「测试连接」；自建服务器脚本启动时会自动尝试放行防火墙（以管理员运行时生效）。</div></div>
-      <div><i></i><span><b>顺手治卡顿</b>：反推按 CPU 自动定进程数、子进程降优先级，不会再把机器占满；关窗口最多等 0.4 秒，不再卡一两秒；好友页全屏时整页能滚动，列表不会被拉成空白。</div></div>
+      <div><i></i><span><b>群聊来了</b>：好友页新增「群聊」一节——点「新建群聊」会给你一个群号，把群号发给要拉的人，他们点「加入群聊」填号就进。群里谁说话所有人都能看到，本地留历史，断网也能翻。</div></div>
+      <div><i></i><span><b>私聊离线也能收到</b>：启动器一打开就在后台每 20 秒收一次消息，不需要你把聊天窗开着、也不用进游戏。新消息会记成未读，好友列表那一行末尾直接显示「·　N 条未读」，点开私聊就清零。</div></div>
+      <div><i></i><span><b>头像，人人可设</b>：好友页点「换头像」——8 个内置像素头像任选，或者导入自己的图片（自动居中裁成正方形、缩到 96×96）。选完之后好友列表、搜索好友的结果、联机成员和房主、私聊窗口、群聊窗口里都能看到头像；头像会跟着消息捎带给对方，别人那边也能显示出来。</div></div>
+      <div><i></i><span><b>登录注册加了「扫码 / 手机号」页</b>：微信扫码、QQ 扫码——电脑上出二维码，手机连同一个 Wi-Fi 扫一下，在手机浏览器里核对渠道、账号和时间，点「确认登录」电脑才会登进去，扫到码也不能直接进；手机端也能点「不是我，取消」。QQ 号还能用「QQ号 + 验证码」登录，验证码发到「QQ号@qq.com」的邮箱；手机号也能用手机号 + 验证码，没接短信通道时验证码会直接显示在界面上（只适合本机试）。本机还没有这个号码的账号会自动建一个。</div></div>
+      <div><i></i><span><b>左上角署名</b>：侧栏顶部加了一行浅灰小字「由一坨圆子弹独立制作」。</div></div>
+      <div><i></i><span><b>老规矩</b>：消息还是走公共中转，不占你带宽也不让你自己搭后端；二维码要手机和电脑连同一个 Wi-Fi。</div></div>
     </div></section>
 
 
@@ -963,7 +961,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.25</span>
+    <span>OMC LAUNCHER 1.7.26</span>
 
     <span>Windows 10/11 x64</span>
 
