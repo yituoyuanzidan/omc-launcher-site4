@@ -30,7 +30,7 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - runner: macos-15
+          - runner: macos-26
             tag: arm64
           - runner: macos-15-intel
             tag: x64
@@ -78,8 +78,16 @@ jobs:
       - name: Zip with ditto
         working-directory: src
         run: |
-          VER=$(python -c "import re,io;print(re.search(r'VERSION\\s*=\\s*\\"([^\\"]+)\\"',io.open('core/update.py',encoding='utf-8').read()).group(1))")
+          python - > ver.txt <<'PY'
+          import io
+          import re
+          d = io.open('core/update.py', encoding='utf-8').read()
+          m = re.search(r'VERSION\s*=\s*"([^"]+)"', d)
+          print(m.group(1) if m else '1.0')
+          PY
+          VER=$(cat ver.txt | tr -d '\r\n')
           echo "VER=$VER" >> $GITHUB_ENV
+          echo "ver=$VER"
           ditto -c -k --sequesterRsrc --keepParent "dist/OMC.app" "OMC-macOS-${{ matrix.tag }}-$VER.zip"
           ls -lh OMC-macOS-*.zip
           shasum -a 256 OMC-macOS-*.zip | tee sha.txt
@@ -90,5 +98,6 @@ jobs:
           path: |
             src/OMC-macOS-${{ matrix.tag }}-*.zip
             src/sha.txt
+            src/ver.txt
           retention-days: 90
           if-no-files-found: error
