@@ -558,7 +558,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.36", "pc_url": "https://aka.doubaocdn.com/s/lguspVm74t", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.36：修好了在线搜歌右键「加到我的列表」看着没反应的问题——以前那条结果要是没有试听地址，菜单项就是灰的，点了什么都不发生；现在能点，点下去会明确告诉你为什么加不了。加歌的过程和结果也都看得见了：下载中会提示、下完在线页顶部当场显示「已加到我的列表」，「我的列表」页签标题带上数量，数字变了就说明加成功了。"}'>
+<meta name="omc-update" content='{"latest": "1.7.37", "pc_url": "https://aka.doubaocdn.com/s/Oks8Hm5jnM", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.37：附魔相关的东西全部收进了左边那一个「附魔计算」页——RNG 附魔操控、铁砧并书、附魔台摆几个书架，三块都在这一页。同时删掉了重复的入口：启动页和模组页工具栏里原来各有一个「附魔计算器」按钮，点了只是弹出一个和整页内容完全一样的窗，这两个按钮连同那个弹窗壳一起去掉了。"}'>
 
 </head>
 
@@ -574,7 +574,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.36</strong></span>
+    <span>版本 <strong>1.7.37</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -614,11 +614,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/lguspVm74t">
+      <a class="btn" href="https://aka.doubaocdn.com/s/Oks8Hm5jnM">
 
         下载 Windows 版
 
-        <small>zip · 66.8 MB · 1.7.36</small>
+        <small>zip · 66.8 MB · 1.7.37</small>
 
       </a>
 
@@ -650,7 +650,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/lguspVm74t">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/Oks8Hm5jnM">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
 
       </div>
 
@@ -700,9 +700,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/lguspVm74t">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/Oks8Hm5jnM">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/lguspVm74t">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/Oks8Hm5jnM">复制完整链接</button>
 
         </div>
 
@@ -712,11 +712,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">2418E0C23D238C6DB03472E733E32262A3C519317E5C295837D8B8072E8B5DBF</div>
+            <div class="hash">7F9B45598EAE797C8A0A7C71B1EA5C635BC0B6175E25DA6737D03E3FF0DB14AC</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.36.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.37.zip -Algorithm SHA256
 
             </div>
 
@@ -805,11 +805,13 @@ footer{
   <!-- 更新日志 -->
 
   <section class="upd">
-    <h2>1.7.36 更新了什么<em>2026-11-10</em></h2>
+    <h2>1.7.37 更新了什么<em>2026-11-10</em></h2>
     <div class="ulist">
+      <div><i></i><span><b>附魔全部收进一个页面了（1.7.37 改）</b>：RNG 附魔操控、铁砧并书（必得）、附魔台（摆几个书架）三块内容本来就在左栏那个「附魔计算」页里，这次把散在外面重复的入口全删了，找附魔只认左栏这一项。</span></div>
+      <div><i></i><span><b>删掉两个重复的「附魔计算器」按钮（1.7.37 改）</b>：启动页的版本表单下面、模组页工具栏最左边，原来各有一个「附魔计算器」按钮，点下去只是弹出一个和整页内容一模一样的窗，等于绕一圈。这两个按钮连同那个弹窗壳一起删了，界面也清爽了。</span></div>
+      <div><i></i><span><b>附魔页不再有「关闭」按钮（1.7.37 改）</b>：那个「关闭」是给弹窗用的，现在没有弹窗了，放在整页里点它什么也不会发生，所以去掉了；底部的「复制当前页」还在，用来把算出来的结果整段复制出去。</span></div>
       <div><i></i><span><b>右键「加到我的列表」没反应的问题修了（1.7.36 修）</b>：以前只要这条搜索结果没有试听地址，右键菜单里那一项就是灰的，点下去什么都不发生，看着就像功能坏了。现在菜单项一律能点，点下去会直接弹窗说清这首为什么加不了（没试听地址 / 下载失败 / 网络问题），不用再猜。</span></div>
       <div><i></i><span><b>加歌全程看得见（1.7.36 改）</b>：正在下的时候在线页顶上显示「正在下载…（下完会告诉你）」，下完当场变成「✓ 已加到「我的列表」：歌名 — 歌手（现在共 N 首）」；「我的列表」页签标题也带上数量，比如「我的列表 (3)」，数字变了就说明真的加进去了。</span></div>
-      <div><i></i><span><b>加失败不再只写一行小字（1.7.36 改)</b>：失败会弹窗告诉你具体原因，不会再让提示藏在页面角落。</span></div>
       <div><i></i><span><b>扫码登录终于能出二维码了（1.7.35 修）</b>：账号页「扫码 / 手机号」里点「生成二维码」现在能正常画出来。之前是二维码缓存的变量忘了定义，一调用就报错、图刷不出来；顺手把失败时的提示也改了，画不出来会直接说原因，还会留着下面的网址，用那个手动打开一样能确认。</span></div>
       <div><i></i><span><b>扫码确认快到几乎无感（1.7.35 改）</b>：查扫码状态的定时器从 1.5 秒一次改成 0.3 秒一次，手机上点完确认，电脑这边基本是立刻跳登录成功。</span></div>
       <div><i></i><span><b>点一下就崩的两个按钮修了（1.7.35 修）</b>：「第三方登录」按钮和「在这个服务器注册新账号」之前引用了一个没导入的模块，点了必定报错退出；背景图高质量缩放那段也因为同样的原因一直是坏的，现在真的生效了，壁纸放大更干净。</span></div>
@@ -962,7 +964,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.36</span>
+    <span>OMC LAUNCHER 1.7.37</span>
 
     <span>Windows 10/11 x64</span>
 
