@@ -1,0 +1,90 @@
+# macOS 版构建（GitHub Actions）
+#
+# 为什么要用 CI：PyInstaller 不能交叉编译，macOS 包只能在 macOS 上打。
+# 源码不在仓库里、只有 omc-src.zip 也够用——这里解压 zip 再构建。
+#
+# 产出：Actions 页面 Artifacts 里的 OMC-macos-arm64 / OMC-macos-x64（含版本号的 zip）。
+#
+# Gatekeeper：未签名公证的 .app，用户首次右键「打开」或在系统设置里点“仍要打开”即可。
+# 要彻底免这一步需要 Apple Developer 证书；配好 secrets 后加签名/公证步骤即可。
+name: Build macOS
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "omc-src.zip"
+      - ".github/workflows/build-macos.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: macos-14
+            tag: arm64
+          - runner: macos-13
+            tag: x64
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Unpack source
+        run: |
+          mkdir -p src
+          unzip -q omc-src.zip -d src
+          echo "--- top level:"; ls src
+          echo "--- py files:"; find src -name "*.py" | wc -l
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install deps
+        working-directory: src
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install "PySide6==6.12.0" pyinstaller pillow qrcode
+          python -c "import platform,sys;print('arch=',platform.machine(),'py=',sys.version)"
+
+      - name: Build .app
+        working-directory: src
+        run: python -m PyInstaller --noconfirm --clean OMC.spec
+
+      - name: Verify bundle
+        working-directory: src
+        run: |
+          ls -la dist
+          test -d "dist/OMC.app" || (echo "OMC.app 没生成"; exit 1)
+          ls -la "dist/OMC.app/Contents/MacOS"
+          du -sh "dist/OMC.app"
+
+      - name: Smoke run (offscreen)
+        working-directory: src
+        run: |
+          cd "dist/OMC.app/Contents/MacOS"
+          QT_QPA_PLATFORM=offscreen timeout 20 ./OMC > /tmp/smoke.log 2>&1 || echo "exit=$?"
+          echo "--- log tail:"; tail -20 /tmp/smoke.log
+
+      - name: Zip with ditto
+        working-directory: src
+        run: |
+          VER=$(python -c "import re,io;print(re.search(r'VERSION\s*=\s*\"([^\"]+)\"',io.open('core/update.py',encoding='utf-8').read()).group(1))")
+          echo "VER=$VER" >> $GITHUB_ENV
+          ditto -c -k --sequesterRsrc --keepParent "dist/OMC.app" "OMC-macOS-${{ matrix.tag }}-$VER.zip"
+          ls -lh OMC-macOS-*.zip
+          shasum -a 256 OMC-macOS-*.zip | tee sha.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: OMC-macos-${{ matrix.tag }}
+          path: |
+            src/OMC-macOS-${{ matrix.tag }}-*.zip
+            src/sha.txt
+          retention-days: 90
+          if-no-files-found: error
