@@ -306,6 +306,8 @@ h2 em{font-style:normal;color:var(--muted);font-weight:400;font-size:13px;
 
 .card p{font-size:13.5px;color:var(--muted)}
 
+#mac{scroll-margin-top:24px}
+
 .dlrow{display:flex;gap:8px;align-items:stretch;flex-wrap:wrap}
 
 a.go{
@@ -630,6 +632,14 @@ footer{
 
       </a>
 
+      <a class="btn ghost" href="#mac">
+
+        下载 macOS 版
+
+        <small>zip · 65.4 MB · Apple 芯片</small>
+
+      </a>
+
       <a class="btn ghost" href="#mobile">
 
         OMC 手机端
@@ -638,7 +648,7 @@ footer{
 
       </a>
 
-      <span class="note">Windows 版解压后双击 OMC.exe，Linux 版解压后在目录里运行 ./OMC，都不用安装</span>
+      <span class="note">Windows 版解压后双击 OMC.exe，Linux 版解压后在目录里运行 ./OMC，macOS 版解压后把 OMC.app 拖进「应用程序」，都不用安装</span>
 
     </div>
 
@@ -688,6 +698,22 @@ footer{
 
       <div class="q">
 
+        <div class="ask">我用 Mac（M1 / M2 / M3 / M4 芯片）玩 MC</div>
+
+        <div class="ans">下 <a href="#mac">macOS 版（Apple 芯片）</a>。解压得到 <span class="tag">OMC.app</span>，拖进「应用程序」就行。第一次打开请右键点图标选「打开」，因为没买苹果开发者签名；之后双击就正常了。</div>
+
+      </div>
+
+      <div class="q">
+
+        <div class="ask">我用的是老款 Intel 芯片的 Mac</div>
+
+        <div class="ans">下 <a href="#mac">macOS 版（Intel）</a>，就是下载卡里那条 Intel 链接。这两个包不能混用：装错了会提示「应用程序无法打开」。不确定芯片就看屏幕左上角苹果标志 → 关于本机，那里写着「芯片」或「处理器」。</div>
+
+      </div>
+
+      <div class="q">
+
         <div class="ask">我用的是 Win7 / Win8 / 32 位系统</div>
 
         <div class="ans">用不了 Windows 版。界面框架最低要求 Win10 64 位，这个限制改不掉。这类机器建议用 HMCL 或 PCL2。</div>
@@ -704,7 +730,7 @@ footer{
 
   <section class="dls">
 
-    <h2>全部下载<em>三个包，按需取</em></h2>
+    <h2>全部下载<em>Windows / Linux / macOS 三平台，外加手机端</em></h2>
 
     <div class="cards">
 
@@ -776,6 +802,60 @@ footer{
 
       </div>
 
+      <div class="card" id="mac">
+
+        <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
+
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。</p>
+
+        <div class="dlrow">
+
+          <a class="go" href="https://aka.doubaocdn.com/s/t6cHmjLLGG">下载 · Apple 芯片 65.4 MB</a>
+
+          <a class="go" href="https://aka.doubaocdn.com/s/6JaCVZIYVw">下载 · Intel 70.7 MB</a>
+
+        </div>
+
+        <div class="dlrow">
+
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/t6cHmjLLGG">复制 Apple 芯片链接</button>
+
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/6JaCVZIYVw">复制 Intel 链接</button>
+
+        </div>
+
+        <details>
+
+          <summary>下载后校验 SHA256</summary>
+
+          <div class="dbody">
+
+            <div class="hash">BAAF8EB57D0B6E5BA8087A3169F1EDE3F882DB249A0A0E69AF08CCEC2F6C9970</div>
+
+            <div style="font-size:12.5px;color:var(--muted);margin-top:4px">↑ Apple 芯片 OMC-macOS-arm64-1.7.37.zip</div>
+
+            <div class="hash" style="margin-top:10px">EEFF0FDFEEA7CB1C56EB1912AE2633D6274FDEEE7D8F81C5076403A0E3FA2DCA</div>
+
+            <div style="font-size:12.5px;color:var(--muted);margin-top:4px">↑ Intel OMC-macOS-x64-1.7.37.zip</div>
+
+            <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
+
+              macOS: shasum -a 256 OMC-macOS-arm64-1.7.37.zip
+
+            </div>
+
+          </div>
+
+        </details>
+
+        <div style="font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.7">
+
+          GitHub 备用直链：<a href="https://github.com/yituoyuanzidan/omc-launcher-site4/releases/tag/macos-arm64-v1.7.37">Apple 芯片</a> · <a href="https://github.com/yituoyuanzidan/omc-launcher-site4/releases/tag/macos-x64-v1.7.37">Intel</a>　｜　没做苹果签名，首次打开请右键图标 →「打开」
+
+        </div>
+
+      </div>
+
       <div class="card">
 
         <h3>手机端 <span class="wh">OMC 手机控制台</span></h3>
@@ -804,7 +884,7 @@ footer{
 
         <b>装上之后不用再回来看这个页面。</b>
 
-        Windows 版启动后会自动联网检查新版本，有新包就在后台自己下，下完问你要不要重启换上；设置里可以关掉这个开关。Linux 版这次是手动更新：新版本出来后重新下这个 tar.gz 覆盖即可。
+        Windows 版启动后会自动联网检查新版本，有新包就在后台自己下，下完问你要不要重启换上；设置里可以关掉这个开关。Linux 和 macOS 版这次是手动更新：新版本出来后重新下对应的包覆盖即可。
 
       </div>
 
@@ -944,7 +1024,7 @@ footer{
 
       <div class="dbody">
 
-        macOS 的 .app 是签名过的包，程序自己替换自己会被系统拒绝。所以在 Mac 上检测到新版只会提示你去下载，然后手动把新的 OMC.app 拖进应用程序目录覆盖。Windows 和 Linux 是可以自己换的。
+        macOS 上 .app 是个目录包，程序在运行时替换自己被系统拦下，所以只能手动换：检测到新版会提示你去下载，然后把新的 OMC.app 拖进「应用程序」覆盖（拖之前先退出旧版）。Windows 和 Linux 的包可以直接自己换。
 
       </div>
 
