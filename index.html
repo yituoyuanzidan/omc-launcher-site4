@@ -558,7 +558,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.34", "pc_url": "https://aka.doubaocdn.com/s/5aZtThhqZ7", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.34：音乐页又补了几样——在线搜歌的结果带封面了；右键一条结果可以「加到我的列表」，会把试听音频下到本地，断网也能听；「我的列表」能单独删一首（右键或「删除选中」）；左键单击选中再点播放就能放，不用双击；搜歌页加了周杰伦/愉快/悲伤/我的世界/伤感/搞怪/轻快/热门八个风格标签，点一下直接搜。"}'>
+<meta name="omc-update" content='{"latest": "1.7.35", "pc_url": "https://aka.doubaocdn.com/s/VQUPJjPvyt", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.35：这版主要是修——扫码登录的二维码现在能正常生成了（原来那个缓存变量没定义，一点就报错）；扫码状态刷新从 1.5 秒缩到 0.3 秒，手机上确认完电脑这边几乎立刻跳成功；「第三方登录」和「在这个服务器注册新账号」两处点了必崩的问题修了；启动快了一点，从点图标到看见界面少等 0.3 秒左右；关窗口时预告片播放器会彻底拆掉，不再拖着解码线程不放。"}'>
 
 </head>
 
@@ -574,7 +574,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.34</strong></span>
+    <span>版本 <strong>1.7.35</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -614,11 +614,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/5aZtThhqZ7">
+      <a class="btn" href="https://aka.doubaocdn.com/s/VQUPJjPvyt">
 
         下载 Windows 版
 
-        <small>zip · 66.8 MB · 1.7.34</small>
+        <small>zip · 66.8 MB · 1.7.35</small>
 
       </a>
 
@@ -650,7 +650,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/5aZtThhqZ7">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/VQUPJjPvyt">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。</div>
 
       </div>
 
@@ -700,9 +700,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/5aZtThhqZ7">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/VQUPJjPvyt">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/5aZtThhqZ7">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/VQUPJjPvyt">复制完整链接</button>
 
         </div>
 
@@ -712,11 +712,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">CA47588845A635C98F51BE15B3E2AA05EA1676FE89DC9A2EBB48DD3B52234687</div>
+            <div class="hash">496D7CC5283D774DEA622AD523664EA8B1F9451E50D7E517F96184D68F3503CB</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.34.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.35.zip -Algorithm SHA256
 
             </div>
 
@@ -805,14 +805,15 @@ footer{
   <!-- 更新日志 -->
 
   <section class="upd">
-    <h2>1.7.34 更新了什么<em>2026-11-10</em></h2>
+    <h2>1.7.35 更新了什么<em>2026-11-10</em></h2>
     <div class="ulist">
-      <div><i></i><span><b>搜索结果显示封面（1.7.34 新增）</b>：在线搜歌每条结果前面都有一张圆角小封面，一眼能认出是哪首；加到我的列表之后封面也跟着存下来，列表里一直是带图的。</span></div>
-      <div><i></i><span><b>右键加到我的列表（1.7.34 新增）</b>：在「在线搜歌」里右键一条结果，选「加到我的列表」，会把那段试听音频下到本地缓存，以后断网也能听；同一首歌重复加会提示已经在列表里。</span></div>
-      <div><i></i><span><b>我的列表能单独删一首（1.7.34 新增）</b>：右键「从我的列表删除这首」，或者选中后点右上角「删除选中」，只删这一条，硬盘上的歌文件不会被动。</span></div>
-      <div><i></i><span><b>单击选中就能播（1.7.34 新增）</b>：以前得双击曲目才放，现在鼠标左键点一下选中，再点「播放」就行；正在放的时候点播放还是暂停。</span></div>
-      <div><i></i><span><b>八个风格快捷标签（1.7.34 新增）</b>：搜歌框下面一排标签：周杰伦 / 愉快 / 悲伤 / 我的世界 / 伤感 / 搞怪 / 轻快 / 热门，点一下直接按这个词搜（「我的世界」搜的是 Minecraft 那边的曲子）。</span></div>
-      <div><i></i><span><b>在线搜歌 + 翻页（1.7.33）</b>：写歌名或歌手就能搜到，中文歌、英文歌都有；翻页按「上一页 / 下一页」，一页 25 首。在线听的是 30 秒试听片段，用的是苹果 iTunes 的公开试听流。</span></div>
+      <div><i></i><span><b>扫码登录终于能出二维码了（1.7.35 修）</b>：账号页「扫码 / 手机号」里点「生成二维码」现在能正常画出来。之前是二维码缓存的变量忘了定义，一调用就报错、图刷不出来；顺手把失败时的提示也改了，画不出来会直接说原因，还会留着下面的网址，用那个手动打开一样能确认。</span></div>
+      <div><i></i><span><b>扫码确认快到几乎无感（1.7.35 改）</b>：查扫码状态的定时器从 1.5 秒一次改成 0.3 秒一次，手机上点完确认，电脑这边基本是立刻跳登录成功，不用盯着「等待确认」发呆。</span></div>
+      <div><i></i><span><b>点一下就崩的两个按钮修了（1.7.35 修）</b>：「第三方登录」按钮和「在这个服务器注册新账号」之前引用了一个没导入的模块，点了必定报错退出；背景图高质量缩放那段也因为同样的原因一直是坏的，现在真的生效了，壁纸放大更干净。</span></div>
+      <div><i></i><span><b>启动快一点点（1.7.35 优化）</b>：改成先把窗口画出来、再套全局样式表，桌面快捷方式也挪到后台去建；实测从双击图标到看见界面快了 0.3 秒左右。</span></div>
+      <div><i></i><span><b>关窗口更稳（1.7.35 优化）</b>：预告片播放器关窗时按「停 → 摘掉画面输出 → 清空片源 → 摘掉音频输出」的顺序彻底拆开，不再让后台解码线程拖着窗口不放；万一真崩了，会把崩溃栈写进用户目录下的 crash.log 方便排查。</span></div>
+      <div><i></i><span><b>窗口图标补了兜底（1.7.35 修）</b>：除了给程序设全局图标，主窗口自己也挂一份，避免某些 Windows 主题下标题栏退回系统那个默认占位图标。</span></div>
+      <div><i></i><span><b>在线搜歌带封面 + 右键加到我的列表（1.7.34）</b>：搜歌结果每条前面一张圆角小封面；右键可以「加到我的列表」，把试听音频存本地，断网也能听；列表能单独删一首；另外有一排周杰伦 / 愉快 / 悲伤 / 我的世界 / 伤感 / 搞怪 / 轻快 / 热门 标签。</span></div>
       <div><i></i><span><b>界面半透明全改实色 + 按键配色 + 小猫（1.7.32）</b>：卡片、列表、输入框都换成实色深底；设置里能选按键颜色（蓝绿紫橙粉金）和样式（圆角/方块/胶囊/描边）；左栏底下有只会眨眼摇尾巴的像素小猫。</span></div>
     </div></section>
 
@@ -960,7 +961,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.34</span>
+    <span>OMC LAUNCHER 1.7.35</span>
 
     <span>Windows 10/11 x64</span>
 
