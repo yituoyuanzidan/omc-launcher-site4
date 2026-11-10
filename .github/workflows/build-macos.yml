@@ -1,12 +1,16 @@
 # macOS 版构建（GitHub Actions）
 #
 # 为什么要用 CI：PyInstaller 不能交叉编译，macOS 包只能在 macOS 上打。
-# 源码不在仓库里、只有 omc-src.zip 也够用——这里解压 zip 再构建。
+# 源码放在仓库根目录的 omc-src.zip 里，这里解压再构建。
+#
+# 注意：不要用 macOS 自带的 unzip 解压这个包——zip 里有中文目录名
+# （assets/avatars/二次元 等），Info-ZIP 会直接报 Illegal byte sequence。
+# Python 的 zipfile 能正确识别 UTF-8 文件名标志，所以这里用 Python 解压。
 #
 # 产出：Actions 页面 Artifacts 里的 OMC-macos-arm64 / OMC-macos-x64（含版本号的 zip）。
 #
 # Gatekeeper：未签名公证的 .app，用户首次右键「打开」或在系统设置里点“仍要打开”即可。
-# 要彻底免这一步需要 Apple Developer 证书；配好 secrets 后加签名/公证步骤即可。
+# 要彻底免这一步需要 Apple Developer 证书。
 name: Build macOS
 
 on:
@@ -34,16 +38,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Unpack source
-        run: |
-          mkdir -p src
-          unzip -q omc-src.zip -d src
-          echo "--- top level:"; ls src
-          echo "--- py files:"; find src -name "*.py" | wc -l
-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Unpack source
+        run: |
+          python -c "import zipfile;zipfile.ZipFile('omc-src.zip').extractall('src')"
+          echo "--- top level:"; ls src
+          echo "--- py files:"; find src -name "*.py" | wc -l
+          echo "--- avatars:"; ls src/assets/avatars
 
       - name: Install deps
         working-directory: src
@@ -74,7 +78,7 @@ jobs:
       - name: Zip with ditto
         working-directory: src
         run: |
-          VER=$(python -c "import re,io;print(re.search(r'VERSION\s*=\s*\"([^\"]+)\"',io.open('core/update.py',encoding='utf-8').read()).group(1))")
+          VER=$(python -c "import re,io;print(re.search(r'VERSION\\s*=\\s*\\"([^\\"]+)\\"',io.open('core/update.py',encoding='utf-8').read()).group(1))")
           echo "VER=$VER" >> $GITHUB_ENV
           ditto -c -k --sequesterRsrc --keepParent "dist/OMC.app" "OMC-macOS-${{ matrix.tag }}-$VER.zip"
           ls -lh OMC-macOS-*.zip
