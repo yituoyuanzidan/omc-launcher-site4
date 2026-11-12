@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.52", "pc_url": "https://aka.doubaocdn.com/s/BY6sSpFYoC", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.52 把上一版之后攒的一批全修了：娱乐页所有游戏都接上了音效（12 种，不是打包音频，开机时本地合成，包体积没涨）；斗地主选中的牌改成往上抬，以前是往下压；五子棋、围棋、连珠这类赢在连线的棋，结算前先把连成的那条线用金线画出来，不会只看到一句结果；21 点整页重做成斗地主那张桌子；六个 AI 全部重写（斗地主 300 局零卡死、五子棋 60 局零连线错、21 点 53 胜 42 负 5 和）。界面这块：工具页 14 个页签不再被压成省略号，一律显示全名还能左右滚；19 个下拉框按最长选项算宽度；切软件、还原、换显示器之后窗口自动收回屏幕内并居中；任务栏图标不再是白板未知程序；切主题从 2449 毫秒降到 681 到 1181 毫秒。油管这块：IP 源从 4 个加到 7 个、仍然一票否决，搜索这条路也堵上了（以前搜一下照样能看到封面标题）；页面顶部直接显示当前地区，看视频时每 45 秒复查一次，IP 一变就刷新、查不到写「未知地域」；修了油管被拦之后切不回 B 站的问题；本地转发代理从 512KB 一段改成 8MB 一段，国外线路下重连次数降到十几分之一。这一版仍是 Windows 更新（含 Win7 老系统版），Linux 和 macOS 的包还是 1.7.38。"}'>
+<meta name="omc-update" content='{"latest": "1.7.53", "pc_url": "https://aka.doubaocdn.com/s/shKEUuOKF3", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.53 加了两件事。一是工具页多了「录屏」：帧率 30 / 60 / 90 / 120 四档、画质四档，实测 1920×1080 能跑满 120 帧（从成品文件里读回 120.003 fps）；一开始录，屏幕右上角就出现「停止」浮条，它压在所有窗口上面，但录出来的视频里看不到它（用的是系统级窗口排除捕获，实测按钮那块区域红色像素 0 个），Win10 2004 以下不支持排除，程序会直接提示并拒绝开录，不会给你一段带按钮的视频；录完直接在启动器里播放，填个起终点就能剪掉一段导出（实测切 1 到 3 秒出 2.00 秒、耗时 0.43 秒），也能另存，剪辑用的是随包带的编码库，不用自己装 ffmpeg，代价是安装包从 76.7 MB 涨到 129.0 MB。二是任务栏图标：上一版只给进程设了 AppUserModelID、没在注册表登记这个 ID 的图标，系统查不到就退回默认占位图，看着像崩溃的程序；现在连显示名和图标路径一起写进注册表，任务栏上就是那把钻石剑。Win7 老系统版没有录屏（Qt5 没屏幕捕获接口），那一页会直接说明。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.52</strong></span>
+    <span>版本 <strong>1.7.53</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/BY6sSpFYoC">
+      <a class="btn" href="https://aka.doubaocdn.com/s/shKEUuOKF3">
 
         下载 Windows 版
 
-        <small>zip · 76.7 MB · 1.7.52</small>
+        <small>zip · 129.0 MB · 1.7.53</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/BY6sSpFYoC">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/CUd9epvhCo">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/shKEUuOKF3">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/HKK2qhQGI2">老系统专用版</a>。</div>
 
       </div>
 
@@ -736,15 +736,15 @@ footer{
 
       <div class="card">
 
-        <h3>Windows 版 <span class="wh">x64 · 68.5 MB</span></h3>
+        <h3>Windows 版 <span class="wh">x64 · 129.0 MB</span></h3>
 
         <p>成品包，解压即用。光影、存档、数据包、模组都能在里面下和装，带自动更新。需要 Windows 10 / 11（64 位）。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/BY6sSpFYoC">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/shKEUuOKF3">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/BY6sSpFYoC">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/shKEUuOKF3">复制完整链接</button>
 
         </div>
 
@@ -754,11 +754,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">EFD0C7F5C37A60780BB789F43880403C264DB873369442A524B5B2EB51682058</div>
+            <div class="hash">9AFEDF0B09DA6C1CFDA19A5EEA6060299D57983E0FED0D53E4077D8DE283F7BB</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.52.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.53.zip -Algorithm SHA256
 
             </div>
 
@@ -776,9 +776,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/CUd9epvhCo">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/HKK2qhQGI2">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/CUd9epvhCo">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/HKK2qhQGI2">复制完整链接</button>
 
         </div>
 
@@ -788,11 +788,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash" id="w7hash">BB5A3271DAF9AB00C942FF485737F7AA3EF456926BB13E13867F8C6B531B2F17</div>
+            <div class="hash" id="w7hash">442E2B1E18A67134CCF52E4710BDF649FCF420F81548476A49E453D57A8EF436</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Win7-x64-1.7.52.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Win7-x64-1.7.53.zip -Algorithm SHA256
 
             </div>
 
@@ -812,7 +812,7 @@ footer{
 
         <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.52 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.53 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -846,7 +846,7 @@ footer{
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.52 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.53 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -975,7 +975,17 @@ footer{
   <!-- 更新日志 -->
 
   <section class="upd">
-    <h2>1.7.52 更新了什么<em>2026-11-12</em></h2>
+  <section class="upd">
+    <h2>1.7.53 更新了什么<em>2026-11-12</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>工具页新增「录屏」</b>：帧率 30 / 60 / 90 / 120 四档，画质流畅 / 标准 / 高清 / 超清四档，保存目录自己挑。实测 1920×1080 跑 120 帧能跑满，从成品文件里读回 <b>120.003 fps</b>。</span></div>
+      <div><i></i><span><b>停止按钮不会被录进画面</b>：一开录，屏幕右上角就出现「停止」浮条，它压在所有软件上面，但录出来的视频里没有它——用的是系统级窗口排除捕获，实测录完解帧统计按钮那块区域红色像素 0 个。Win10 2004 以下的系统不让排除，程序会直接提示并拒绝开录，不会给你一段带按钮的视频。</span></div>
+      <div><i></i><span><b>录完能播、能剪、能另存</b>：视频直接在启动器里播放，带进度条；填个起点终点点「导出片段」就生成新文件（实测切 1–3 秒出 2.00 秒、30fps、306.6 KB、耗时 0.43 秒），另有「另存为」把整段复制走。</span></div>
+      <div><i></i><span><b>剪辑不依赖系统装 ffmpeg</b>：编码库随包带（H264 编解码），代价是安装包从 76.7 MB 涨到 129.0 MB。</span></div>
+      <div><i></i><span><b>修任务栏图标还是显示成「崩溃程序」</b>：上一版只给进程设了 AppUserModelID，却忘了在注册表里登记这个 ID 的图标，系统按 ID 查不到就退回默认占位图。现在启动时把 ID 连同显示名「OMC 启动器」和图标路径一起写进 HKCU\Software\Classes\AppUserModelId，任务栏显示的就是那把钻石剑。</span></div>
+      <div><i></i><span><b>Win7 老系统版</b>：Qt5 没有屏幕捕获接口，录屏这一页会直接写明「本系统不支持录屏」，播放和剪辑照旧可用；剪辑需要包内的编码库，老系统版没带，剪辑按钮会置灰。</span></div>
+    </div>
+        <h2>1.7.52 更新了什么<em>2026-11-12</em></h2>
     <div class="ulist">
       <div><i></i><span><b>所有游戏都有音效了</b>：写牌、出牌、过牌、落子、翻牌、赢、输、爆牌、和棋、金币，共 12 种。音效不进安装包，启动时在本地合成为 16bit / 22050Hz 的 wav，打完包体积一点没涨。斗地主选中手牌也改成往上抬 18 像素（以前是往下压，看着像牌被按进桌面）。</span></div>
       <div><i></i><span><b>连线的棋先把线画出来再结算</b>：五子棋、围棋、连珠这类「连起来就赢」的，赢的一方连成的那条线先用金线画出来，停 0.9 秒再弹结算，不会出现「明明看到输了却只有一句结果」。</span></div>
@@ -1281,7 +1291,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.52</span>
+    <span>OMC LAUNCHER 1.7.53</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1521,6 +1531,41 @@ footer{
 
   document.body.appendChild(qrScript);
 
+})();
+
+/* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
+(function(){
+  var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
+  var V = '1.7.53';
+  var MAP = {
+    'shKEUuOKF3': 'win',
+    'HKK2qhQGI2': 'win7',
+    'Jx9AUBLVTs': 'linux',
+    'h1gp3A8UVo': 'mac-arm',
+    '2vCWqDxAyC': 'mac-intel',
+    'bwrmetFsLs': 'mobile'
+  };
+  function kindOf(href){
+    for (var k in MAP) { if (href.indexOf(k) >= 0) return MAP[k]; }
+    return 'other';
+  }
+  function send(k){
+    var body = JSON.stringify({ t: 'dl', ver: V, k: k, ts: Math.floor(Date.now() / 1000) });
+    try {
+      if (navigator.sendBeacon) {
+        navigator.sendBeacon(U, new Blob([body], { type: 'text/plain' }));
+        return;
+      }
+    } catch (e) {}
+    try {
+      fetch(U, { method: 'POST', body: body, keepalive: true, mode: 'no-cors' });
+    } catch (e) {}
+  }
+  document.addEventListener('click', function(ev){
+    var a = ev.target && ev.target.closest ? ev.target.closest('a[href*="doubaocdn.com"]') : null;
+    if (!a) return;
+    send(kindOf(a.getAttribute('href') || ''));
+  }, true);
 })();
 
 </script>
