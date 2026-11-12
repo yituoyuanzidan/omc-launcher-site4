@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.56", "pc_url": "https://aka.doubaocdn.com/s/IAHK7YAvCP", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.56 小矿的耳朵换了。语音听写从系统自带识别（只认命令词）换成本地跑的 faster-whisper small：整句听写，12 句 MC 语境回归 11 句逐字全对、剩 1 句只是标点差异，单句 1.8~2.2 秒，全程离线不联网。说完停 0.9 秒自动收尾，不用手动点停。第一次用要下一次约 460MB 的识别模型（只下一次，下好之前用系统识别顶着）。代价是安装包从 129.0 MB 涨到 224.9 MB，多出来的是识别引擎运行时，模型本身不进包。"}'>
+<meta name="omc-update" content='{"latest": "1.7.57", "pc_url": "https://aka.doubaocdn.com/s/x6VLOtCNVi", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.57 修的是「加入公共服一打开就崩」。崩溃日志显示那次给游戏开了 6GB 内存，崩的时候系统只剩 277MB 可用，Java 连 1MB 都申请不到——跟服务器地址、模组都无关。现在启动前先读真实可用内存，上限取「总内存 60%」和「可用 75%」里小的那个，不够就降档、降了还不够就不硬启并说明差多少。顺手修了直连参数：1.20+ 和 1.19- 两套参数以前同时拼进命令行，现在按版本只发一套。围棋 AI 会先算「对手下一手吃我多少子」，6 子大块快死时会去救、旁边有大便宜也不贪；对老 AI 16 局全胜，平均每手 15.4 毫秒。登录窗口多了「微软账号」页签，8 位代码走设备码登录，没有账号可以当场注册；微信/QQ 扫码填新名字会自动注册，手机上的按钮相应变成「确认注册」。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.56</strong></span>
+    <span>版本 <strong>1.7.57</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/IAHK7YAvCP">
+      <a class="btn" href="https://aka.doubaocdn.com/s/x6VLOtCNVi">
 
         下载 Windows 版
 
-        <small>zip · 224.9 MB · 1.7.56</small>
+        <small>zip · 224.9 MB · 1.7.57</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/IAHK7YAvCP">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/5JqU2xsxD9">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/x6VLOtCNVi">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/U5LgeHCD4H">老系统专用版</a>。</div>
 
       </div>
 
@@ -742,9 +742,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/IAHK7YAvCP">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/x6VLOtCNVi">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/IAHK7YAvCP">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/x6VLOtCNVi">复制完整链接</button>
 
         </div>
 
@@ -754,11 +754,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">5577AF25A770C08FC709F5802CDB493D9D89364F5036B7D484AA2E5F17688553</div>
+            <div class="hash">7EB9AAEEC15CBEEFBDE98DE48F6E98134315893589717ACECC717DF00A92B79D</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.56.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.57.zip -Algorithm SHA256
 
             </div>
 
@@ -776,9 +776,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/5JqU2xsxD9">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/U5LgeHCD4H">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/5JqU2xsxD9">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/U5LgeHCD4H">复制完整链接</button>
 
         </div>
 
@@ -788,11 +788,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash" id="w7hash">ADEEBAA06769593B3342EF6D3B8947CA84A3F6EEC10EDC7F27F3624C4DE911B2</div>
+            <div class="hash" id="w7hash">00779DDF5A29FA43B0ABD2DD1CB2706FAE5DB2BA9D34A729BB4B15CDBC4DD9A6</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Win7-x64-1.7.56.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Win7-x64-1.7.57.zip -Algorithm SHA256
 
             </div>
 
@@ -812,7 +812,7 @@ footer{
 
         <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.56 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.57 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -846,7 +846,7 @@ footer{
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.56 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.57 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -973,6 +973,18 @@ footer{
 
 
   <!-- 更新日志 -->
+
+  <section class="upd">
+    <h2>1.7.57 更新了什么<em>2026-11-12</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>加入公共服不再一打开就崩</b>：真因是内存，不是服务器地址、更不是模组。崩溃日志里写得很清楚：那次启动给游戏开的是 <b>6GB</b> 内存，而崩溃那一刻系统只剩 <b>277MB</b> 可用，Java 连 1MB 都申请不到，游戏在加载界面就没了。现在启动前先读真实可用内存，上限取「总内存 60%」和「当前可用 75%」里小的那个，可用紧张时自动降档；降完还是不够就不硬启，弹窗写明这次要多少、现在剩多少、该关掉哪些程序，而不是让你对着闪退猜。</span></div>
+      <div><i></i><span><b>点公共服一定进得去</b>：以前 1.20 及以上要用 <span class="tag">--quickPlayMultiplayer</span>，1.19 及更老得用 <span class="tag">--server / --port</span>，这两套参数被同时拼进命令行，点哪都可能进错服、老版本还被整个忽略。现在按版本只发一套，9 组地址用例（含空地址、端口 25565、非法地址）全部验证过。</span></div>
+      <div><i></i><span><b>围棋 AI 会先算「我这样走，他下一手是不是就赢了」</b>：落子前把每个候选各模拟一遍，统计自己有多少子下一手就要被提、最大一块多大，按规模扣分，五子以上的大块另外重罚；救子也从「一律 45 分」改成块越大越值钱。实测自己 6 子大块只剩一口气时会去救，旁边摆着能吃对方 5 子的大便宜也不贪；40 手对局里一次没出现「走完就给自己留个大死块」，平均每手 <b>15.4 毫秒</b>。战术专项 6 项全过，跟老 AI 下 <b>16 局全胜</b>。</span></div>
+      <div><i></i><span><b>扫码能注册了</b>：以前微信/QQ 扫码只能登录已有账号，填个新名字会被拦。现在填的名字本机没有就自动走注册——手机上的确认页会写明「将新建一个本地账号」、按钮也变成「确认注册」，确认完这台电脑就多一个账号并直接登录。名字不合规（带空格、太短太长）当场挡住，不会给你一张扫了也没用的码。</span></div>
+      <div><i></i><span><b>登录窗口多了「微软账号」页签</b>：点一下给一个 8 位代码，浏览器里输进去选账号就行；还没有微软账号的，同一个页面上可以直接注册一个，注册完自动接着走登录。拿到身份会绑到当前本地账号，之后启动游戏直接用正版身份，不用再登一次。</span></div>
+      <div><i></i><span><b>这次的包</b>：标准版 <b>224.9 MB</b>（跟上一版一样），老系统版 <b>59.7 MB</b>。这轮没有新增依赖，体积没变。</span></div>
+    </div>
+  </section>
 
   <section class="upd">
     <h2>1.7.56 更新了什么<em>2026-11-12</em></h2>
@@ -1330,7 +1342,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.56</span>
+    <span>OMC LAUNCHER 1.7.57</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1575,10 +1587,10 @@ footer{
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-  var V = '1.7.56';
+  var V = '1.7.57';
   var MAP = {
-    'IAHK7YAvCP': 'win',
-    '5JqU2xsxD9': 'win7',
+    'x6VLOtCNVi': 'win',
+    'U5LgeHCD4H': 'win7',
     'Jx9AUBLVTs': 'linux',
     'h1gp3A8UVo': 'mac-arm',
     '2vCWqDxAyC': 'mac-intel',
