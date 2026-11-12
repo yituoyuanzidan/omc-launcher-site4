@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.55", "pc_url": "https://aka.doubaocdn.com/s/hmV39ro7KR", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.55 修任务栏图标和嗓子。图标那个「崩溃程序」占位图，根子是三个不同目录的 OMC.exe 共用同一个 AppUserModelId，图标路径写的是「当前启动的那个 exe」，谁最后启动就改写谁，旧包没塞好图标任务栏就退回占位图；现在图标固定一份 ico 放数据目录，写完还通知资源管理器别用旧缓存。另外加了单实例：反复双击不再叠出一堆进程（实测曾叠到 15 个抢着改注册表），再点一次只会把已开的窗口提到前面。小矿说话不那么死了，模板腔去掉，复读率 0%、平均每句 20.9 字（以前最长能甩 104 字）；语音去掉 markdown 符号和括号注释，长句在逗号处再切一刀，语速按句轻浮动、语气跟着情绪走一点点；识别词库扩到 76 项、同音纠错 50 条，12 句难样本从 6/12 提到 11/12。声线只留「小矿」一项，旧配置里选过其他声线的自动回落。"}'>
+<meta name="omc-update" content='{"latest": "1.7.56", "pc_url": "https://aka.doubaocdn.com/s/IAHK7YAvCP", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.56 小矿的耳朵换了。语音听写从系统自带识别（只认命令词）换成本地跑的 faster-whisper small：整句听写，12 句 MC 语境回归 11 句逐字全对、剩 1 句只是标点差异，单句 1.8~2.2 秒，全程离线不联网。说完停 0.9 秒自动收尾，不用手动点停。第一次用要下一次约 460MB 的识别模型（只下一次，下好之前用系统识别顶着）。代价是安装包从 129.0 MB 涨到 224.9 MB，多出来的是识别引擎运行时，模型本身不进包。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.55</strong></span>
+    <span>版本 <strong>1.7.56</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/hmV39ro7KR">
+      <a class="btn" href="https://aka.doubaocdn.com/s/IAHK7YAvCP">
 
         下载 Windows 版
 
-        <small>zip · 129.0 MB · 1.7.55</small>
+        <small>zip · 224.9 MB · 1.7.56</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/hmV39ro7KR">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/7ZipcrweEr">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/IAHK7YAvCP">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/5JqU2xsxD9">老系统专用版</a>。</div>
 
       </div>
 
@@ -736,15 +736,15 @@ footer{
 
       <div class="card">
 
-        <h3>Windows 版 <span class="wh">x64 · 129.0 MB</span></h3>
+        <h3>Windows 版 <span class="wh">x64 · 224.9 MB</span></h3>
 
         <p>成品包，解压即用。光影、存档、数据包、模组都能在里面下和装，带自动更新。需要 Windows 10 / 11（64 位）。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/hmV39ro7KR">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/IAHK7YAvCP">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/hmV39ro7KR">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/IAHK7YAvCP">复制完整链接</button>
 
         </div>
 
@@ -754,11 +754,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">759CBA6765094E450616A925B4B7A57B24B5D9CD6B5FD36B68ABA30B094F0A0A</div>
+            <div class="hash">5577AF25A770C08FC709F5802CDB493D9D89364F5036B7D484AA2E5F17688553</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.55.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.56.zip -Algorithm SHA256
 
             </div>
 
@@ -776,9 +776,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/7ZipcrweEr">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/5JqU2xsxD9">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/7ZipcrweEr">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/5JqU2xsxD9">复制完整链接</button>
 
         </div>
 
@@ -788,11 +788,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash" id="w7hash">F0C7701C3CD17BA02940EEB61C41DDD570F964644128BE24989AAC6CF954C29F</div>
+            <div class="hash" id="w7hash">ADEEBAA06769593B3342EF6D3B8947CA84A3F6EEC10EDC7F27F3624C4DE911B2</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Win7-x64-1.7.55.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Win7-x64-1.7.56.zip -Algorithm SHA256
 
             </div>
 
@@ -812,7 +812,7 @@ footer{
 
         <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.55 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.56 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -846,7 +846,7 @@ footer{
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.55 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.56 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -973,6 +973,19 @@ footer{
 
 
   <!-- 更新日志 -->
+
+  <section class="upd">
+    <h2>1.7.56 更新了什么<em>2026-11-12</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>小矿的耳朵换了</b>：以前的语音识别用的是系统自带那套，只认几十个命令词，说长一点就串成乱码。现在换成在自己电脑上跑的小模型（faster-whisper small，CPU 推理），整句听写——「帮我把附魔台搬到红石农场旁边」这种 18 个字的句子也能整句出字。12 句 MC 语境回归 <b>11 句逐字全对</b>，剩下那 1 句只是原文里的逗号被去掉了、字一个没错；单句 1.8~2.2 秒，跟说一句话的时长基本持平。</span></div>
+      <div><i></i><span><b>完全离线</b>：识别过程在你本机跑，不联网、不调云端接口，断网、开飞行模式照样用。聊天内容不会往任何服务器发。</span></div>
+      <div><i></i><span><b>说完自动收尾</b>：录音改成能量检测，你讲完停顿 0.9 秒就自动结束、开始识别，不用手动点停；5 秒没人说话算超时，不会一直挂着占着麦克风。初版那个灵敏度调得偏高，环境噪声会把录音提前掐断，已经改成按当前噪声水平动态定阈值。</span></div>
+      <div><i></i><span><b>第一次用要下一个模型</b>：约 <b>460 MB</b>，只下一次，存在你的用户目录里，换版本、重装启动器都不用重下。没下好之前不会干等——自动用系统自带识别顶着，通话照常能开。</span></div>
+      <div><i></i><span><b>包变大了，说清楚原因</b>：安装包从 129.0 MB 涨到 <b>224.9 MB</b>（+95.9 MB）。多出来的是识别引擎的运行时（ctranslate2、onnxruntime、音频解码、麦克风库），<b>模型本身不在包里</b>——放进去包要再大一倍。</span></div>
+      <div><i></i><span><b>老系统版这次没换识别</b>：Win7 / 8 / 8.1 那套用的是旧 Python 内核，装不上新引擎，语音仍是系统自带识别；其余功能和标准版一致。</span></div>
+      <div><i></i><span><b>做不了一模一样</b>：和搜狗那种云端大模型+游戏热词库比不了，专有名词偶尔会错一个字（把「挖」听成「吧」这类），已经补了同音纠错兜一部分。日常对话、报坐标、问存档在哪，够用。</span></div>
+    </div>
+  </section>
 
   <section class="upd">
     <h2>1.7.55 更新了什么<em>2026-11-12</em></h2>
@@ -1317,7 +1330,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.55</span>
+    <span>OMC LAUNCHER 1.7.56</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1562,10 +1575,10 @@ footer{
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-  var V = '1.7.55';
+  var V = '1.7.56';
   var MAP = {
-    'hmV39ro7KR': 'win',
-    '7ZipcrweEr': 'win7',
+    'IAHK7YAvCP': 'win',
+    '5JqU2xsxD9': 'win7',
     'Jx9AUBLVTs': 'linux',
     'h1gp3A8UVo': 'mac-arm',
     '2vCWqDxAyC': 'mac-intel',
