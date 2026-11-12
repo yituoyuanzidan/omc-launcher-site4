@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.53", "pc_url": "https://aka.doubaocdn.com/s/shKEUuOKF3", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.53 加了两件事。一是工具页多了「录屏」：帧率 30 / 60 / 90 / 120 四档、画质四档，实测 1920×1080 能跑满 120 帧（从成品文件里读回 120.003 fps）；一开始录，屏幕右上角就出现「停止」浮条，它压在所有窗口上面，但录出来的视频里看不到它（用的是系统级窗口排除捕获，实测按钮那块区域红色像素 0 个），Win10 2004 以下不支持排除，程序会直接提示并拒绝开录，不会给你一段带按钮的视频；录完直接在启动器里播放，填个起终点就能剪掉一段导出（实测切 1 到 3 秒出 2.00 秒、耗时 0.43 秒），也能另存，剪辑用的是随包带的编码库，不用自己装 ffmpeg，代价是安装包从 76.7 MB 涨到 129.0 MB。二是任务栏图标：上一版只给进程设了 AppUserModelID、没在注册表登记这个 ID 的图标，系统查不到就退回默认占位图，看着像崩溃的程序；现在连显示名和图标路径一起写进注册表，任务栏上就是那把钻石剑。Win7 老系统版没有录屏（Qt5 没屏幕捕获接口），那一页会直接说明。"}'>
+<meta name="omc-update" content='{"latest": "1.7.54", "pc_url": "https://aka.doubaocdn.com/s/%s", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.54 全修视频页。全屏暂停图案以前大小写死在 92 像素，1920×1080 铺满后还是 92，看着就像没显示；现在跟着画面区走，1080p 是 172 像素（1.87 倍），窗口化不变。全屏一进去就卡住的死循环修掉了（重排会 resize 底部浮层，浮层自己也在监听尺寸变化，两个互相触发）；全屏不再只剩右上角一个退出按钮，底部多了暂停/进度/音量/上下一条的浮层，鼠标一动就出来、停 2.5 秒自动收起；四角黑缺口也没了（全屏圆角归零，退出还原）。卡顿方面，本地代理以前是读完 8MB 就断一次、重连的空档里一个字节都不发，现在后台线程提前拉下一段，重连和下发重叠，回环连接也关了 Nagle。画质方面，油管同一条视频常同时给 360p 和 720p 两档带音轨的流，以前「第一个就用」，挑到 360p 全屏就是一片糊；现在按分辨率和码率取最高。B 站也先要 1080p 档、拿不到再退 720p——实测 html5 匿名接口封顶就是 720p，真要 1080p 得登录大会员走音视频分离，这版还没做，先把话说清楚。"}'
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.53</strong></span>
+    <span>版本 <strong>1.7.54</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/shKEUuOKF3">
+      <a class="btn" href="https://aka.doubaocdn.com/s/UoG6JQZqfT">
 
         下载 Windows 版
 
-        <small>zip · 129.0 MB · 1.7.53</small>
+        <small>zip · 129.0 MB · 1.7.54</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/shKEUuOKF3">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/HKK2qhQGI2">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/UoG6JQZqfT">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/fkHcUOnoV4">老系统专用版</a>。</div>
 
       </div>
 
@@ -742,9 +742,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/shKEUuOKF3">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/UoG6JQZqfT">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/shKEUuOKF3">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/UoG6JQZqfT">复制完整链接</button>
 
         </div>
 
@@ -754,11 +754,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">9AFEDF0B09DA6C1CFDA19A5EEA6060299D57983E0FED0D53E4077D8DE283F7BB</div>
+            <div class="hash">431B1BBA4E84ACCE4B6E5D3109A25E503168A0EE7713DE76042E6E2BA063F95C</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.53.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.54.zip -Algorithm SHA256
 
             </div>
 
@@ -770,15 +770,15 @@ footer{
 
       <div class="card">
 
-        <h3>Windows 老系统版 <span class="wh">Win7 / 8 / 8.1 · x64 · 59.6 MB</span></h3>
+        <h3>Windows 老系统版 <span class="wh">Win7 / 8 / 8.1 · x64 · 59.7 MB</span></h3>
 
         <p>给还在 Win7 SP1、Win8、Win8.1 的电脑用。界面和功能跟标准版一致，只是底下换成 Qt5 内核，因为这些系统跑不了新版 Qt6。历史记录里那种「只是挪挪位置、不改变功能」的补丁做了不少，这一版是把界面整套对齐过去的第一版。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/HKK2qhQGI2">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/fkHcUOnoV4">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/HKK2qhQGI2">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/fkHcUOnoV4">复制完整链接</button>
 
         </div>
 
@@ -788,11 +788,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash" id="w7hash">442E2B1E18A67134CCF52E4710BDF649FCF420F81548476A49E453D57A8EF436</div>
+            <div class="hash" id="w7hash">0076D408C6707149EC5B55FDBA1F3DFFC408ED901F476AEF1FAF81976A226D73</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Win7-x64-1.7.53.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Win7-x64-1.7.54.zip -Algorithm SHA256
 
             </div>
 
@@ -812,7 +812,7 @@ footer{
 
         <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.53 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.54 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -846,7 +846,7 @@ footer{
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.53 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.54 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -976,6 +976,17 @@ footer{
 
   <section class="upd">
   <section class="upd">
+    <h2>1.7.54 更新了什么<em>2026-11-12</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>全屏暂停图案修好了</b>：以前图案大小写死在 92 像素，1920×1080 铺满整屏后它还是 92，看着就像没有。现在按画面区短边自适应，1080p 是 <b>172 像素</b>（1.87 倍），窗口化 800×450 仍是 92，手感不变。</span></div>
+      <div><i></i><span><b>全屏一进去就卡住的死循环</b>：全屏重排会对底部浮层做 resize，而浮层本身也在监听尺寸变化，两者互相触发无限递归。现在重排带重入保护，浮层自己的尺寸事件也不再引发重排。</span></div>
+      <div><i></i><span><b>全屏有控制条了</b>：以前全屏后只剩右上角一个「退出全屏」，想暂停只能点画面、进度拖不了、音量调不了。现在画面底部一条浮层：暂停/继续、上一条下一条、当前时间/进度条/总时长、静音和音量。鼠标一动就出来，停 2.5 秒自动收起。实测 1920×1080 下控制条 820×37、居中距底 20 像素，退出按钮在 (1821,16)。</span></div>
+      <div><i></i><span><b>全屏四角黑缺口没了</b>：画面区原本带 12 像素圆角，铺满整屏后四角露黑。现在全屏时圆角归零，退出时还原。</span></div>
+      <div><i></i><span><b>播放卡顿的来源</b>：本地代理原来是「开连接、读完 8MB、关掉、再连下一段」，每段之间重连 100~400ms 里一个字节都不下发，缓冲耗尽就卡一下。现在后台线程提前拉下一段，重连和数据下发重叠，并给回环连接关了 Nagle 延迟。</span></div>
+      <div><i></i><span><b>油管画质</b>：同一条视频常同时给 itag 18（360p）和 22（720p）两档自带音轨的流，返回顺序不保证，以前「第一个就用」，挑到 360p 全屏就是一片糊。现在按分辨率和码率取最高的一档。</span></div>
+      <div><i></i><span><b>B 站画质（说实话）</b>：改成先要 1080p 档、拿不到再退 720p。但实测 html5 匿名接口两次返回的清晰度都是 64（720p）、文件大小一模一样，也就是这个接口本身封顶 720p。真要 1080p 得登录大会员走音视频分离再本地合并，这一版没做，留到下轮。</span></div>
+    </div>
+      <section class="upd">
     <h2>1.7.53 更新了什么<em>2026-11-12</em></h2>
     <div class="ulist">
       <div><i></i><span><b>工具页新增「录屏」</b>：帧率 30 / 60 / 90 / 120 四档，画质流畅 / 标准 / 高清 / 超清四档，保存目录自己挑。实测 1920×1080 跑 120 帧能跑满，从成品文件里读回 <b>120.003 fps</b>。</span></div>
@@ -1291,7 +1302,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.53</span>
+    <span>OMC LAUNCHER 1.7.54</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1536,10 +1547,10 @@ footer{
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-  var V = '1.7.53';
+  var V = '1.7.54';
   var MAP = {
-    'shKEUuOKF3': 'win',
-    'HKK2qhQGI2': 'win7',
+    'UoG6JQZqfT': 'win',
+    'fkHcUOnoV4': 'win7',
     'Jx9AUBLVTs': 'linux',
     'h1gp3A8UVo': 'mac-arm',
     '2vCWqDxAyC': 'mac-intel',
