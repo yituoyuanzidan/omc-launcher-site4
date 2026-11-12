@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.57", "pc_url": "https://aka.doubaocdn.com/s/x6VLOtCNVi", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.57 修的是「加入公共服一打开就崩」。崩溃日志显示那次给游戏开了 6GB 内存，崩的时候系统只剩 277MB 可用，Java 连 1MB 都申请不到——跟服务器地址、模组都无关。现在启动前先读真实可用内存，上限取「总内存 60%」和「可用 75%」里小的那个，不够就降档、降了还不够就不硬启并说明差多少。顺手修了直连参数：1.20+ 和 1.19- 两套参数以前同时拼进命令行，现在按版本只发一套。围棋 AI 会先算「对手下一手吃我多少子」，6 子大块快死时会去救、旁边有大便宜也不贪；对老 AI 16 局全胜，平均每手 15.4 毫秒。登录窗口多了「微软账号」页签，8 位代码走设备码登录，没有账号可以当场注册；微信/QQ 扫码填新名字会自动注册，手机上的按钮相应变成「确认注册」。"}'>
+<meta name="omc-update" content='{"latest": "1.7.58", "pc_url": "https://aka.doubaocdn.com/s/gA2cVWpG35", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.58 修的是「明明提示有新版本、重启完还是旧版本」这个死循环。真因不是清单缓存，而是退出后同目录还挂着别的 OMC 实例，主程序文件被占着，复制替换永远失败——日志里那串「主程序仍被占用」和 robocopy 返回码 11 就是证据。现在替换前按完整路径清掉同目录其它实例、等独占最多 15 秒、每次都先清理再重试（0 重试等待、共 8 次），换完不只比文件大小，还比 SHA256 才认定成功；真换不上会写明目标版本，下次启动不再自动重下 225MB，改成提示手动下载。登录和注册都加了人机验证：4 位图形码，输对才往下走，错 5 次关掉窗口。小矿回复慢也找到了原因：以前每句话先直连维基百科，国内连不通时四个请求把一次回复拖到 40 秒；现在 2 秒预检 + 连不上冷却 10 分钟 + 开程序时后台先探一次，实测单句 0.07 秒。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.57</strong></span>
+<span>版本 <strong>1.7.58</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/x6VLOtCNVi">
+      <a class="btn" href="https://aka.doubaocdn.com/s/gA2cVWpG35">
 
         下载 Windows 版
 
-        <small>zip · 224.9 MB · 1.7.57</small>
+<small>zip · 225.0 MB · 1.7.58</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/x6VLOtCNVi">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/U5LgeHCD4H">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/gA2cVWpG35">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/vgTQuIDLMZ">老系统专用版</a>。</div>
 
       </div>
 
@@ -736,15 +736,15 @@ footer{
 
       <div class="card">
 
-        <h3>Windows 版 <span class="wh">x64 · 224.9 MB</span></h3>
+<h3>Windows 版 <span class="wh">x64 · 225.0 MB</span></h3>
 
         <p>成品包，解压即用。光影、存档、数据包、模组都能在里面下和装，带自动更新。需要 Windows 10 / 11（64 位）。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/x6VLOtCNVi">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/gA2cVWpG35">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/x6VLOtCNVi">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/gA2cVWpG35">复制完整链接</button>
 
         </div>
 
@@ -754,11 +754,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">7EB9AAEEC15CBEEFBDE98DE48F6E98134315893589717ACECC717DF00A92B79D</div>
+<div class="hash">1C11A638B275A05265D252013CD67EF6B8B1CD9F2E7A2C9A1709BAD0AD1182FE</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.57.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC-Windows-x64-1.7.58.zip -Algorithm SHA256
 
             </div>
 
@@ -776,9 +776,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/U5LgeHCD4H">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/vgTQuIDLMZ">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/U5LgeHCD4H">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/vgTQuIDLMZ">复制完整链接</button>
 
         </div>
 
@@ -788,11 +788,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash" id="w7hash">00779DDF5A29FA43B0ABD2DD1CB2706FAE5DB2BA9D34A729BB4B15CDBC4DD9A6</div>
+<div class="hash" id="w7hash">49CEEF1E5EB2A22EDF293B1B8E7332A07105269DB22F38C0CC588AA867986B33</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Win7-x64-1.7.57.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC-Win7-x64-1.7.58.zip -Algorithm SHA256
 
             </div>
 
@@ -812,7 +812,7 @@ footer{
 
         <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.57 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.58 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -846,7 +846,7 @@ footer{
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.57 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.58 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -973,6 +973,17 @@ footer{
 
 
   <!-- 更新日志 -->
+
+  <section class="upd">
+    <h2>1.7.58 更新了什么<em>2026-11-12</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>「提示有新版本，重启完还是旧的」修好了</b>：真因不是清单缓存，也不是 CDN 短链。日志里有直接证据——退出启动器后，同目录还挂着别的 OMC 实例，<span class="tag">OMC.exe</span> 被别人占着，复制替换永远失败（robocopy 返回码 11），脚本却还是照常把「新版本已启动」写进日志，于是每次都提示更新、每次都没换上。现在替换前先按完整路径清掉同目录其它实例，再等文件独占最多 15 秒，每次失败都先清理再重试（不等待、共 8 次）；换成功不只比文件大小，还比 <b>SHA256</b>，两边一致才算换上。实测同目录压着一个实例的情况下 3 秒完成替换、哈希双向一致。</span></div>
+      <div><i></i><span><b>换不上就明说，不再偷偷重下 225MB</b>：真遇到占用清不掉，这次会在更新提示里写明「上次没换上，建议按提示手动下载」，而不是后台再下载一遍整包、下次启动继续提示更新。失败记录里也带上目标版本号，方便对照到底卡在哪一版。</span></div>
+      <div><i></i><span><b>登录、注册都加人机验证</b>：弹一个 4 位图形验证码（带旋转、噪点、干扰线），输对才允许登录或注册，不区分大小写；输错立刻换一张，错满 5 次关掉窗口。本地账号的登录/注册、第三方服务器的登录/注册、主界面的第三方登录都拦上了。</span></div>
+      <div><i></i><span><b>小矿回复慢也修了</b>：以前每句话发出去先直连维基百科查资料，国内连不通时一次回复要试四个请求、每个 10 秒超时，最坏 <b>40.07 秒</b>才出字。现在先做 2 秒 TCP 预检，连不上就冷却 10 分钟不再试，开程序时后台还会先探一次；实测同一句话从 <b>40.07 秒</b>降到 <b>0.07 秒</b>，后续每句都是 0 秒。</span></div>
+      <div><i></i><span><b>这次的包</b>：标准版 <b>225.0 MB</b>（上一版 224.9 MB，多 0.1 MB），老系统版 <b>59.7 MB</b>。没有新增依赖。</span></div>
+    </div>
+  </section>
 
   <section class="upd">
     <h2>1.7.57 更新了什么<em>2026-11-12</em></h2>
@@ -1342,7 +1353,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.57</span>
+<span>OMC LAUNCHER 1.7.58</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1587,10 +1598,10 @@ footer{
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-  var V = '1.7.57';
+var V = '1.7.58';
   var MAP = {
-    'x6VLOtCNVi': 'win',
-    'U5LgeHCD4H': 'win7',
+    'gA2cVWpG35': 'win',
+    'vgTQuIDLMZ': 'win7',
     'Jx9AUBLVTs': 'linux',
     'h1gp3A8UVo': 'mac-arm',
     '2vCWqDxAyC': 'mac-intel',
