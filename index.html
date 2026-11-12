@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.54", "pc_url": "https://aka.doubaocdn.com/s/UoG6JQZqfT", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.54 全修视频页。全屏暂停图案以前大小写死在 92 像素，1920×1080 铺满后还是 92，看着就像没显示；现在跟着画面区走，1080p 是 172 像素（1.87 倍），窗口化不变。全屏一进去就卡住的死循环修掉了（重排会 resize 底部浮层，浮层自己也在监听尺寸变化，两个互相触发）；全屏不再只剩右上角一个退出按钮，底部多了暂停/进度/音量/上下一条的浮层，鼠标一动就出来、停 2.5 秒自动收起；四角黑缺口也没了（全屏圆角归零，退出还原）。卡顿方面，本地代理以前是读完 8MB 就断一次、重连的空档里一个字节都不发，现在后台线程提前拉下一段，重连和下发重叠，回环连接也关了 Nagle。画质方面，油管同一条视频常同时给 360p 和 720p 两档带音轨的流，以前「第一个就用」，挑到 360p 全屏就是一片糊；现在按分辨率和码率取最高。B 站也先要 1080p 档、拿不到再退 720p——实测 html5 匿名接口封顶就是 720p，真要 1080p 得登录大会员走音视频分离，这版还没做，先把话说清楚。"}'>
+<meta name="omc-update" content='{"latest": "1.7.55", "pc_url": "https://aka.doubaocdn.com/s/hmV39ro7KR", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.55 修任务栏图标和嗓子。图标那个「崩溃程序」占位图，根子是三个不同目录的 OMC.exe 共用同一个 AppUserModelId，图标路径写的是「当前启动的那个 exe」，谁最后启动就改写谁，旧包没塞好图标任务栏就退回占位图；现在图标固定一份 ico 放数据目录，写完还通知资源管理器别用旧缓存。另外加了单实例：反复双击不再叠出一堆进程（实测曾叠到 15 个抢着改注册表），再点一次只会把已开的窗口提到前面。小矿说话不那么死了，模板腔去掉，复读率 0%、平均每句 20.9 字（以前最长能甩 104 字）；语音去掉 markdown 符号和括号注释，长句在逗号处再切一刀，语速按句轻浮动、语气跟着情绪走一点点；识别词库扩到 76 项、同音纠错 50 条，12 句难样本从 6/12 提到 11/12。声线只留「小矿」一项，旧配置里选过其他声线的自动回落。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-    <span>版本 <strong>1.7.54</strong></span>
+    <span>版本 <strong>1.7.55</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/UoG6JQZqfT">
+      <a class="btn" href="https://aka.doubaocdn.com/s/hmV39ro7KR">
 
         下载 Windows 版
 
-        <small>zip · 129.0 MB · 1.7.54</small>
+        <small>zip · 129.0 MB · 1.7.55</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/UoG6JQZqfT">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/fkHcUOnoV4">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/hmV39ro7KR">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/7ZipcrweEr">老系统专用版</a>。</div>
 
       </div>
 
@@ -742,9 +742,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/UoG6JQZqfT">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/hmV39ro7KR">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/UoG6JQZqfT">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/hmV39ro7KR">复制完整链接</button>
 
         </div>
 
@@ -754,11 +754,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash">431B1BBA4E84ACCE4B6E5D3109A25E503168A0EE7713DE76042E6E2BA063F95C</div>
+            <div class="hash">759CBA6765094E450616A925B4B7A57B24B5D9CD6B5FD36B68ABA30B094F0A0A</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Windows-x64-1.7.54.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Windows-x64-1.7.55.zip -Algorithm SHA256
 
             </div>
 
@@ -776,9 +776,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/fkHcUOnoV4">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/7ZipcrweEr">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/fkHcUOnoV4">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/7ZipcrweEr">复制完整链接</button>
 
         </div>
 
@@ -788,11 +788,11 @@ footer{
 
           <div class="dbody">
 
-            <div class="hash" id="w7hash">0076D408C6707149EC5B55FDBA1F3DFFC408ED901F476AEF1FAF81976A226D73</div>
+            <div class="hash" id="w7hash">F0C7701C3CD17BA02940EEB61C41DDD570F964644128BE24989AAC6CF954C29F</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Windows: Get-FileHash .\OMC-Win7-x64-1.7.54.zip -Algorithm SHA256
+              Windows: Get-FileHash .\OMC-Win7-x64-1.7.55.zip -Algorithm SHA256
 
             </div>
 
@@ -812,7 +812,7 @@ footer{
 
         <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.54 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.55 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -846,7 +846,7 @@ footer{
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.54 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.55 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -973,6 +973,19 @@ footer{
 
 
   <!-- 更新日志 -->
+
+  <section class="upd">
+    <h2>1.7.55 更新了什么<em>2026-11-12</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>任务栏图标不再是「崩溃程序」</b>：根子不在图标文件本身。桌面上一共有三个不同目录的 OMC.exe，它们共用同一个 AppUserModelId（OMC.Launcher.App.1），而旧版把「图标路径」写成「当前启动的这个 exe」——谁最后启动就把这个路径改写成谁，碰上一个图标没塞好的旧包，任务栏就只能退回系统占位图。现在启动时把图标复制成一份固定 ico（taskbar.ico，5,139 字节，含 16/20/24/32/40/48/64/96/128/256 十档）放在数据目录，换版本、换目录都改不坏；写完还调 SHChangeNotify 通知资源管理器丢掉旧缓存。</span></div>
+      <div><i></i><span><b>加了单实例</b>：以前反复双击桌面图标，每点一次就多一个进程（现场实测同时 15 个），它们抢着改写上面那份图标注册。现在第二份会去抢文件锁，抢不到就把已经开着的窗口提到前面、自己安静退出（实测 2 秒内返回码 0，且没有额外窗口）。如果老进程是上回被强杀留下的空壳、提不到窗口，就照常放行——不会把你自己挡在门外（锁文件残留的情况下实测照样能开）。</span></div>
+      <div><i></i><span><b>小矿说话不那么死了</b>：去掉「记下了」「还有呢」这类模板腔，20 轮实测复读率 <b>0%</b>，平均每句 20.9 字、最长 55 字（上一版最长能甩出 104 字的装模组教程）。追问会往上找最近一句「有内容」的话（最多回溯 8 轮），不再把你的追问当成空话接一句「这个刚聊过」。</span></div>
+      <div><i></i><span><b>念出来更像人在说</b>：语音会先清掉 markdown 符号和括号注释，「**重点**：内存别拉满（超过物理内存一半会卡）—— 原版 2048MB 够用」现在念成「重点：内存别拉满，原版 2048MB 够用」；过长的句子在逗号处再切一刀；句间语速不再按固定周期抖动，改成每句轻微浮动；语气跟着情绪走一点点——说高兴事快一档、音高高 2.5%，安抚时只压低音高不降速（降一档实测慢 24%，像卡带）。</span></div>
+      <div><i></i><span><b>识别听得更准</b>：词库扩到 76 项，补上加载器、整合包、坐标、生物群系、备份、崩溃报告、附魔书、forge、fabric、optifine、光影、jar；同音纠错扩到 50 条（钻石搞→钻石镐、合金定→合金锭、要在的→要怎么）。还修了一个真 bug：第二段没音频时抛异常会连带丢掉第一段的结果，现在异常被隔离。12 句难样本从 6/12 提到 <b>11/12</b>，6 句日常回归全对。</span></div>
+      <div><i></i><span><b>声线只留「小矿」</b>：其余声线全删，下拉框只剩「小矿」和「关闭声音」两项；旧配置里选过萝莉 / 少女 / 大神 / 播报 / 热血 / 机器 / 英文的，读出来一律回落到小矿，不会变成没声音。</span></div>
+      <div><i></i><span><b>说清楚限制</b>：这一版只发 Windows（含 Win7 老系统版），Linux 与 macOS 包仍是 1.7.38，下轮补。图标那块地表最强系统缓存有时要重启一次资源管理器才刷新，本机实测注册表里的 IconUri 已指向固定 ico 且十个尺寸都能读。</span></div>
+    </div>
+  </section>
 
   <section class="upd">
     <h2>1.7.54 更新了什么<em>2026-11-12</em></h2>
@@ -1304,7 +1317,7 @@ footer{
 
   <footer>
 
-    <span>OMC LAUNCHER 1.7.54</span>
+    <span>OMC LAUNCHER 1.7.55</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1549,10 +1562,10 @@ footer{
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-  var V = '1.7.54';
+  var V = '1.7.55';
   var MAP = {
-    'UoG6JQZqfT': 'win',
-    'fkHcUOnoV4': 'win7',
+    'hmV39ro7KR': 'win',
+    '7ZipcrweEr': 'win7',
     'Jx9AUBLVTs': 'linux',
     'h1gp3A8UVo': 'mac-arm',
     '2vCWqDxAyC': 'mac-intel',
