@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.58", "pc_url": "https://aka.doubaocdn.com/s/gA2cVWpG35", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.58 修的是「明明提示有新版本、重启完还是旧版本」这个死循环。真因不是清单缓存，而是退出后同目录还挂着别的 OMC 实例，主程序文件被占着，复制替换永远失败——日志里那串「主程序仍被占用」和 robocopy 返回码 11 就是证据。现在替换前按完整路径清掉同目录其它实例、等独占最多 15 秒、每次都先清理再重试（0 重试等待、共 8 次），换完不只比文件大小，还比 SHA256 才认定成功；真换不上会写明目标版本，下次启动不再自动重下 225MB，改成提示手动下载。登录和注册都加了人机验证：4 位图形码，输对才往下走，错 5 次关掉窗口。小矿回复慢也找到了原因：以前每句话先直连维基百科，国内连不通时四个请求把一次回复拖到 40 秒；现在 2 秒预检 + 连不上冷却 10 分钟 + 开程序时后台先探一次，实测单句 0.07 秒。"}'>
+<meta name="omc-update" content='{"latest": "1.7.59", "pc_url": "https://aka.doubaocdn.com/s/o1yUSVBtvE", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.59 第一个改动是「退出登录后还能进娱乐区」。真因不是权限没判，而是娱乐页有个兜底：current 空着、机器上只有一个账号时，就认定登录态被更新或强杀弄丢了，自动把账号写回去。它认不出用户是自己点的退出，于是退出完再进娱乐区又被登回去。现在退出登录会写一个主动退出标记，兜底看到标记就不再补，重启也不再拿记住的密码自动登录；手动登录一次标记自动清掉。第二个是任务栏显示「崩溃程序」：旧包的版本资源里 FileDescription、ProductName、FileVersion 全是空的，Windows 拿不到程序名只能给占位名，现在写成 OMC 启动器 1.7.59。另外崩溃不再静默了，异常会写进启动器数据目录的 crash.log，工具箱里能直接看最后 160 行；工具箱新增网络自检、帧率优化、内存体检三块；音乐封面缓存加 80 条上限、全局热键轮询从 300 毫秒放宽到 600 毫秒。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-<span>版本 <strong>1.7.58</strong></span>
+<span>版本 <strong>1.7.59</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/gA2cVWpG35">
+      <a class="btn" href="https://aka.doubaocdn.com/s/o1yUSVBtvE">
 
         下载 Windows 版
 
-<small>zip · 225.0 MB · 1.7.58</small>
+<small>zip · 225.0 MB · 1.7.59</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/gA2cVWpG35">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/vgTQuIDLMZ">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/o1yUSVBtvE">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/cZHTyeD8lA">老系统专用版</a>。</div>
 
       </div>
 
@@ -742,9 +742,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/gA2cVWpG35">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/o1yUSVBtvE">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/gA2cVWpG35">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/o1yUSVBtvE">复制完整链接</button>
 
         </div>
 
@@ -754,11 +754,11 @@ footer{
 
           <div class="dbody">
 
-<div class="hash">1C11A638B275A05265D252013CD67EF6B8B1CD9F2E7A2C9A1709BAD0AD1182FE</div>
+<div class="hash">8C3E58A3AC229ED77616F28218DC6AD65DE6463C76F3676F942009276C20133F</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC-Windows-x64-1.7.58.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC-Windows-x64-1.7.59.zip -Algorithm SHA256
 
             </div>
 
@@ -776,9 +776,9 @@ Windows: Get-FileHash .\OMC-Windows-x64-1.7.58.zip -Algorithm SHA256
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/vgTQuIDLMZ">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/cZHTyeD8lA">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/vgTQuIDLMZ">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/cZHTyeD8lA">复制完整链接</button>
 
         </div>
 
@@ -788,11 +788,11 @@ Windows: Get-FileHash .\OMC-Windows-x64-1.7.58.zip -Algorithm SHA256
 
           <div class="dbody">
 
-<div class="hash" id="w7hash">49CEEF1E5EB2A22EDF293B1B8E7332A07105269DB22F38C0CC588AA867986B33</div>
+<div class="hash" id="w7hash">FD2BD108A132C5D6002A98AC2F6E641604650F9D81EE84EED850144C415EFB56</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC-Win7-x64-1.7.58.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC-Win7-x64-1.7.59.zip -Algorithm SHA256
 
             </div>
 
@@ -812,7 +812,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.58.zip -Algorithm SHA256
 
         <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.58 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.59 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -846,7 +846,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.58.zip -Algorithm SHA256
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.58 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.59 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -973,6 +973,18 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.58.zip -Algorithm SHA256
 
 
   <!-- 更新日志 -->
+
+  <section class="upd">
+    <h2>1.7.59 更新了什么<em>2026-11-13</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>退出登录后还能进娱乐区，修好了</b>：真因不是没判权限。娱乐页原来有个兜底——登录态空着、机器上只有一个账号时，就认定是更新或强杀把登录态弄丢了，自动把账号写回去。它分不出「用户自己点的退出」，于是退出完进娱乐区又被笑呵呵地登回去。现在退出登录会写一个主动退出标记，兜底看见标记就不再补登录态；重启也不会拿记住的密码自动把你登回去。实测：退出后娱乐页直接落到「需要先登录账号」，<code>current</code> 始终为空，手动登录一次标记就自动清掉了。</span></div>
+      <div><i></i><span><b>任务栏不再显示「崩溃程序」</b>：上一版 exe 的版本资源里 FileDescription、ProductName、FileVersion、CompanyName 四项全空，Windows 拿不到程序名，只能退回占位名。这次打包时直接把这四项写进 exe：<b>OMC 启动器 / 1.7.59 / OMC</b>，标准版和老系统版都写。实测新包四项都有值，旧包是空的。</span></div>
+      <div><i></i><span><b>真崩了也有记录</b>：主线程和子线程的异常都会写进启动器数据目录下的 <code>crash.log</code>（带时间、线程名、完整调用栈），同时抑制 Windows 那个「程序已停止工作」弹窗。工具页的日志诊断里加了「看启动器崩溃日志 / 清空启动器日志 / 打开启动器数据目录」三个按钮，超过 160 行只渲染最后 160 行，别让界面卡住。</span></div>
+      <div><i></i><span><b>工具箱又多了三块</b>：<br>① <b>网络自检</b>——列出局域网地址，试 80/8080/8901 三个扫码端口能不能绑，测站点 DNS 与首页、两条下载短链，哪一步断了一眼看得出。实测本机 DNS 22 ms、站点 200（843 ms）、两条短链 206。<br>② <b>帧率优化</b>——读真实核心数和物理内存给三档建议，刷新率用当前屏幕的实值。实测 16 核 / 15.8 GB / 144 Hz 给出 maxFps 144、renderDistance 12 等 10 个键；可用内存低于 3 GB 会自动降档并提示先关浏览器；只补你还没调过的项，不覆盖你的设置。<br>③ <b>内存体检</b>——直接读本进程的工作集、私有字节、句柄数，配「整理内存」和「清图片缓存」两个按钮；整理时会显式清掉 Qt 的 pixmap 缓存。</span></div>
+      <div><i></i><span><b>顺手收的几个内存口子</b>：音乐页封面缓存原来没有上限（几百首的歌单会一直涨），现在封到 80 张、超了丢最早的；全局热键轮询从 300 毫秒放宽到 600 毫秒；视频、皮肤、缩略图、录像几处缓存本来就封顶了，这次只是复核。</span></div>
+      <div><i></i><span><b>这次的包</b>：标准版 <b>225.0 MB</b>（2361 个文件），老系统版 <b>59.7 MB</b>（284 个文件）。没有新增依赖。</span></div>
+    </div>
+  </section>
 
   <section class="upd">
     <h2>1.7.58 更新了什么<em>2026-11-12</em></h2>
@@ -1353,7 +1365,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.58.zip -Algorithm SHA256
 
   <footer>
 
-<span>OMC LAUNCHER 1.7.58</span>
+<span>OMC LAUNCHER 1.7.59</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1598,10 +1610,10 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.58.zip -Algorithm SHA256
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-var V = '1.7.58';
+var V = '1.7.59';
   var MAP = {
-    'gA2cVWpG35': 'win',
-    'vgTQuIDLMZ': 'win7',
+    'o1yUSVBtvE': 'win',
+    'cZHTyeD8lA': 'win7',
     'Jx9AUBLVTs': 'linux',
     'h1gp3A8UVo': 'mac-arm',
     '2vCWqDxAyC': 'mac-intel',
