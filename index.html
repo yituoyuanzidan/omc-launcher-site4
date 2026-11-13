@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.60", "pc_url": "https://aka.doubaocdn.com/s/OUcDtdL9K1", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.60 主要补了四件事。第一是小矿开口快了一个数量级：以前每句话都要新起一个合成进程，短句也要等一秒半；现在合成进程常驻，语音引擎和音色只加载一次，实测短句从 1500 毫秒降到 60 毫秒上下，而且第一句合成好就先开口，不等整段念完。第二是离开视频页彻底静音：切到别的页面、或者把窗口缩到任务栏，播放器直接停掉，不只是暂停，不会再出现人在别的页面却还听见视频声音。第三是性能监控：工具箱的缓存清理页里加了「开始性能监控」，每秒刷新 CPU 占比、工作集、私有字节、峰值、线程数、句柄数和界面帧率，关掉就全停。第四是空闲降频：窗口最小化之后全局热键轮询会停掉，还原再启。另外位图缓存有了硬上限 64 MB，超了自动淘汰最久没用的。退出登录后还能进娱乐区的 bug 在这版之前就修好了：退出会写主动退出标记，单账号自动回填的兜底看到标记就不再补登录态。任务栏显示崩溃程序的问题也一并解决，exe 里现在写明了 OMC 启动器、版本号和公司名。"}'>
+<meta name="omc-update" content='{"latest": "1.7.61", "pc_url": "https://aka.doubaocdn.com/s/20A1ydMStZ", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.61 修的是视频页那个「勾了恐怖还是刷到恐怖片」的老毛病，另外加了三个东西。过滤失效的根子不在界面：B 站搜索结果本来带 tag（一串标签）和简介，程序只读了标题，所以标题不写「恐怖」的片子全漏过去了；现在这两项都取回来一起判断，恐怖词表从 16 个扩到 50 多个，另外勾选改动当场就把手里这批重新过一遍，不用再点刷新。实测搜「我的世界 恐怖 模组」二十条全拦，只按标题的老写法会放过 5 条；正常生存和建筑教程内容误杀 0 条。第二是视频页多了「查这片的模组」，按名字对模组站做匹配，认不出来会直说，不瞎推。第三是下载版本选 Fabric 加载器时可以勾选一并装 Fabric API。第四是装加载器有了真进度条：按字节算百分比，实时显示下载速度。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-<span>版本 <strong>1.7.60</strong></span>
+<span>版本 <strong>1.7.61</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/OUcDtdL9K1">
+      <a class="btn" href="https://aka.doubaocdn.com/s/20A1ydMStZ">
 
         下载 Windows 版
 
-<small>zip · 225.0 MB · 1.7.60</small>
+<small>zip · 224.8 MB · 1.7.61</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/OUcDtdL9K1">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/oDjlvQ6P1z">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/20A1ydMStZ">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/mFUyD69y7Q">老系统专用版</a>。</div>
 
       </div>
 
@@ -742,9 +742,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/OUcDtdL9K1">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/20A1ydMStZ">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/OUcDtdL9K1">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/20A1ydMStZ">复制完整链接</button>
 
         </div>
 
@@ -754,11 +754,11 @@ footer{
 
           <div class="dbody">
 
-<div class="hash">5335730083AAC990CC5DE0201E907DC65783464F8D6E9718B265E795150DB824</div>
+<div class="hash">04FC6AC85FC3CB116FF7E88DE46B1ECE998B64D5F3BAB6DCA46A548A60988A1C</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC-Windows-x64-1.7.60.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC-Windows-x64-1.7.61.zip -Algorithm SHA256
 
             </div>
 
@@ -776,9 +776,9 @@ Windows: Get-FileHash .\OMC-Windows-x64-1.7.60.zip -Algorithm SHA256
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/oDjlvQ6P1z">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/mFUyD69y7Q">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/oDjlvQ6P1z">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/mFUyD69y7Q">复制完整链接</button>
 
         </div>
 
@@ -788,11 +788,11 @@ Windows: Get-FileHash .\OMC-Windows-x64-1.7.60.zip -Algorithm SHA256
 
           <div class="dbody">
 
-<div class="hash" id="w7hash">AAF35F4AC420B809D5DFF273C7386C1E6BACD0F49BC33815CFE157E0A7A1EE80</div>
+<div class="hash" id="w7hash">79E53511419AF6A575FE9733010B9EF4F40B021B3EAA3AD27329D679E96458F9</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC-Win7-x64-1.7.60.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC-Win7-x64-1.7.61.zip -Algorithm SHA256
 
             </div>
 
@@ -812,7 +812,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.60.zip -Algorithm SHA256
 
         <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.60 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.61 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -846,7 +846,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.60.zip -Algorithm SHA256
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.60 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.61 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -973,6 +973,19 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.60.zip -Algorithm SHA256
 
 
   <!-- 更新日志 -->
+
+  <section class="upd">
+    <h2>1.7.61 更新了什么<em>2026-11-13</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>「勾了恐怖还刷到恐怖片」修好了</b>：问题不在界面，在数据。B 站搜索接口本来就返回了 tag（一串标签，比如「MC 恐怖模组」）和简介，程序只取了标题，所以标题故意不写「恐怖」、只把关键词塞进标签的片子一路漏过去。现在标签和简介都取回来一起判断，恐怖这一类词表从 16 个扩到 <b>50 多个</b>（后室、规则怪谈、怨灵、毛骨悚然、胆小勿入、jumpscare、phasmophobia 之类）。实测搜「我的世界 恐怖 模组」取 20 条：勾上恐怖后 <b>20 条全拦</b>，而只按标题的旧写法会放过 5 条；「我的世界 后室」20 条也全拦。反过来搜「我的世界 生存」和「我的世界 建筑教程」，各 20 条<b>一条没误杀</b>。</span></div>
+      <div><i></i><span><b>勾完立刻生效，不用等刷新</b>：以前改过滤只是存设置，手里这一批还要等你点刷新才重算，边看边改就会觉得「勾了没用」。现在勾选一变，当场把列表里已有的条目本地重过一遍，被滤掉的立刻消失；如果你正在看的那条正好被滤掉，会自动换到新的第一条。</span></div>
+      <div><i></i><span><b>视频页多了「查这片的模组」</b>：在「在平台上打开」旁边。不把整句标题丢给搜索，而是先从标题里认出具体的模组名（中文译名表约 60 条，加上书名号/引号里的专名、「XX 模组」结构、英文词组），再按<b>名字层面</b>去模组站核对：同名、名字互相包含、项目名整个出现在标题里才算命中，只在简介里蹭到一嘴的会被丢掉。实测「机械动力」认到 Create（2810 万次下载）、「匠魂」认到 Tinkers' Construct、「Alex's Mobs」同名直接 100 分；「我的世界最恐怖的模组」这类认不出具体项目的，会直接告诉你标题里没有模组名，<b>不瞎推</b>。双击结果或按「打开模组页」能直接跳过去。</span></div>
+      <div><i></i><span><b>选 Fabric 时能一并装 Fabric API</b>：以前是偷偷装——不管你要不要，装完 Fabric 都会去模组站补一个 Fabric API，失败了只写日志，你完全看不出来。现在加载器下面有个勾选框「一并装 Fabric API（多数 Fabric 模组的前置）」，默认勾着，取消就真的不装；它会按你这次选的 MC 版本取对应版本，已经装过的话不重复下载。实测 1.21.1 / 1.20.1 / 1.19.2 三个版本都能取到并下载成功（2.4 MB / 2.1 MB / 1.9 MB）。</span></div>
+      <div><i></i><span><b>装加载器有真进度条了</b>：以前只有「正在安装加载器…」一行字，库文件要下几十个，看不出是在下还是卡死了。现在进度条按<b>字节</b>算百分比（Fabric 的清单不写文件大小，程序会自己并发探一遍总长度），旁边实时显示「已下载 / 总量 + 当前速度」。实测装一次 Fabric 0.20.1 + 1.21.1：<b>4.4 MB、10.4 秒</b>，27 次进度采样百分比一路只增不减，峰值 <b>1.7 MB/s</b>。Forge / NeoForge 那部分下载发生在 Java 安装器自己进程里，拿不到逐字节数据，这段时间进度条走「不确定」状态并显示已下载量和速度，不会假装有个百分比。</span></div>
+      <div><i></i><span><b>音乐播放的兜底也在这版里</b>：上一版改完没发，这次一起带上——搜歌/下载改走直连，不再被本机代理拦掉；在线播放失败会自动换备用源，同名文件直接复用不再重复下载。</span></div>
+      <div><i></i><span><b>这次的包</b>：标准版 <b>224.8 MB</b>（2361 个文件），老系统版 <b>59.7 MB</b>（284 个文件）。没有新增依赖。</span></div>
+    </div>
+  </section>
 
   <section class="upd">
     <h2>1.7.60 更新了什么<em>2026-11-13</em></h2>
@@ -1378,7 +1391,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.60.zip -Algorithm SHA256
 
   <footer>
 
-<span>OMC LAUNCHER 1.7.60</span>
+<span>OMC LAUNCHER 1.7.61</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1623,10 +1636,10 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.60.zip -Algorithm SHA256
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-var V = '1.7.60';
+var V = '1.7.61';
   var MAP = {
-    'OUcDtdL9K1': 'win',
-    'oDjlvQ6P1z': 'win7',
+    '20A1ydMStZ': 'win',
+    'mFUyD69y7Q': 'win7',
     'Jx9AUBLVTs': 'linux',
     'h1gp3A8UVo': 'mac-arm',
     '2vCWqDxAyC': 'mac-intel',
