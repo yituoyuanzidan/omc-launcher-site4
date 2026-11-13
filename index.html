@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.62", "pc_url": "https://aka.doubaocdn.com/s/HOUSmqVWpS", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.62 有五件事。一是下载包改名：以后压出来的包就叫「OMC启动器-版本号.zip」，不再是一串英文加平台名。二是专门做了一轮降误报：exe 里写进完整的系统兼容声明（Win7 到 Win11 四代 supportedOS、长路径支持、逐显示器 DPI 感知、通用控件依赖、请求层级 asInvoker），UPX 压缩全关，版本资源每个字段都填满。三是加了个「OMC加白.exe」，双击后自动检测这台电脑上装了哪些杀毒软件，只列装了的，点一下就把整个 OMC 文件夹加进 Defender 排除项，其它杀软给出它自己的加白路径。四是有了正常安装包：可以选语言（默认中文）、选安装位置、勾桌面和开始菜单快捷方式，装完能在控制面板里正常卸载。五是加了「启动网易版」，只走网易官方登录，只负责启动和登录，不代注册、不改它的文件、不注入，避免被当成外挂。另外模组下载页可以按类型筛了。"}'>
+<meta name="omc-update" content='{"latest": "1.7.63", "pc_url": "https://aka.doubaocdn.com/s/gBZucPUV9l", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.63 主要修娱乐页四件事、顺手把全项目的定时器降了频。一是好友下拉框常开，不用先切到「邀请好友」，还多了「刷新好友」和「去好友页加人」；二是邀请改一人一个收件箱，自己发的邀请不会再显示成「别人邀请你」；三是娱乐页的轮询全部挪到后台线程，网络慢 2.5 秒时界面最大帧间隔从 2506.8 毫秒降到 10.7 毫秒；四是「匹配」模式下点开始真的进真人匹配池并留在大厅等，45 秒没人再提示，还能取消匹配。另外闹钟页、聊天浮窗、金币心跳的定时器都改成按需变频，从每秒 50 次唤醒降到每秒 1 次。这一版 Windows、Win7、安装版、Linux、macOS 五个包全部同步发。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-<span>版本 <strong>1.7.62</strong></span>
+<span>版本 <strong>1.7.63</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,19 +616,19 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/HOUSmqVWpS">
+      <a class="btn" href="https://aka.doubaocdn.com/s/gBZucPUV9l">
 
         下载 Windows 版
 
-<small>zip · 224.9 MB · 1.7.62</small>
+<small>zip · 224.8 MB · 1.7.63</small>
 
       </a>
 
-      <a class="btn ghost" href="https://aka.doubaocdn.com/s/Jx9AUBLVTs">
+      <a class="btn ghost" href="https://aka.doubaocdn.com/s/nWEgPoReXB">
 
         下载 Linux 版
 
-        <small>tar.gz · 123.2 MB · 1.7.38</small>
+        <small>tar.gz · 226.8 MB · 1.7.63</small>
 
       </a>
 
@@ -636,7 +636,7 @@ footer{
 
         下载 macOS 版
 
-        <small>zip · 65.5 MB · Apple 芯片</small>
+        <small>zip · 69.0 MB · Apple 芯片</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/HOUSmqVWpS">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/U1eKjpFT3q">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/gBZucPUV9l">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/s0cQjLI8Bc">老系统专用版</a>。</div>
 
       </div>
 
@@ -692,7 +692,7 @@ footer{
 
         <div class="ask">我用 Linux（Ubuntu / Debian / 国产 Linux）玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/Jx9AUBLVTs">Linux 版</a>。解压后进目录运行 <span class="tag">./OMC</span> 就能开，界面和 Windows 版一模一样。依赖库已经全打进去了，不用额外装 Qt。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/nWEgPoReXB">Linux 版</a>。解压后进目录运行 <span class="tag">./OMC</span> 就能开，界面和 Windows 版一模一样。依赖库已经全打进去了，不用额外装 Qt。</div>
 
       </div>
 
@@ -736,21 +736,21 @@ footer{
 
       <div class="card">
 
-<h3>Windows 版 <span class="wh">x64 · 224.9 MB</span></h3>
+<h3>Windows 版 <span class="wh">x64 · 224.8 MB</span></h3>
 
         <p>成品包，解压即用；也可下右边的安装版，像普通软件一样安装（可选语言、安装位置、桌面图标）。光影、存档、数据包、模组都能在里面下和装，带自动更新。需要 Windows 10 / 11（64 位）。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/HOUSmqVWpS">下载 OMC启动器-1.7.62.zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/gBZucPUV9l">下载 OMC启动器-1.7.63.zip</a>
 
-          <a class="go" href="https://aka.doubaocdn.com/s/FRwbySQ0gZ">下载安装版</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/qxJhSNoSXF">下载安装版</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/HOUSmqVWpS">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/gBZucPUV9l">复制完整链接</button>
 
         </div>
 
-        <p style="font-size:12.5px;color:var(--muted)">点上面的按钮下完，浏览器可能把文件存成一串字母（下载地址是短链），<b>改不改名不影响使用</b>，里面的东西一样、SHA256 也一样；想对上下面那个哈希值，把文件名改成 <span class="tag">OMC启动器-1.7.62.zip</span> 再算就行。不想管这些就点旁边的「下载安装版」，装完桌面和开始菜单里都叫「OMC 启动器」。</p>
+        <p style="font-size:12.5px;color:var(--muted)">点上面的按钮下完，浏览器可能把文件存成一串字母（下载地址是短链），<b>改不改名不影响使用</b>，里面的东西一样、SHA256 也一样；想对上下面那个哈希值，把文件名改成 <span class="tag">OMC启动器-1.7.63.zip</span> 再算就行。不想管这些就点旁边的「下载安装版」，装完桌面和开始菜单里都叫「OMC 启动器」。</p>
 
         <details>
 
@@ -758,11 +758,11 @@ footer{
 
           <div class="dbody">
 
-<div class="hash">99E17DB4EBE3D4A17DAB258741E5C67A9902DA3478EF60FB75133CAEE4E07D5D</div>
+<div class="hash">E8985366889E28FC4CA6AA5F462D57B0CE7893D9A980669AC8DE58215D7CA959</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC启动器-1.7.62.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC启动器-1.7.63.zip -Algorithm SHA256
 
             </div>
 
@@ -780,9 +780,9 @@ Windows: Get-FileHash .\OMC启动器-1.7.62.zip -Algorithm SHA256
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/U1eKjpFT3q">下载 OMC启动器-Win7-1.7.62.zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/s0cQjLI8Bc">下载 OMC启动器-Win7-1.7.63.zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/U1eKjpFT3q">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/s0cQjLI8Bc">复制完整链接</button>
 
         </div>
 
@@ -792,11 +792,11 @@ Windows: Get-FileHash .\OMC启动器-1.7.62.zip -Algorithm SHA256
 
           <div class="dbody">
 
-<div class="hash" id="w7hash">B216C14F28EA17A2474439E0EDED1DCB3746214D95EC9109C7F973B8912B1ADB</div>
+<div class="hash" id="w7hash">767781BDE041FBC257C6EDDD40498CC9A9814102100F74F4F878BDEF4433E163</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC启动器-Win7-1.7.62.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC启动器-Win7-1.7.63.zip -Algorithm SHA256
 
             </div>
 
@@ -814,15 +814,15 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.62.zip -Algorithm SHA256
 
       <div class="card">
 
-        <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
+        <h3>Linux 版 <span class="wh">x64 · 226.8 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.62 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号，1.7.63 跟 Windows 版内容一致：娱乐页的邀请、匹配、好友下拉和后台轮询这些改动都在里面。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC，Qt 依赖已经全打进去了。这版包体涨到 226.8 MB，原因是把小矿的语音识别和视频解码那套依赖打全了，不再靠系统自带的凑。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/Jx9AUBLVTs">下载 tar.gz</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/nWEgPoReXB">下载 tar.gz</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/Jx9AUBLVTs">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/nWEgPoReXB">复制完整链接</button>
 
         </div>
 
@@ -832,11 +832,11 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.62.zip -Algorithm SHA256
 
           <div class="dbody">
 
-            <div class="hash">E7DF08B8426030CD727CB8DF90E3D4456F0A49F96AFCD0C63D320CBD1FCCDB2A</div>
+            <div class="hash">0E4D50A109F956B5A1C84A69CE39DBB68EBF2EDE9BC44B6A9339B19AAF649903</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              Linux: sha256sum OMC-Linux-x64-1.7.38.tar.gz
+              Linux: sha256sum OMC-Linux-x64-1.7.63.tar.gz
 
             </div>
 
@@ -850,21 +850,21 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.62.zip -Algorithm SHA256
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.62 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号，1.7.63 跟 Windows / Linux 版内容一致。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。这两个包是在 GitHub 的 macOS 机器上现打出来的，不是交叉编译，所以能正常跑。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/h1gp3A8UVo">下载 · Apple 芯片 65.5 MB</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/AcIYs5IgGZ">下载 · Apple 芯片 69.0 MB</a>
 
-          <a class="go" href="https://aka.doubaocdn.com/s/2vCWqDxAyC">下载 · Intel 70.8 MB</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/9b9PNXEa4N">下载 · Intel 74.3 MB</a>
 
         </div>
 
         <div class="dlrow">
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/h1gp3A8UVo">复制 Apple 芯片链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/AcIYs5IgGZ">复制 Apple 芯片链接</button>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/2vCWqDxAyC">复制 Intel 链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/9b9PNXEa4N">复制 Intel 链接</button>
 
         </div>
 
@@ -874,17 +874,17 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.62.zip -Algorithm SHA256
 
           <div class="dbody">
 
-            <div class="hash">FFF829FC9FD3DDB47FA39B5D6CD82E004D710E3A9B2E8BA3547661B54DB7B8C0</div>
+            <div class="hash">0C06E749AB87B7A5055BD00844B8FE8FC7177FF63EE32E9F91E55B0BBAD8A019</div>
 
-            <div style="font-size:12.5px;color:var(--muted);margin-top:4px">↑ Apple 芯片 OMC-macOS-arm64-1.7.38.zip</div>
+            <div style="font-size:12.5px;color:var(--muted);margin-top:4px">↑ Apple 芯片 OMC-macOS-arm64-1.7.63.zip</div>
 
-            <div class="hash" style="margin-top:10px">D0FBE9DA8D208947C6FDB0FF4F8E71AA25B9AB98DFBC090F760D7C0572AFA78A</div>
+            <div class="hash" style="margin-top:10px">0D87051475D13051F1FBF89F9F7C8C45ADFC4E999A187D0AEE4000689B182EDB</div>
 
-            <div style="font-size:12.5px;color:var(--muted);margin-top:4px">↑ Intel OMC-macOS-x64-1.7.38.zip</div>
+            <div style="font-size:12.5px;color:var(--muted);margin-top:4px">↑ Intel OMC-macOS-x64-1.7.63.zip</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-              macOS: shasum -a 256 OMC-macOS-arm64-1.7.38.zip
+              macOS: shasum -a 256 OMC-macOS-arm64-1.7.63.zip
 
             </div>
 
@@ -894,7 +894,7 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.62.zip -Algorithm SHA256
 
         <div style="font-size:12.5px;color:var(--muted);margin-top:10px;line-height:1.7">
 
-          GitHub 备用直链：<a href="https://github.com/yituoyuanzidan/omc-launcher-site4/releases/tag/macos-arm64-v1.7.38">Apple 芯片</a> · <a href="https://github.com/yituoyuanzidan/omc-launcher-site4/releases/tag/macos-x64-v1.7.38">Intel</a>　｜　没做苹果签名，首次打开请右键图标 →「打开」
+          GitHub 备用直链：<a href="https://github.com/yituoyuanzidan/omc-launcher-site4/releases/tag/macos-arm64-v1.7.63">Apple 芯片</a> · <a href="https://github.com/yituoyuanzidan/omc-launcher-site4/releases/tag/macos-x64-v1.7.63">Intel</a>　｜　没做苹果签名，首次打开请右键图标 →「打开」
 
         </div>
 
@@ -978,6 +978,18 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.62.zip -Algorithm SHA256
 
   <!-- 更新日志 -->
 
+
+  <section class="upd">
+    <h2>1.7.63 更新了什么<em>2026-11-13</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>好友下拉一直能点了</b>：以前必须先把上面切到「邀请好友」模式，那个下拉才亮，平常是灰的；下拉里显示的还不是账号名，是备注名，点下去根本对不上人。现在不管在哪个模式都能直接选好友，列表里存的是<b>真名</b>，旁边多了<b>「刷新好友」</b>和<b>「去好友页加人」</b>两个按钮——好友是在别的地方加的，加完不用重启就能刷出来。</span></div>
+      <div><i></i><span><b>「我发出的邀请，显示成别人邀请我」修好了</b>：根子是旧协议的频道是「双方名字哈希共享」的，你发出去的邀请躺在同一个频道里，下一轮轮询被自己读回来，就成了「某某邀请你」。现在改成<b>一人一个收件箱</b>，收的时候按消息里的「收件人是我、发件人不是我」双向过滤。这一类我写了 17 项针对性测试全过：自己发的不进收件箱、发给别人的不进我的、别人发我的能收到、同一条邀请不会重复插入。</span></div>
+      <div><i></i><span><b>娱乐页不卡了</b>：以前每 2.5 秒在主线程里串行发一遍 HTTP，每个好友一次、每次等 8 秒超时，好友一多界面就整片冻住。现在这些请求全挪到<b>后台线程</b>，主线程只接结果；上一轮没回来就跳过这一轮，页面不可见时干脆不轮询。同一套基准对比：网络故意拖慢 2.5 秒的情况下，旧版最大帧间隔 <b>2506.8 毫秒</b>、平均 49.6 毫秒；新版最大帧间隔 <b>10.7 毫秒</b>、平均 5.5 毫秒，采样 1090 帧等效 182 fps。</span></div>
+      <div><i></i><span><b>「匹配」模式点开始，是真的在等真人</b>：以前那个「开始」按钮不看模式，永远开一局 AI 对局，匹配池的代码虽然写了却要求你一直停在大厅页，一点开始就跳走了，所以永远配不上。现在匹配模式下点开始只把自己挂进公共池、<b>留在大厅等真人</b>，45 秒没人就提示一句，还能点「取消匹配」退出。两边同时看见对方时，约定<b>房间号小的当房主、大的去敲门</b>，不会各开一局。</span></div>
+      <div><i></i><span><b>全项目定时器降频</b>：闹钟服务的心跳以前固定 20 毫秒一次（每秒 50 次唤醒，什么都不干也烧 CPU），现在空闲 1000 毫秒、有闹钟计时 100 毫秒、真在响才 20 毫秒；闹钟页多了自适应间隔（秒表 50 毫秒 / 有倒计时 100 毫秒 / 空闲 1000 毫秒），页面切走就停表；聊天浮窗收起后不再空拉网络。顺手核查了 <span class="tag">ui</span> 目录：没有一处在主线程直连网络或 <span class="tag">time.sleep</span>。</span></div>
+      <div><i></i><span><b>这次的包</b>：标准版 <b>224.8 MB</b>（2361 个文件），老系统版 <b>59.8 MB</b>（284 个文件），安装版同样 224.8 MB，Linux <b>226.8 MB</b>，macOS Apple 芯片 <b>69.0 MB</b>、Intel <b>74.3 MB</b>。五个包版本号、版本资源都是 1.7.63。提醒一句：<b>邀请协议变了</b>，和 1.7.62 之间互相收不到邀请，两边都升到 1.7.63 才能正常开局。</span></div>
+    </div>
+  </section>
   <section class="upd">
     <h2>1.7.62 更新了什么<em>2026-11-13</em></h2>
     <div class="ulist">
@@ -1409,7 +1421,7 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.62.zip -Algorithm SHA256
 
   <footer>
 
-<span>OMC LAUNCHER 1.7.62</span>
+<span>OMC LAUNCHER 1.7.63</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1654,13 +1666,13 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.62.zip -Algorithm SHA256
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-var V = '1.7.62';
+var V = '1.7.63';
   var MAP = {
-    'HOUSmqVWpS': 'win',
-    'U1eKjpFT3q': 'win7',
-    'Jx9AUBLVTs': 'linux',
-    'h1gp3A8UVo': 'mac-arm',
-    '2vCWqDxAyC': 'mac-intel',
+    'gBZucPUV9l': 'win',
+    's0cQjLI8Bc': 'win7',
+    'nWEgPoReXB': 'linux',
+    'AcIYs5IgGZ': 'mac-arm',
+    '9b9PNXEa4N': 'mac-intel',
     'bwrmetFsLs': 'mobile'
   };
   function kindOf(href){
