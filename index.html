@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.59", "pc_url": "https://aka.doubaocdn.com/s/o1yUSVBtvE", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.59 第一个改动是「退出登录后还能进娱乐区」。真因不是权限没判，而是娱乐页有个兜底：current 空着、机器上只有一个账号时，就认定登录态被更新或强杀弄丢了，自动把账号写回去。它认不出用户是自己点的退出，于是退出完再进娱乐区又被登回去。现在退出登录会写一个主动退出标记，兜底看到标记就不再补，重启也不再拿记住的密码自动登录；手动登录一次标记自动清掉。第二个是任务栏显示「崩溃程序」：旧包的版本资源里 FileDescription、ProductName、FileVersion 全是空的，Windows 拿不到程序名只能给占位名，现在写成 OMC 启动器 1.7.59。另外崩溃不再静默了，异常会写进启动器数据目录的 crash.log，工具箱里能直接看最后 160 行；工具箱新增网络自检、帧率优化、内存体检三块；音乐封面缓存加 80 条上限、全局热键轮询从 300 毫秒放宽到 600 毫秒。"}'>
+<meta name="omc-update" content='{"latest": "1.7.60", "pc_url": "https://aka.doubaocdn.com/s/OUcDtdL9K1", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.60 主要补了四件事。第一是小矿开口快了一个数量级：以前每句话都要新起一个合成进程，短句也要等一秒半；现在合成进程常驻，语音引擎和音色只加载一次，实测短句从 1500 毫秒降到 60 毫秒上下，而且第一句合成好就先开口，不等整段念完。第二是离开视频页彻底静音：切到别的页面、或者把窗口缩到任务栏，播放器直接停掉，不只是暂停，不会再出现人在别的页面却还听见视频声音。第三是性能监控：工具箱的缓存清理页里加了「开始性能监控」，每秒刷新 CPU 占比、工作集、私有字节、峰值、线程数、句柄数和界面帧率，关掉就全停。第四是空闲降频：窗口最小化之后全局热键轮询会停掉，还原再启。另外位图缓存有了硬上限 64 MB，超了自动淘汰最久没用的。退出登录后还能进娱乐区的 bug 在这版之前就修好了：退出会写主动退出标记，单账号自动回填的兜底看到标记就不再补登录态。任务栏显示崩溃程序的问题也一并解决，exe 里现在写明了 OMC 启动器、版本号和公司名。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-<span>版本 <strong>1.7.59</strong></span>
+<span>版本 <strong>1.7.60</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/o1yUSVBtvE">
+      <a class="btn" href="https://aka.doubaocdn.com/s/OUcDtdL9K1">
 
         下载 Windows 版
 
-<small>zip · 225.0 MB · 1.7.59</small>
+<small>zip · 225.0 MB · 1.7.60</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/o1yUSVBtvE">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/cZHTyeD8lA">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/OUcDtdL9K1">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/oDjlvQ6P1z">老系统专用版</a>。</div>
 
       </div>
 
@@ -742,9 +742,9 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/o1yUSVBtvE">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/OUcDtdL9K1">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/o1yUSVBtvE">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/OUcDtdL9K1">复制完整链接</button>
 
         </div>
 
@@ -754,11 +754,11 @@ footer{
 
           <div class="dbody">
 
-<div class="hash">8C3E58A3AC229ED77616F28218DC6AD65DE6463C76F3676F942009276C20133F</div>
+<div class="hash">5335730083AAC990CC5DE0201E907DC65783464F8D6E9718B265E795150DB824</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC-Windows-x64-1.7.59.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC-Windows-x64-1.7.60.zip -Algorithm SHA256
 
             </div>
 
@@ -776,9 +776,9 @@ Windows: Get-FileHash .\OMC-Windows-x64-1.7.59.zip -Algorithm SHA256
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/cZHTyeD8lA">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/oDjlvQ6P1z">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/cZHTyeD8lA">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/oDjlvQ6P1z">复制完整链接</button>
 
         </div>
 
@@ -788,11 +788,11 @@ Windows: Get-FileHash .\OMC-Windows-x64-1.7.59.zip -Algorithm SHA256
 
           <div class="dbody">
 
-<div class="hash" id="w7hash">FD2BD108A132C5D6002A98AC2F6E641604650F9D81EE84EED850144C415EFB56</div>
+<div class="hash" id="w7hash">AAF35F4AC420B809D5DFF273C7386C1E6BACD0F49BC33815CFE157E0A7A1EE80</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC-Win7-x64-1.7.59.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC-Win7-x64-1.7.60.zip -Algorithm SHA256
 
             </div>
 
@@ -812,7 +812,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.59.zip -Algorithm SHA256
 
         <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.59 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.60 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -846,7 +846,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.59.zip -Algorithm SHA256
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.59 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.60 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -973,6 +973,19 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.59.zip -Algorithm SHA256
 
 
   <!-- 更新日志 -->
+
+  <section class="upd">
+    <h2>1.7.60 更新了什么<em>2026-11-13</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>小矿开口快了十倍</b>：以前每说一句话都要新起一个语音合成进程，光进程启动和加载语音引擎就要一秒多，短句实测 1500~1736 毫秒才出声。现在合成进程常驻，语音引擎和音色只加载一次，之后每句只要 <b>58~70 毫秒</b>；第一句合成好就先开口，不用等整段话都合成完再出声。</span></div>
+      <div><i></i><span><b>离开视频页彻底静音</b>：以前切到别的页面、或者把窗口缩到任务栏，视频只是「暂停」，音频输出不一定真正松开，人在别的页面还能听见声音。现在离开就停掉播放器并卸载音源，最小化到任务栏也照样停，回来不漏音、也不白占解码器。</span></div>
+      <div><i></i><span><b>性能监控面板</b>：工具箱 → 缓存清理页底部多了「开始性能监控 / 采样一次」。开始后每秒刷新一行：CPU 占比（对单核的百分比，多核会超过 100）、工作集、私有字节、峰值、线程数、句柄数，还有界面帧率（数的是事件循环的触发次数）。这套定时器只在监控期间运行，点「停止」两个都停，不留后台开销。</span></div>
+      <div><i></i><span><b>最小化就停嘴</b>：以前窗口最小化到任务栏，全局热键轮询还在 600 毫秒一次地转，纯属白烧 CPU。现在窗口一最小化就停，还原时自动接着跑；对局、任务这类真业务的定时器不受影响，切回来不会发现状态没跟上。</span></div>
+      <div><i></i><span><b>位图缓存定死 64 MB</b>：封面、皮肤预览、视频缩略图都进 QPixmapCache，原来的上限偏大又只管单张图大小，列表翻久了内存会持续往上走。现在整个缓存池封在 64 MB，超了自动淘汰最久没用的那张，界面照常显示，只是要重画一次。</span></div>
+      <div><i></i><span><b>上一版修的两个毛病也在这版里</b>：点「退出登录」之后再进娱乐区会被自动登回去——根子是单账号自动回填的兜底认不出主动退出，现在退出会写主动退出标记，兜底看到就不补，重启也不会拿记住的密码自动登录，手动登录一次标记自动清掉；任务栏显示「崩溃程序」——旧 exe 的程序名和版本号全是空的，现在写明了 <b>OMC 启动器 / 1.7.60 / OMC</b>。</span></div>
+      <div><i></i><span><b>这次的包</b>：标准版 <b>225.0 MB</b>（2361 个文件），老系统版 <b>59.7 MB</b>（284 个文件）。没有新增依赖。</span></div>
+    </div>
+  </section>
 
   <section class="upd">
     <h2>1.7.59 更新了什么<em>2026-11-13</em></h2>
@@ -1365,7 +1378,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.59.zip -Algorithm SHA256
 
   <footer>
 
-<span>OMC LAUNCHER 1.7.59</span>
+<span>OMC LAUNCHER 1.7.60</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1610,10 +1623,10 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.59.zip -Algorithm SHA256
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-var V = '1.7.59';
+var V = '1.7.60';
   var MAP = {
-    'o1yUSVBtvE': 'win',
-    'cZHTyeD8lA': 'win7',
+    'OUcDtdL9K1': 'win',
+    'oDjlvQ6P1z': 'win7',
     'Jx9AUBLVTs': 'linux',
     'h1gp3A8UVo': 'mac-arm',
     '2vCWqDxAyC': 'mac-intel',
