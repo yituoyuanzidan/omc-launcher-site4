@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.65", "pc_url": "https://aka.doubaocdn.com/s/MCTg8EdGKU", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.65 这轮十二件事。启动器自己的东西全搬到 D 盘：默认游戏目录 D:\MC，配置缓存 Java 头像搬到 D:\OMCData，第一次启动自动整体搬迁并在老路径上建目录联接，搬失败一个字节都不删；安装器默认装 D:\OMC，装完第一次打开跳过一次更新检查，不会再「刚装完又提示发现新版本、像要再装一遍」；在线搜歌收进「我的列表」不再报加不了，没有直链的标「（在线收藏）」点开原页面听；加载器版本列表加 6 小时本地缓存，库文件下载 4 路并发、进度条加粗带百分比；种子地图进页重扫存档、加了「用这个存档」和坐标查最近遗迹群系；新增「养小猫」页；工具页按钮缩小自适应一屏全看到；好友去重、申请改后台不再卡；围棋「停一手」只跳自己这一手；启动白屏换成深色启动图。这轮只重打了 Windows 三个包（标准版 224.9 MB、老系统版 59.8 MB、安装版同标准版），Linux 和 macOS 仍是 1.7.64；好友申请、双向同步这些要双方都是 1.7.65 才互通。"}'>
+<meta name="omc-update" content='{"latest": "1.7.66", "pc_url": "https://aka.doubaocdn.com/s/9oPXtYtDmU", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.66 修了四件让人卡住的事：一是「检查更新一直失败」——上一版站点清单里把 Windows 路径原样写进了 JSON，反斜杠让整份清单解析失败，所有客户端都读不到新版本号；现在解析器会把这类单个坏字符补齐，清单本身也改成合法 JSON。二是「双击打开没反应」——启动第一步就在同步复制 1 GB 数据目录，被跑着的游戏进程锁住就整段回滚、窗口迟迟不出；现在窗口先出来，搬迁改后台做，还加了「已经搬完」的标记，以后不再重复抄。三是「装了模组加载器的版本启动不了」——加载器启动参数里「多个库文件怎么拼」的占位符没被替换，拼出一条不存在的长路径，加载器引导程序一启动就退；现在占位符全部替换干净，缺原版也会直接提示先去装原版。四是「打开一次出来两个窗口」——单实例判断改成看锁里记的进程号，第一个实例还在搬数据、窗口没出来时，第二次双击不会再开第二个。另外：工具页固定三行（7/7/5）一屏全看到；视频专区加了「珍妮」系列和擦边内容过滤；「养小猫」从工具页搬出来单独成一页，侧栏那只猫去掉了（功能都在养小猫页）。最明显的变化是安装方式：现在主下载是纸箱图标的安装包，双击就进安装界面，能选安装位置、桌面快捷方式、开始菜单、装完是否立刻打开，带进度条，不用解压、不用自己找 OMC.exe。这轮包：安装包 225.0 MB、解压版 225.0 MB（2361 个文件）、老系统版 59.8 MB；Linux 和 macOS 仍是 1.7.64。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-<span>版本 <strong>1.7.65</strong></span>
+<span>版本 <strong>1.7.66</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/MCTg8EdGKU">
+      <a class="btn" href="https://aka.doubaocdn.com/s/9oPXtYtDmU">
 
-        下载 Windows 版
+        下载 Windows 安装包
 
-<small>zip · 224.9 MB · 1.7.65</small>
+<small>exe · 225.0 MB · 1.7.66</small>
 
       </a>
 
@@ -648,7 +648,7 @@ footer{
 
       </a>
 
-      <span class="note">Windows 版解压后双击 OMC.exe，Linux 版解压后在目录里运行 ./OMC，macOS 版解压后把 OMC.app 拖进「应用程序」，都不用安装</span>
+      <span class="note">Windows 版这次直接下安装包：双击纸箱图标那个 exe，选好位置点「开始安装」，装完桌面就有「OMC 启动器」；想免安装就下解压版 zip。Linux 版解压后在目录里运行 ./OMC，macOS 版解压后把 OMC.app 拖进「应用程序」</span>
 
     </div>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/MCTg8EdGKU">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/czVfXR5wbC">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/9oPXtYtDmU">Windows 安装包</a>，双击就进安装界面，选位置、点「开始安装」，装完桌面就有图标；不想装就下<a href="https://aka.doubaocdn.com/s/OguZfwVBXl">解压版 zip</a>，解压后双击 <span class="tag">OMC.exe</span>。第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/wX1KhiguWf">老系统专用版</a>。</div>
 
       </div>
 
@@ -736,21 +736,21 @@ footer{
 
       <div class="card">
 
-<h3>Windows 版 <span class="wh">x64 · 224.9 MB</span></h3>
+<h3>Windows 版 <span class="wh">x64 · 225.0 MB</span></h3>
 
-        <p>成品包，解压即用；也可下右边的安装版，像普通软件一样安装（可选语言、安装位置、桌面图标）。光影、存档、数据包、模组都能在里面下和装，带自动更新。需要 Windows 10 / 11（64 位）。</p>
+        <p>推荐下安装包：纸箱图标那个 exe，双击进安装界面，能选安装位置、要不要建桌面快捷方式和开始菜单、装完要不要立刻打开，带进度条和百分比，装完就是能用的启动器。想要免安装就下解压版 zip，解压即用。光影、存档、数据包、模组都能在里面下和装，带自动更新。需要 Windows 10 / 11（64 位）。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/MCTg8EdGKU">下载 OMC启动器-1.7.65.zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/9oPXtYtDmU">下载安装包（推荐）</a>
 
-          <a class="go" href="https://aka.doubaocdn.com/s/J1bKUYokh3">下载安装版</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/OguZfwVBXl">下载 OMC启动器-1.7.66.zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/MCTg8EdGKU">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/9oPXtYtDmU">复制完整链接</button>
 
         </div>
 
-        <p style="font-size:12.5px;color:var(--muted)">点上面的按钮下完，浏览器可能把文件存成一串字母（下载地址是短链），<b>改不改名不影响使用</b>，里面的东西一样、SHA256 也一样；想对上下面那个哈希值，把文件名改成 <span class="tag">OMC启动器-1.7.65.zip</span> 再算就行。不想管这些就点旁边的「下载安装版」，装完桌面和开始菜单里都叫「OMC 启动器」。</p>
+        <p style="font-size:12.5px;color:var(--muted)"><b>安装包不用担心文件名</b>：下下来双击就能装，装完桌面和开始菜单里都叫「OMC 启动器」。下载地址是短链，浏览器有时会把文件存成一串字母；下的是安装包就照样双击；下的是解压版 zip，改名不影响内容，想对上哈希值就把文件名改成 <span class="tag">OMC启动器-1.7.66.zip</span> 再算。</p>
 
         <details>
 
@@ -758,11 +758,11 @@ footer{
 
           <div class="dbody">
 
-<div class="hash">CC5A68B7A92744C583F27EA736F7BFA6C8B6B9E10B2EA8DF1367F7568F7644D5</div>
+<div class="hash">BB8FCED46A1D8AC340C9E18DF3A20D754BFAF77835C265272D0B0E055E75616D</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC启动器-1.7.65.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC启动器-1.7.66.zip -Algorithm SHA256
 
             </div>
 
@@ -780,9 +780,9 @@ Windows: Get-FileHash .\OMC启动器-1.7.65.zip -Algorithm SHA256
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/czVfXR5wbC">下载 OMC启动器-Win7-1.7.65.zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/wX1KhiguWf">下载 OMC启动器-Win7-1.7.66.zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/czVfXR5wbC">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/wX1KhiguWf">复制完整链接</button>
 
         </div>
 
@@ -792,11 +792,11 @@ Windows: Get-FileHash .\OMC启动器-1.7.65.zip -Algorithm SHA256
 
           <div class="dbody">
 
-<div class="hash" id="w7hash">C31B6F13FAB20C610C7582F64A007B1B40BF05DF6DBC2BD98F1030B834F347F6</div>
+<div class="hash" id="w7hash">97035C399E99288C50BEB72D2BE66A813646A8F122D3EC5D298BC5AC1160A67E</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC启动器-Win7-1.7.65.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC启动器-Win7-1.7.66.zip -Algorithm SHA256
 
             </div>
 
@@ -978,6 +978,54 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.65.zip -Algorithm SHA256
 
   <!-- 更新日志 -->
 
+
+  <section class="upd">
+
+    <h2>1.7.66 更新了什么<em>2026-11-14</em></h2>
+
+    <div class="ulist">
+
+      <div><i></i><span><b>检查更新修好了</b>：上一版站点清单里把 Windows 路径原样写进了 JSON，
+反斜杠在 JSON 里是转义符、后面跟的又不是合法字符，整份清单直接解析失败，于是所有客户端都
+「检查更新失败」、收不到新版本号。现在解析器会把这类单个坏字符就地补齐，一个笔误不再毁掉
+整份清单；站点这份清单本身也改成了合法 JSON。</span></div>
+
+      <div><i></i><span><b>双击打开不再卡半天</b>：以前启动第一步就同步复制老的 1 GB 数据目录，
+被正在跑的游戏进程锁住就整段回滚，窗口迟迟不出来（Windows 还会弹「无法访问指定设备」）。
+现在窗口先显示，搬迁丢到后台线程，并且写一个「已经搬完」的标记，以后每次启动都不再重复抄。</span></div>
+
+      <div><i></i><span><b>装了模组加载器的版本能启动了</b>：加载器给的启动参数里有个「多个库文件怎么拼」
+的占位符没被替换，拼出一条根本不存在的长路径，加载器自己的引导程序一启动就报
+<span class="tag">Illegal char &lt;:&gt;</span> 退出。现在所有占位符都会替换干净，库文件路径统一成本机写法；
+那个加载器版本依赖的原版没装时，会直接提示「先装原版 X」，而不是闪一下就没了。</span></div>
+
+      <div><i></i><span><b>不会再一开两个窗口</b>：第二个双击以前发现抢不到窗口就放行，
+第一个实例还在搬数据、窗口没出来的时候正好撞上。现在看锁里记的进程号：那个进程还活着，
+就等它把窗口亮出来再把自己退掉，绝不开第二个。</span></div>
+
+      <div><i></i><span><b>下载方式变了：先下安装包，双击安装</b>：主下载现在是纸箱图标的安装程序，
+双击就进单屏安装界面——选安装位置、要不要建桌面快捷方式、要不要加开始菜单、装完要不要立刻打开，
+带进度条、百分比和解压文件数。不用解压，也不用自己去找 <span class="tag">OMC.exe</span>。
+想免安装的，卡里第二个按钮还是解压版 zip。</span></div>
+
+      <div><i></i><span><b>工具页固定三行</b>：19 个工具按 7 / 7 / 5 排成三行，导航区高度定死，
+不用滑动就能全部看到。</span></div>
+
+      <div><i></i><span><b>视频专区过滤加强</b>：「珍妮」系列和擦边内容（黑丝、福利向、nsfw 这类）
+自动过滤掉，不再出现在任何专区列表里。</span></div>
+
+      <div><i></i><span><b>「养小猫」单独成页</b>：从工具页搬出来，左侧栏直接点进去；饥饿值、饥渴值、
+心情值、喂食、喂水、抚摸全在那一页。侧栏那只猫去掉了，功能都在养小猫页里。</span></div>
+
+      <div><i></i><span><b>这次的包</b>：安装包 <b>225.0 MB</b>（双击安装，装完 <b>2363 个文件</b>）、
+解压版 <b>225.0 MB</b>（2361 个文件，SHA256 <span class="tag">BB8FCED4…616D</span>）、
+老系统版 <b>59.8 MB</b>（284 个文件，SHA256 <span class="tag">97035C39…A67E</span>）。
+三个 Windows 包版本号都是 1.7.66。<b>Linux 和 macOS 这一轮没重打，还是 1.7.64</b>，链接和哈希都没变。
+好友申请、双向同步这些走公共频道，要双方都是 1.7.66 且登录了账号才互通。</span></div>
+
+    </div>
+
+  </section>
 
   <section class="upd">
     <h2>1.7.65 更新了什么<em>2026-11-13</em></h2>
@@ -1456,7 +1504,7 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.65.zip -Algorithm SHA256
 
   <footer>
 
-<span>OMC LAUNCHER 1.7.65</span>
+<span>OMC LAUNCHER 1.7.66</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1701,10 +1749,11 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.65.zip -Algorithm SHA256
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-var V = '1.7.65';
+var V = '1.7.66';
   var MAP = {
-    'MCTg8EdGKU': 'win',
-    'czVfXR5wbC': 'win7',
+    'OguZfwVBXl': 'win',
+    'wX1KhiguWf': 'win7',
+    '9oPXtYtDmU': 'setup',
     'aYIedVzw8T': 'linux',
     'sCIh8Oefxf': 'mac-arm',
     'YeQkMpuoJK': 'mac-intel',
