@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.61", "pc_url": "https://aka.doubaocdn.com/s/20A1ydMStZ", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.61 修的是视频页那个「勾了恐怖还是刷到恐怖片」的老毛病，另外加了三个东西。过滤失效的根子不在界面：B 站搜索结果本来带 tag（一串标签）和简介，程序只读了标题，所以标题不写「恐怖」的片子全漏过去了；现在这两项都取回来一起判断，恐怖词表从 16 个扩到 50 多个，另外勾选改动当场就把手里这批重新过一遍，不用再点刷新。实测搜「我的世界 恐怖 模组」二十条全拦，只按标题的老写法会放过 5 条；正常生存和建筑教程内容误杀 0 条。第二是视频页多了「查这片的模组」，按名字对模组站做匹配，认不出来会直说，不瞎推。第三是下载版本选 Fabric 加载器时可以勾选一并装 Fabric API。第四是装加载器有了真进度条：按字节算百分比，实时显示下载速度。"}'>
+<meta name="omc-update" content='{"latest": "1.7.62", "pc_url": "https://aka.doubaocdn.com/s/HOUSmqVWpS", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.62 有五件事。一是下载包改名：以后压出来的包就叫「OMC启动器-版本号.zip」，不再是一串英文加平台名。二是专门做了一轮降误报：exe 里写进完整的系统兼容声明（Win7 到 Win11 四代 supportedOS、长路径支持、逐显示器 DPI 感知、通用控件依赖、请求层级 asInvoker），UPX 压缩全关，版本资源每个字段都填满。三是加了个「OMC加白.exe」，双击后自动检测这台电脑上装了哪些杀毒软件，只列装了的，点一下就把整个 OMC 文件夹加进 Defender 排除项，其它杀软给出它自己的加白路径。四是有了正常安装包：可以选语言（默认中文）、选安装位置、勾桌面和开始菜单快捷方式，装完能在控制面板里正常卸载。五是加了「启动网易版」，只走网易官方登录，只负责启动和登录，不代注册、不改它的文件、不注入，避免被当成外挂。另外模组下载页可以按类型筛了。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-<span>版本 <strong>1.7.61</strong></span>
+<span>版本 <strong>1.7.62</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/20A1ydMStZ">
+      <a class="btn" href="https://aka.doubaocdn.com/s/HOUSmqVWpS">
 
         下载 Windows 版
 
-<small>zip · 224.8 MB · 1.7.61</small>
+<small>zip · 224.9 MB · 1.7.62</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/20A1ydMStZ">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/mFUyD69y7Q">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/HOUSmqVWpS">Windows 版</a>。解压到任意目录，双击 <span class="tag">OMC.exe</span> 就能开，第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/U1eKjpFT3q">老系统专用版</a>。</div>
 
       </div>
 
@@ -736,15 +736,17 @@ footer{
 
       <div class="card">
 
-<h3>Windows 版 <span class="wh">x64 · 225.0 MB</span></h3>
+<h3>Windows 版 <span class="wh">x64 · 224.9 MB</span></h3>
 
-        <p>成品包，解压即用。光影、存档、数据包、模组都能在里面下和装，带自动更新。需要 Windows 10 / 11（64 位）。</p>
+        <p>成品包，解压即用；也可下右边的安装版，像普通软件一样安装（可选语言、安装位置、桌面图标）。光影、存档、数据包、模组都能在里面下和装，带自动更新。需要 Windows 10 / 11（64 位）。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/20A1ydMStZ">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/HOUSmqVWpS">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/20A1ydMStZ">复制完整链接</button>
+          <a class="go" href="https://aka.doubaocdn.com/s/FRwbySQ0gZ">下载安装版</a>
+
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/HOUSmqVWpS">复制完整链接</button>
 
         </div>
 
@@ -754,11 +756,11 @@ footer{
 
           <div class="dbody">
 
-<div class="hash">04FC6AC85FC3CB116FF7E88DE46B1ECE998B64D5F3BAB6DCA46A548A60988A1C</div>
+<div class="hash">99E17DB4EBE3D4A17DAB258741E5C67A9902DA3478EF60FB75133CAEE4E07D5D</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC-Windows-x64-1.7.61.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC启动器-1.7.62.zip -Algorithm SHA256
 
             </div>
 
@@ -770,15 +772,15 @@ Windows: Get-FileHash .\OMC-Windows-x64-1.7.61.zip -Algorithm SHA256
 
       <div class="card">
 
-        <h3>Windows 老系统版 <span class="wh">Win7 / 8 / 8.1 · x64 · 59.7 MB</span></h3>
+        <h3>Windows 老系统版 <span class="wh">Win7 / 8 / 8.1 · x64 · 59.8 MB</span></h3>
 
         <p>给还在 Win7 SP1、Win8、Win8.1 的电脑用。界面和功能跟标准版一致，只是底下换成 Qt5 内核，因为这些系统跑不了新版 Qt6。历史记录里那种「只是挪挪位置、不改变功能」的补丁做了不少，这一版是把界面整套对齐过去的第一版。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/mFUyD69y7Q">下载 zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/U1eKjpFT3q">下载 zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/mFUyD69y7Q">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/U1eKjpFT3q">复制完整链接</button>
 
         </div>
 
@@ -788,11 +790,11 @@ Windows: Get-FileHash .\OMC-Windows-x64-1.7.61.zip -Algorithm SHA256
 
           <div class="dbody">
 
-<div class="hash" id="w7hash">79E53511419AF6A575FE9733010B9EF4F40B021B3EAA3AD27329D679E96458F9</div>
+<div class="hash" id="w7hash">B216C14F28EA17A2474439E0EDED1DCB3746214D95EC9109C7F973B8912B1ADB</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC-Win7-x64-1.7.61.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC启动器-Win7-1.7.62.zip -Algorithm SHA256
 
             </div>
 
@@ -812,7 +814,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.61.zip -Algorithm SHA256
 
         <h3>Linux 版 <span class="wh">x64 · 123.2 MB</span></h3>
 
-        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.61 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。Ubuntu / Debian / Mint 这类 64 位桌面发行版都能跑，解压后进目录运行 ./OMC。Qt 依赖已经全打进去了。<strong>这一版仍是 1.7.38</strong>，1.7.62 这轮先发 Windows（含老系统版），Linux 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -846,7 +848,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.61.zip -Algorithm SHA256
 
         <h3>macOS 版 <span class="wh">Apple 芯片 · Intel</span></h3>
 
-        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.61 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
+        <p>同一个启动器、同一个版本号。解压后把 <b>OMC.app</b> 拖进「应用程序」就能用。下载卡里两条链接分别对应 Apple 芯片（M1/M2/M3/M4）和 Intel 芯片，装错架构会提示「应用程序无法打开」。系统要求 macOS 11 及以上。<strong>这一版仍是 1.7.38</strong>，1.7.62 这轮先发 Windows（含老系统版），macOS 包等下轮补。</p>
 
         <div class="dlrow">
 
@@ -973,6 +975,19 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.61.zip -Algorithm SHA256
 
 
   <!-- 更新日志 -->
+
+  <section class="upd">
+    <h2>1.7.62 更新了什么<em>2026-11-13</em></h2>
+    <div class="ulist">
+      <div><i></i><span><b>下载包改名了</b>：以前叫 <span class="tag">OMC-Windows-x64-1.7.61.zip</span>，一长串英文，下完还分不清哪个是哪个。现在标准版就叫 <b>OMC启动器-1.7.62.zip</b>，老系统版叫 <b>OMC启动器-Win7-1.7.62.zip</b>。只改文件名叫法，里面东西和以前完全一样。</span></div>
+      <div><i></i><span><b>专门做了一轮「别再被当成病毒」</b>：这类误报的大头是「文件里没有任何身份信息」加「被压缩过」。这版把 exe 的系统兼容声明写全了——Win7 / Win8 / 8.1 / 10 / 11 四代 supportedOS 都声明，长路径支持、逐显示器 DPI 感知、通用控件 6.0 依赖、请求权限层级 <span class="tag">asInvoker</span> 都按微软给的标准清单来；UPX 压缩<b>彻底关掉</b>；版本资源里公司、产品名、版权、商标、原始文件名、内部名称一个字段不留空。</span></div>
+      <div><i></i><span><b>多了个「OMC加白.exe」，就一个按钮</b>：双击打开，它先<b>自动检测你这台电脑装了哪些杀软</b>，界面里<b>只列已经装了的</b>，没装的不会列出来占地方。本机实测列出的三项是：Windows Defender、金山毒霸、火绒安全——因为这台机器确实只装了这三个（火绒没注册到 Windows 安全中心，是从注册表的安装记录里认出来的）。点蓝色的大按钮，它会把<b>整个 OMC 文件夹</b>加进 Defender 的排除项，顺带把 <span class="tag">OMC.exe</span> 进程也排除掉；列出来的其它杀软，点「看步骤」会告诉你它自己的加白路径在哪，比如火绒是「病毒防护 → 信任区 → 添加目录」，毒霸是「安全防护 → 信任列表」。<b>为什么加整个文件夹而不是单个 exe</b>：启动器旁边有 _internal 那一堆依赖文件，只放行 OMC.exe 会出现「能打开但一启动就报毒」。说清楚：<b>这只能把误报压到很低，压不到零</b>，杀软要不要弹框最终由厂商云端特征库决定，真弹了你点「允许 / 信任」就行，文件本身没有恶意行为。</span></div>
+      <div><i></i><span><b>有了正常安装包</b>：以前的包解压完就能用，但没法「安装」。现在下载卡里多了一个「下载安装版」按钮，跑起来是个正常的安装向导——先选<b>语言</b>（中文 / English，默认中文），再选<b>安装位置</b>（默认装到当前用户目录，不用管理员权限；选 Program Files 会提示需要授权），然后勾<b>桌面快捷方式</b>和<b>开始菜单项</b>（都默认勾上），装完可以直接启动。装完在「设置 → 应用」里能看到 OMC 启动器，点卸载能清干净：程序目录、桌面和开始菜单的快捷方式、注册表里的卸载登记一起删，<b>你的存档、模组、账号数据不在安装目录里</b>，不会被删。实测装一次写入 2363 个文件、538.4 MB，卸载后目录、快捷方式、注册表项三项全部清空。</span></div>
+      <div><i></i><span><b>加了「启动网易版」</b>：列表里选中一个版本后，右边多了这个按钮，用来启动你电脑上已经装好的<b>网易版我的世界</b>。它只做一件事：调网易官方那个 MCLauncher.exe 启动，<b>登录也走网易官方自己的登录框</b>。不代填账号、不做自己的登录界面、不往它进程里注入任何东西、不改它的文件、不加启动参数——就是为了不被网易的反作弊当成外挂。所以它<b>不能注册新账号</b>，也没有「免登录」这种功能，登录该输什么还是你自己输。找不到网易版时会给三个选择：去官网下载、自己选 MCLauncher.exe 的位置（记住下次用）、取消。</span></div>
+      <div><i></i><span><b>模组下载页可以按类型筛了</b>：以前只能按加载器筛，想找整合包、光影、材质、数据包得自己翻。现在浏览页多了一个「类型」下拉框，18 类中英对照——模组 / 整合包 / 资源包 / 光影 / 数据包 / 世界生成 / 结构 / 生物群系 / 附魔 / 药水效果 / 武器 / 装备 / 魔法 / 科技 / 农业 / 装饰 / 优化 / 库，选完和加载器条件叠加生效（两个条件同时满足，不是任一满足）。选「全部类型」就是原来的行为。</span></div>
+      <div><i></i><span><b>这次的包</b>：标准版 <b>224.9 MB</b>（2362 个文件），老系统版 <b>59.8 MB</b>（285 个文件），安装版 <b>224.9 MB</b>。没有新增依赖。</span></div>
+    </div>
+  </section>
 
   <section class="upd">
     <h2>1.7.61 更新了什么<em>2026-11-13</em></h2>
@@ -1392,7 +1407,7 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.61.zip -Algorithm SHA256
 
   <footer>
 
-<span>OMC LAUNCHER 1.7.61</span>
+<span>OMC LAUNCHER 1.7.62</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1637,10 +1652,10 @@ Windows: Get-FileHash .\OMC-Win7-x64-1.7.61.zip -Algorithm SHA256
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-var V = '1.7.61';
+var V = '1.7.62';
   var MAP = {
-    '20A1ydMStZ': 'win',
-    'mFUyD69y7Q': 'win7',
+    'HOUSmqVWpS': 'win',
+    'U1eKjpFT3q': 'win7',
     'Jx9AUBLVTs': 'linux',
     'h1gp3A8UVo': 'mac-arm',
     '2vCWqDxAyC': 'mac-intel',
