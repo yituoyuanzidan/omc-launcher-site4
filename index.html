@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.67", "pc_url": "https://aka.doubaocdn.com/s/fl6lUkSsrg", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.67 这一轮全是修毛病。一是「双击启动器没反应」：抢不到单实例锁时进程直接静悄悄退出，看着就是闪退；锁文件里记的进程号又会被系统复用，旧锁的号分给了别的程序也会被当成「已经有一个在跑」。现在会核对锁主人是不是 OMC.exe 本体，残留锁自动清掉；确实是另一个实例但十秒都没出窗口时，会弹说明告诉你怎么处理。二是「微软账号注册 / 登录走不下去」：浏览器被安全软件拦掉或默认浏览器没注册时，以前打开浏览器那一步是静默失败，界面还显示「正在打开浏览器」，整条链路就卡在那里；现在打不开就把登录网址显示在界面上，照着打开、输入 8 位代码就能继续。三是修了几处一点就废的小毛病：视频专区在画面上滚滚轮不换视频（QRect 没导入、异常被吞）、今日人品在 md5 被禁用的环境算不出分、加歌失败每次糊一个模态框、皮肤库「只看披风」筛出来还是人形、工具页隐藏页签条仍按 19 个标题算宽度把整页撑到 1444px 顶出横向滚动条。另外重做了应用图标：原来 ico 里大尺寸帧是把 16×16 硬拉大的糊图，现在六档全用硬边像素放大，重打包后 exe、桌面快捷方式、任务栏是同一张新图。这轮包：安装包 228.5 MB、解压版 228.5 MB（2472 个文件）；Win7 老系统版这一轮没重打，还是 1.7.66。"}'>
+<meta name="omc-update" content='{"latest": "1.7.67", "pc_url": "https://aka.doubaocdn.com/s/F3B4RrIgWS", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.67 这一轮全是修毛病。最要命的一条是「启动十来秒必定闪退」：账号页给每行小头像上色时把名字算出的 RGB 三元组直接塞进 QColor()，PySide6 6.12 抛 TypeError，而异常发生在界面回调里，Qt 会直接把进程 abort（Windows 记成 0xC0000409），重启几次都一样；现在改成分通道上色，并给事件循环加了兜底，回调异常只写 crash.log、不再带走进程。一是「双击启动器没反应」：抢不到单实例锁时进程直接静悄悄退出，看着就是闪退；锁文件里记的进程号又会被系统复用，旧锁的号分给了别的程序也会被当成「已经有一个在跑」。现在会核对锁主人是不是 OMC.exe 本体，残留锁自动清掉；确实是另一个实例但十秒都没出窗口时，会弹说明告诉你怎么处理。二是「微软账号注册 / 登录走不下去」：浏览器被安全软件拦掉或默认浏览器没注册时，以前打开浏览器那一步是静默失败，界面还显示「正在打开浏览器」，整条链路就卡在那里；现在打不开就把登录网址显示在界面上，照着打开、输入 8 位代码就能继续。三是修了几处一点就废的小毛病：视频专区在画面上滚滚轮不换视频（QRect 没导入、异常被吞）、今日人品在 md5 被禁用的环境算不出分、加歌失败每次糊一个模态框、皮肤库「只看披风」筛出来还是人形、工具页隐藏页签条仍按 19 个标题算宽度把整页撑到 1444px 顶出横向滚动条。另外重做了应用图标：原来 ico 里大尺寸帧是把 16×16 硬拉大的糊图，现在六档全用硬边像素放大，重打包后 exe、桌面快捷方式、任务栏是同一张新图。这轮包：安装包 228.5 MB、解压版 228.5 MB（2472 个文件）；Win7 老系统版这一轮没重打，还是 1.7.66。"}'>
 
 </head>
 
@@ -616,7 +616,7 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/fl6lUkSsrg">
+      <a class="btn" href="https://aka.doubaocdn.com/s/F3B4RrIgWS">
 
         下载 Windows 安装包
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/fl6lUkSsrg">Windows 安装包</a>，双击就进安装界面，选位置、点「开始安装」，装完桌面就有图标；不想装就下<a href="https://aka.doubaocdn.com/s/fm7U2rhVtO">解压版 zip</a>，解压后双击 <span class="tag">OMC.exe</span>。第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/wX1KhiguWf">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/F3B4RrIgWS">Windows 安装包</a>，双击就进安装界面，选位置、点「开始安装」，装完桌面就有图标；不想装就下<a href="https://aka.doubaocdn.com/s/AfuApkOxTN">解压版 zip</a>，解压后双击 <span class="tag">OMC.exe</span>。第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/wX1KhiguWf">老系统专用版</a>。</div>
 
       </div>
 
@@ -742,11 +742,11 @@ footer{
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/fl6lUkSsrg">下载安装包（推荐）</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/F3B4RrIgWS">下载安装包（推荐）</a>
 
-          <a class="go" href="https://aka.doubaocdn.com/s/fm7U2rhVtO">下载 OMC启动器-1.7.67.zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/AfuApkOxTN">下载 OMC启动器-1.7.67.zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/fl6lUkSsrg">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/F3B4RrIgWS">复制完整链接</button>
 
         </div>
 
@@ -758,7 +758,7 @@ footer{
 
           <div class="dbody">
 
-<div class="hash">DB0031DE6948A4B12DFC8B61D2C2C767FD8C469A5485A10921011AE635E11B35</div>
+<div class="hash">FDC6F81B9C633FDECE75F3F485F7DEA69CB30FB99AA449A3999D502207B75DCB</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
@@ -984,6 +984,13 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.66.zip -Algorithm SHA256
 
     <div class="ulist">
 
+      <div><i></i><span><b>启动十来秒就闪退，找到真凶了</b>：账号页给每行画小头像时，
+把名字算出来的三个数字直接塞进 <span class="tag">QColor()</span>（PySide6 6.12 只认 QColor 对象，
+不认三元组），抛出的 <span class="tag">TypeError</span> 发生在界面回调里，Qt 收到未处理异常会
+直接把进程 abort 掉——Windows 记成 <b>0xC0000409</b>，重启几次都一样。现在改成分通道上色，
+并给整个事件循环加了一层兜底：回调里再出异常只写进 <span class="tag">crash.log</span>，
+不再带走整个程序。实测打包版连开 108 秒、安装版连开 36 秒都不再退。</span></div>
+
       <div><i></i><span><b>双击没反应、一开就退，修好了</b>：以前抢不到单实例锁时进程是静悄悄退出的，
 看着完全就是闪退，桌面和任务栏都不留任何提示；锁文件里记的进程号又会被系统复用，旧锁的号分给了
 别的程序时，也会被当成「已经有一个在跑」。现在会核对锁主人到底是不是 <span class="tag">OMC.exe</span>
@@ -1023,8 +1030,8 @@ FIPS 合规模式、或者精简构建的 Python 下 md5 直接抛异常，整�
 exe、桌面快捷方式、任务栏读的是同一个资源，重打包后一起换掉。</span></div>
 
       <div><i></i><span><b>这次的包</b>：安装包 <b>228.5 MB</b>（双击安装，装完 <b>2474 个文件</b>，
-SHA256 <span class="tag">A9AA31E7…902C</span>）、解压版 <b>228.5 MB</b>
-（2472 个文件，SHA256 <span class="tag">DB0031DE…1B35</span>）。两个 Windows 包版本号都是
+SHA256 <span class="tag">90CAC2F6…116A</span>）、解压版 <b>228.5 MB</b>
+（2472 个文件，SHA256 <span class="tag">FDC6F81B…5DCB</span>）。两个 Windows 包版本号都是
 <b>1.7.67</b>。<b>Win7 老系统版这一轮没重打，还是 1.7.66</b>；<b>Linux 和 macOS 还是 1.7.64</b>，
 链接和哈希都没变。</span></div>
 
@@ -1804,9 +1811,9 @@ SHA256 <span class="tag">A9AA31E7…902C</span>）、解压版 <b>228.5 MB</b>
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
 var V = '1.7.67';
   var MAP = {
-    'fm7U2rhVtO': 'win',
+    'AfuApkOxTN': 'win',
     'wX1KhiguWf': 'win7',
-    'fl6lUkSsrg': 'setup',
+    'F3B4RrIgWS': 'setup',
     'aYIedVzw8T': 'linux',
     'sCIh8Oefxf': 'mac-arm',
     'YeQkMpuoJK': 'mac-intel',
