@@ -560,7 +560,7 @@ footer{
 
 </style>
 
-<meta name="omc-update" content='{"latest": "1.7.67", "pc_url": "https://aka.doubaocdn.com/s/F3B4RrIgWS", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.67 这一轮全是修毛病。最要命的一条是「启动十来秒必定闪退」：账号页给每行小头像上色时把名字算出的 RGB 三元组直接塞进 QColor()，PySide6 6.12 抛 TypeError，而异常发生在界面回调里，Qt 会直接把进程 abort（Windows 记成 0xC0000409），重启几次都一样；现在改成分通道上色，并给事件循环加了兜底，回调异常只写 crash.log、不再带走进程。一是「双击启动器没反应」：抢不到单实例锁时进程直接静悄悄退出，看着就是闪退；锁文件里记的进程号又会被系统复用，旧锁的号分给了别的程序也会被当成「已经有一个在跑」。现在会核对锁主人是不是 OMC.exe 本体，残留锁自动清掉；确实是另一个实例但十秒都没出窗口时，会弹说明告诉你怎么处理。二是「微软账号注册 / 登录走不下去」：浏览器被安全软件拦掉或默认浏览器没注册时，以前打开浏览器那一步是静默失败，界面还显示「正在打开浏览器」，整条链路就卡在那里；现在打不开就把登录网址显示在界面上，照着打开、输入 8 位代码就能继续。三是修了几处一点就废的小毛病：视频专区在画面上滚滚轮不换视频（QRect 没导入、异常被吞）、今日人品在 md5 被禁用的环境算不出分、加歌失败每次糊一个模态框、皮肤库「只看披风」筛出来还是人形、工具页隐藏页签条仍按 19 个标题算宽度把整页撑到 1444px 顶出横向滚动条。另外重做了应用图标：原来 ico 里大尺寸帧是把 16×16 硬拉大的糊图，现在六档全用硬边像素放大，重打包后 exe、桌面快捷方式、任务栏是同一张新图。这轮包：安装包 228.5 MB、解压版 228.5 MB（2472 个文件）；Win7 老系统版这一轮没重打，还是 1.7.66。"}'>
+<meta name="omc-update" content='{"latest": "1.7.68", "pc_url": "https://aka.doubaocdn.com/s/gVojAL239Z", "mobile_url": "https://aka.doubaocdn.com/s/bwrmetFsLs", "notes": "1.7.68 修的是「下载时勾了 Fabric API，进游戏还是缺前置」。表面看是前置没装上，底下还有一层：启动器生成的 Fabric 版本 json 里 8 条库全都没有 downloads.artifact，而拼 classpath 只认这个字段，fabric-loader、sponge-mixin、intermediary、asm 全被漏掉，一启动就报 ClassNotFoundException: net.fabricmc.loader.impl.launch.knot.KnotClient，Fabric 根本没起来，依赖 Fabric API 的模组自然全缺前置。现在安装加载器时会按 maven 坐标把 path 和 url 补进版本 json；已经装坏的旧版本不用重装，启动拼 classpath 时也会按坐标推算。实测 1.21.11-Fabric：Loading Minecraft 1.21.11 with Fabric Loader 0.20.1，aiminds 与 fabric-api 0.141.6+1.21.11 同时加载，正常进主界面。第二处是时序：以前勾选后刚下发下载任务就紧跟着启动，2.4 MB 的 jar 往往晚两分钟才写完，第一次进游戏必然缺前置；现在必须等它真正落地才继续启动，进度条同步显示。判定也收紧了：文件名要带 +对应 MC 版本、文件大于 300 KB，否则当没装；版本不符的旧 jar 改名 .bak 保留。下载走 Modrinth 与 Fabric 官方 maven 两个源，都失败会弹窗说明。顺手修掉了「在下载页点开模组或光影详情直接报TypeError: unexpected keyword argument project_type 退出」的崩溃。模组列表、单个与批量启停、冲突检测、启动前扫描、版本快照统一按实例 mods 目录取。这轮包：安装包 235.7 MB、解压版 235.7 MB（2467 个文件）；Win7 老系统版这一轮没重打，还是 1.7.66。"}'>
 
 </head>
 
@@ -576,7 +576,7 @@ footer{
 
     <span>OMC LAUNCHER</span>
 
-<span>版本 <strong>1.7.67</strong></span>
+<span>版本 <strong>1.7.68</strong></span>
 
     <span class="badge">稳定正式版</span>
 
@@ -616,11 +616,11 @@ footer{
 
     <div class="primary">
 
-      <a class="btn" href="https://aka.doubaocdn.com/s/F3B4RrIgWS">
+      <a class="btn" href="https://aka.doubaocdn.com/s/gVojAL239Z">
 
         下载 Windows 安装包
 
-<small>exe · 228.5 MB · 1.7.67</small>
+<small>exe · 235.7 MB · 1.7.68</small>
 
       </a>
 
@@ -668,7 +668,7 @@ footer{
 
         <div class="ask">我用 Windows 电脑玩 MC</div>
 
-        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/F3B4RrIgWS">Windows 安装包</a>，双击就进安装界面，选位置、点「开始安装」，装完桌面就有图标；不想装就下<a href="https://aka.doubaocdn.com/s/AfuApkOxTN">解压版 zip</a>，解压后双击 <span class="tag">OMC.exe</span>。第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/wX1KhiguWf">老系统专用版</a>。</div>
+        <div class="ans">下 <a href="https://aka.doubaocdn.com/s/gVojAL239Z">Windows 安装包</a>，双击就进安装界面，选位置、点「开始安装」，装完桌面就有图标；不想装就下<a href="https://aka.doubaocdn.com/s/L42bpsonWY">解压版 zip</a>，解压后双击 <span class="tag">OMC.exe</span>。第一次启动会自动检测 Java，没有就自己下。系统还在 Win7 / Win8 / 8.1 的，下<a href="https://aka.doubaocdn.com/s/wX1KhiguWf">老系统专用版</a>。</div>
 
       </div>
 
@@ -736,21 +736,21 @@ footer{
 
       <div class="card">
 
-<h3>Windows 版 <span class="wh">x64 · 228.5 MB</span></h3>
+<h3>Windows 版 <span class="wh">x64 · 235.7 MB</span></h3>
 
         <p>推荐下安装包：纸箱图标那个 exe，双击进安装界面，能选安装位置、要不要建桌面快捷方式和开始菜单、装完要不要立刻打开，带进度条和百分比，装完就是能用的启动器。想要免安装就下解压版 zip，解压即用。光影、存档、数据包、模组都能在里面下和装，带自动更新。需要 Windows 10 / 11（64 位）。</p>
 
         <div class="dlrow">
 
-          <a class="go" href="https://aka.doubaocdn.com/s/F3B4RrIgWS">下载安装包（推荐）</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/gVojAL239Z">下载安装包（推荐）</a>
 
-          <a class="go" href="https://aka.doubaocdn.com/s/AfuApkOxTN">下载 OMC启动器-1.7.67.zip</a>
+          <a class="go" href="https://aka.doubaocdn.com/s/L42bpsonWY">下载 OMC启动器-1.7.68.zip</a>
 
-          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/F3B4RrIgWS">复制完整链接</button>
+          <button class="copy" type="button" data-copy="https://aka.doubaocdn.com/s/gVojAL239Z">复制完整链接</button>
 
         </div>
 
-        <p style="font-size:12.5px;color:var(--muted)"><b>安装包不用担心文件名</b>：下下来双击就能装，装完桌面和开始菜单里都叫「OMC 启动器」。下载地址是短链，浏览器有时会把文件存成一串字母；下的是安装包就照样双击；下的是解压版 zip，改名不影响内容，想对上哈希值就把文件名改成 <span class="tag">OMC启动器-1.7.67.zip</span> 再算。</p>
+        <p style="font-size:12.5px;color:var(--muted)"><b>安装包不用担心文件名</b>：下下来双击就能装，装完桌面和开始菜单里都叫「OMC 启动器」。下载地址是短链，浏览器有时会把文件存成一串字母；下的是安装包就照样双击；下的是解压版 zip，改名不影响内容，想对上哈希值就把文件名改成 <span class="tag">OMC启动器-1.7.68.zip</span> 再算。</p>
 
         <details>
 
@@ -758,11 +758,11 @@ footer{
 
           <div class="dbody">
 
-<div class="hash">FDC6F81B9C633FDECE75F3F485F7DEA69CB30FB99AA449A3999D502207B75DCB</div>
+<div class="hash">0221FF11677A7257764AB55872F73B4982937663C838B9258BE10D2E77E12E82</div>
 
             <div style="font-size:12.5px;color:var(--muted);margin-top:8px;font-family:Consolas,monospace">
 
-Windows: Get-FileHash .\OMC启动器-1.7.67.zip -Algorithm SHA256
+Windows: Get-FileHash .\OMC启动器-1.7.68.zip -Algorithm SHA256
 
             </div>
 
@@ -979,7 +979,51 @@ Windows: Get-FileHash .\OMC启动器-Win7-1.7.66.zip -Algorithm SHA256
   <!-- 更新日志 -->
 
 
-  <section class="upd">
+<section class="upd">
+    <h2>1.7.68 更新了什么<em>2026-11-16</em></h2>
+
+    <div class="ulist">
+
+      <div><i></i><span><b>勾了 Fabric API 还是缺前置，根因找到了</b>：不是前置没下载，而是
+启动器写出的 Fabric 版本 json 里，8 条库（fabric-loader、sponge-mixin、intermediary、整套 asm）
+全都没有 <span class="tag">downloads.artifact</span> 字段，而拼 classpath 时只认这个字段。
+结果这些库一条都没进 classpath，游戏一启动就是
+<span class="tag">ClassNotFoundException: net.fabricmc.loader.impl.launch.knot.KnotClient</span>，
+Fabric 根本没起来——所有依赖 Fabric API 的模组当然都报缺前置，跟前置装没装完全无关。
+现在安装加载器时会按 maven 坐标把每条库的 path、url 补进版本 json；
+<b>已经装坏的旧版本不用重装</b>，启动拼 classpath 时也会按坐标自己推算路径。
+实测 1.21.11-Fabric：<span class="tag">Loading Minecraft 1.21.11 with Fabric Loader 0.20.1</span>，
+aiminds 与 fabric-api 0.141.6+1.21.11 同时加载，正常进主界面。</span></div>
+
+      <div><i></i><span><b>Fabric API 还没落地，游戏就已经读完 mods 目录</b>：以前勾选后刚下发
+下载任务就紧接着启动，2.4 MB 的 jar 往往晚两分钟才写进 mods，第一次进游戏必然缺前置。
+现在必须等 Fabric API 真正装好（或确认已在位）才继续启动，下载进度直接显示在加载器那条进度条上。</span></div>
+
+      <div><i></i><span><b>Fabric API 的判定收紧了</b>：文件名要带
+<span class="tag">+对应 MC 版本</span>、文件要大于 300 KB，否则当没装；只是版本对不上的旧 jar
+改名成 <span class="tag">.bak</span> 保留，不删你的文件。下载走两个源：先 Modrinth，
+拿不到自动退到 Fabric 官方 maven 按 +MC 版本挑最新；两边都失败会明确弹窗说明，
+不再只在日志里留一行。</span></div>
+
+      <div><i></i><span><b>在下载页点开模组 / 光影 / 资源包详情就崩溃，修好了</b>：下载线程的构造参数
+多传了一个 <span class="tag">project_type</span>，而那边根本没接，一点下载就抛
+<span class="tag">TypeError: unexpected keyword argument 'project_type'</span>。
+现在线程收下并按类型挑文件，光影和资源包优先拿 zip。</span></div>
+
+      <div><i></i><span><b>模组相关页面统一按实例目录取 mods</b>：模组列表、单个与批量启停、
+冲突检测、启动前扫描、版本快照，整合包或隔离实例不再按全局 mods 误判「缺前置」。</span></div>
+
+      <div><i></i><span><b>这次的包</b>：安装包 <b>235.7 MB</b>（双击安装，装完 <b>2469 个文件</b>，
+SHA256 <span class="tag">C7B8F77C…EB1D</span>）、解压版 <b>235.7 MB</b>
+（2467 个文件，SHA256 <span class="tag">0221FF11…2E82</span>）。两个 Windows 包版本号都是
+<b>1.7.68</b>。<b>Win7 老系统版这一轮没重打，还是 1.7.66</b>；<b>Linux 和 macOS 还是 1.7.64</b>，
+链接和哈希都没变。</span></div>
+
+    </div>
+
+  </section>
+
+    <section class="upd">
     <h2>1.7.67 更新了什么<em>2026-11-14</em></h2>
 
     <div class="ulist">
@@ -1564,7 +1608,7 @@ SHA256 <span class="tag">90CAC2F6…116A</span>）、解压版 <b>228.5 MB</b>
 
   <footer>
 
-<span>OMC LAUNCHER 1.7.67</span>
+<span>OMC LAUNCHER 1.7.68</span>
 
     <span>Windows 10/11 x64 · 另有 Win7/8/8.1 老系统版</span>
 
@@ -1809,11 +1853,11 @@ SHA256 <span class="tag">90CAC2F6…116A</span>）、解压版 <b>228.5 MB</b>
 /* ===== 下载点击统计（只记平台和版本，不影响下载，也不记 IP） ===== */
 (function(){
   var U = 'https://ntfy.sh/omc-stat-7k2p9m4v-dl';
-var V = '1.7.67';
+var V = '1.7.68';
   var MAP = {
-    'AfuApkOxTN': 'win',
+    'L42bpsonWY': 'win',
     'wX1KhiguWf': 'win7',
-    'F3B4RrIgWS': 'setup',
+    'gVojAL239Z': 'setup',
     'aYIedVzw8T': 'linux',
     'sCIh8Oefxf': 'mac-arm',
     'YeQkMpuoJK': 'mac-intel',
